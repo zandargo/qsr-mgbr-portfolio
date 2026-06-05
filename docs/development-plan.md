@@ -306,12 +306,12 @@ This plan converts the architecture in `docs/structure.md` into small, implement
 
 ### Subtasks
 
-- [ ] Create `ContactSection.vue` terminal panel structure.
-- [ ] Add static command/output lines for status, email, GitHub, LinkedIn.
-- [ ] Add blinking cursor animation.
-- [ ] Add periodic rotating system messages every 15-20 seconds.
-- [ ] Animate text reveal using Anime.js timeline.
-- [ ] Validate contrast and copy legibility.
+- [x] Create `ContactSection.vue` terminal panel structure.
+- [x] Add static command/output lines for status, email, GitHub, LinkedIn.
+- [x] Add blinking cursor animation.
+- [x] Add periodic rotating system messages every 15-20 seconds.
+- [x] Animate text reveal using Anime.js timeline.
+- [x] Validate contrast and copy legibility.
 
 ### Acceptance
 
