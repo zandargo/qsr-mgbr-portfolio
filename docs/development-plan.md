@@ -166,13 +166,13 @@ This plan converts the architecture in `docs/structure.md` into small, implement
 
 ### Subtasks
 
-- [ ] Register ApexCharts plugin for Vue 3.
-- [ ] Create `RadarChart.vue` with configured radar options and series values.
-- [ ] Create `SoftSkillsSection.vue` wrapper with heading and chart zone.
-- [ ] Add responsive chart sizing rules.
-- [ ] Add floating trait labels around the chart.
-- [ ] Animate trait entrance with Anime.js stagger.
-- [ ] Add hover glow/scale interactions for traits.
+- [x] Register ApexCharts plugin for Vue 3.
+- [x] Create `RadarChart.vue` with configured radar options and series values.
+- [x] Create `SoftSkillsSection.vue` wrapper with heading and chart zone.
+- [x] Add responsive chart sizing rules.
+- [x] Add floating trait labels around the chart.
+- [x] Animate trait entrance with Anime.js stagger.
+- [x] Add hover glow/scale interactions for traits.
 
 ### Acceptance
 
