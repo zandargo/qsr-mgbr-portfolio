@@ -26,13 +26,7 @@
 				</div>
 
 				<div class="timeline-list">
-					<TimelineCard
-						v-for="(item, index) in timelineItems"
-						:key="item.year"
-						:ref="(element) => setCardRef(element, index)"
-						:item="item"
-						:side="index % 2 === 0 ? 'left' : 'right'"
-					/>
+					<TimelineCard v-for="(item, index) in timelineItems" :key="item.year" :ref="(element) => setCardRef(element, index)" :item="item" :side="index % 2 === 0 ? 'left' : 'right'" />
 				</div>
 			</div>
 		</div>
