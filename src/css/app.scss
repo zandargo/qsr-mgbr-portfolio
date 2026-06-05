@@ -1,1 +1,86 @@
-// app global css
+@import '_qsr.overrides.scss';
+
+// Phase 1 global design system tokens and utilities
+
+:root {
+	/* Core palette */
+	--bg-primary: #070b08;
+	--bg-secondary: #101512;
+	--primary: #00ff88;
+	--primary-soft: #44ffaa;
+	--accent: #7dffca;
+	--text: #e4fff1;
+	--text-muted: #8ba698;
+	--glass: rgba(20, 25, 22, 0.55);
+	--glass-border: rgba(125, 255, 202, 0.24);
+
+	/* Typography */
+	--font-display: 'Space Grotesk', 'Segoe UI', sans-serif;
+	--font-body: 'Barlow', 'Segoe UI', sans-serif;
+	--font-mono: 'JetBrains Mono', 'Consolas', monospace;
+
+	/* Spacing scale */
+	--space-2xs: 0.25rem;
+	--space-xs: 0.5rem;
+	--space-sm: 0.75rem;
+	--space-md: 1rem;
+	--space-lg: 1.5rem;
+	--space-xl: 2rem;
+	--space-2xl: 3rem;
+	--space-3xl: 4rem;
+
+	--radius-md: 12px;
+	--radius-lg: 18px;
+	--radius-xl: 24px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body,
+#q-app {
+	margin: 0;
+	min-height: 100%;
+}
+
+body {
+	font-family: var(--font-body);
+	background:
+		radial-gradient(circle at 12% 15%, rgba(0, 255, 136, 0.12), transparent 35%),
+		radial-gradient(circle at 85% 25%, rgba(125, 255, 202, 0.08), transparent 30%),
+		linear-gradient(160deg, var(--bg-primary), var(--bg-secondary));
+	color: var(--text);
+	text-rendering: optimizeLegibility;
+}
+
+.text-display {
+	font-family: var(--font-display);
+	letter-spacing: 0.03em;
+}
+
+.text-mono {
+	font-family: var(--font-mono);
+}
+
+.section-container {
+	width: min(1200px, calc(100% - (2 * var(--space-xl))));
+	margin-inline: auto;
+	padding-block: var(--space-3xl);
+}
+
+.glass-panel {
+	background: var(--glass);
+	border: 1px solid var(--glass-border);
+	border-radius: var(--radius-lg);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+}
+
+.glow-border {
+	border: 1px solid rgba(0, 255, 136, 0.45);
+	box-shadow:
+		0 0 0 1px rgba(0, 255, 136, 0.12) inset,
+		0 0 22px rgba(0, 255, 136, 0.2);
+}

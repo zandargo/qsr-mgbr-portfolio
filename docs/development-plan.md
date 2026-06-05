@@ -19,15 +19,15 @@ This plan converts the architecture in `docs/structure.md` into small, implement
 
 ### Subtasks
 
-- [ ] Run the app and verify current Quasar starter loads without errors.
-- [ ] Install dependencies: animejs, lenis, vue3-apexcharts, @iconify/vue, embla-carousel-vue, vanilla-tilt.
-- [ ] Decide if PrismJS is needed now; if yes, install prismjs, else defer.
-- [ ] Create component folders from the architecture map under `src/components/`.
-- [ ] Create composable placeholders in `src/composables/`.
-- [ ] Add global CSS variables for colors and glass tokens in `src/css/app.scss`.
-- [ ] Add typography variables and spacing scale tokens.
-- [ ] Define reusable utility classes (glow border, glass panel, section container).
-- [ ] Verify no style regressions in the existing page.
+- [x] Run the app and verify current Quasar starter loads without errors.
+- [x] Install dependencies: animejs, lenis, vue3-apexcharts, @iconify/vue, embla-carousel-vue, vanilla-tilt.
+- [x] Decide if PrismJS is needed now; if yes, install prismjs, else defer. (Deferred for now.)
+- [x] Create component folders from the architecture map under `src/components/`.
+- [x] Create composable placeholders in `src/composables/`.
+- [x] Add global CSS variables for colors and glass tokens in `src/css/app.scss`.
+- [x] Add typography variables and spacing scale tokens.
+- [x] Define reusable utility classes (glow border, glass panel, section container).
+- [x] Verify no style regressions in the existing page.
 
 ### Acceptance
 
@@ -43,11 +43,11 @@ This plan converts the architecture in `docs/structure.md` into small, implement
 
 ### Subtasks
 
-- [ ] Replace starter content in `src/App.vue` with section components in architecture order.
-- [ ] Add semantic section wrappers and IDs (hero, biography, soft-skills, technical-skills, experience, projects, gallery, links, contact).
-- [ ] Add temporary placeholder content in each component to validate layout flow.
-- [ ] Ensure section spacing and top offsets work for anchored scrolling.
-- [ ] Confirm render order and z-index layering support fixed background.
+- [x] Replace starter content in `src/App.vue` with section components in architecture order.
+- [x] Add semantic section wrappers and IDs (hero, biography, soft-skills, technical-skills, experience, projects, gallery, links, contact).
+- [x] Add temporary placeholder content in each component to validate layout flow.
+- [x] Ensure section spacing and top offsets work for anchored scrolling.
+- [x] Confirm render order and z-index layering support fixed background.
 
 ### Acceptance
 
