@@ -125,13 +125,13 @@ This plan converts the architecture in `docs/structure.md` into small, implement
 
 ### Subtasks
 
-- [ ] Create `HeroSection.vue` layout with logo, name, subtitle, CTA links, and scroll hint.
-- [ ] Create `ScrambleTitle.vue` and `useScrambleText.js` using Anime.js v4 utilities.
-- [ ] Configure scramble sequence from obfuscated text to final name.
-- [ ] Build subtitle rotating tech tags via Anime.js timeline.
-- [ ] Add social/action buttons with hover states and icon integration.
-- [ ] Build `useMouseGlow.js` for subtle cursor glow and trailing effect.
-- [ ] Add graceful fallback for touch devices (disable cursor effect).
+- [x] Create `HeroSection.vue` layout with logo, name, subtitle, CTA links, and scroll hint.
+- [x] Create `ScrambleTitle.vue` and `useScrambleText.js` using Anime.js v4 utilities.
+- [x] Configure scramble sequence from obfuscated text to final name.
+- [x] Build subtitle rotating tech tags via Anime.js timeline.
+- [x] Add social/action buttons with hover states and icon integration.
+- [x] Build `useMouseGlow.js` for subtle cursor glow and trailing effect.
+- [x] Add graceful fallback for touch devices (disable cursor effect).
 
 ### Acceptance
 
