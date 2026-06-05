@@ -134,9 +134,11 @@
     white-space: pre-line;
     isolation: isolate;
     text-shadow:
-      0 0 4px rgba(96, 255, 128, 0.55),
-      0 0 12px rgba(96, 255, 128, 0.25),
-      0 0 24px rgba(96, 255, 128, 0.15);
+      0 0 2px rgba(96, 255, 128, 0.55),
+      0 0 8px rgba(96, 255, 128, 0.35),
+      0 0 16px rgba(96, 255, 128, 0.25);
+    color: rgba(224, 255, 232, 0.95);
+    /* opacity: 0.85 !important; */
   }
 
   .scramble-title::before,
@@ -157,11 +159,11 @@
   .scramble-title::after {
     color: transparent;
     background: repeating-linear-gradient(to bottom,
-        rgba(185, 255, 185, 0.6) 0 1px,
-        rgba(15, 55, 20, 0.2) 1px 3px);
+        rgba(185, 255, 185, 0.75) 0 2px,
+        rgba(15, 55, 20, 0.95) 2px 6px);
     background-clip: text;
     -webkit-background-clip: text;
-    mix-blend-mode: screen;
-    opacity: 0.2;
+    mix-blend-mode: multiply;
+    opacity: 0.15;
   }
 </style>

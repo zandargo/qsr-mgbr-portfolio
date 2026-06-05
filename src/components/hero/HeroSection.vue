@@ -220,6 +220,7 @@
     line-height: 0.92;
     max-width: 11ch;
     font-weight: 500;
+    /* opacity: 0.25; */
   }
 
   .role-stack {
