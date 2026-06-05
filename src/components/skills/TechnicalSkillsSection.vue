@@ -13,13 +13,7 @@
 				<section v-for="group in skillGroups" :key="group.key" class="group-block">
 					<h3 class="group-title text-display">{{ group.title }}</h3>
 					<ul class="skills-row" :aria-label="`${group.title} skills`">
-						<li
-							v-for="skill in group.skills"
-							:key="`${group.key}-${skill.name}`"
-							:ref="(element) => setCardRef(element, `${group.key}-${skill.name}`)"
-							class="technical-skill-card glass-panel"
-							tabindex="0"
-						>
+						<li v-for="skill in group.skills" :key="`${group.key}-${skill.name}`" :ref="(element) => setCardRef(element, `${group.key}-${skill.name}`)" class="technical-skill-card glass-panel" tabindex="0">
 							<SkillGauge :value="skill.value" :active="gaugesActive" />
 							<div class="technical-skill-card__copy">
 								<h4 class="text-display">{{ skill.name }}</h4>

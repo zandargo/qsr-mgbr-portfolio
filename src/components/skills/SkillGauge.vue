@@ -2,16 +2,7 @@
 	<div class="skill-gauge" :style="{ width: `${size}px`, height: `${size}px` }" aria-hidden="true">
 		<svg class="skill-gauge__svg" :viewBox="`0 0 ${size} ${size}`" role="presentation">
 			<circle class="skill-gauge__track" :cx="center" :cy="center" :r="radius" :stroke-width="strokeWidth" fill="none" />
-			<circle
-				class="skill-gauge__progress"
-				:cx="center"
-				:cy="center"
-				:r="radius"
-				:stroke-width="strokeWidth"
-				:stroke-dasharray="metrics.strokeDasharray"
-				:stroke-dashoffset="metrics.strokeDashoffset"
-				fill="none"
-			/>
+			<circle class="skill-gauge__progress" :cx="center" :cy="center" :r="radius" :stroke-width="strokeWidth" :stroke-dasharray="metrics.strokeDasharray" :stroke-dashoffset="metrics.strokeDashoffset" fill="none" />
 		</svg>
 		<div class="skill-gauge__value text-display">{{ Math.round(displayPercent) }}%</div>
 	</div>
