@@ -187,13 +187,13 @@ This plan converts the architecture in `docs/structure.md` into small, implement
 
 ### Subtasks
 
-- [ ] Create `TechnicalSkillsSection.vue` with Frontend, Engineering, Automation groups.
-- [ ] Create reusable `SkillGauge.vue` using SVG circles and stroke-dashoffset.
-- [ ] Create `useSkillGauge.js` for percent-to-path calculations.
-- [ ] Add skill cards with years/context details hidden by default.
-- [ ] Animate gauge fill on section enter.
-- [ ] Add hover expand to reveal experience details.
-- [ ] Implement horizontal scroll behavior on small screens.
+- [x] Create `TechnicalSkillsSection.vue` with Frontend, Engineering, Automation groups.
+- [x] Create reusable `SkillGauge.vue` using SVG circles and stroke-dashoffset.
+- [x] Create `useSkillGauge.js` for percent-to-path calculations.
+- [x] Add skill cards with years/context details hidden by default.
+- [x] Animate gauge fill on section enter.
+- [x] Add hover expand to reveal experience details.
+- [x] Implement horizontal scroll behavior on small screens.
 
 ### Acceptance
 
