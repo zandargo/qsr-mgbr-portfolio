@@ -21,7 +21,7 @@ export function useScrambleText() {
     target.textContent = options.fromText ?? target.textContent ?? text
 
     activeAnimation = animate(target, {
-      text: scrambleText({
+      innerHTML: scrambleText({
         text,
         chars: options.chars ?? 'a-zA-Z0-9!%#_',
         ease: options.ease ?? 'outQuad',
