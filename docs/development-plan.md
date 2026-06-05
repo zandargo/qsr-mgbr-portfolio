@@ -247,13 +247,13 @@ This plan converts the architecture in `docs/structure.md` into small, implement
 
 ### Subtasks
 
-- [ ] Create `ProjectModal.vue` with Quasar dialog or custom overlay.
-- [ ] Add content blocks: screenshots, overview, architecture, technologies, challenges, links.
-- [ ] Build open and close timeline animations with Anime.js.
-- [ ] Lock body scroll while modal is open.
-- [ ] Wire open action from `ProjectCard.vue`.
-- [ ] Trigger circuit pulse burst when modal opens.
-- [ ] Add keyboard controls (escape to close, focus trap).
+- [x] Create `ProjectModal.vue` with Quasar dialog or custom overlay.
+- [x] Add content blocks: screenshots, overview, architecture, technologies, challenges, links.
+- [x] Build open and close timeline animations with Anime.js.
+- [x] Lock body scroll while modal is open.
+- [x] Wire open action from `ProjectCard.vue`.
+- [x] Trigger circuit pulse burst when modal opens.
+- [x] Add keyboard controls (escape to close, focus trap).
 
 ### Acceptance
 

@@ -14,6 +14,7 @@
 			</ul>
 
 			<div class="project-card__actions">
+				<button type="button" class="project-card__link" @click="emit('open-project', project)">Details</button>
 				<a class="project-card__link" :href="project.github" target="_blank" rel="noreferrer">GitHub</a>
 				<a class="project-card__link project-card__link--primary" :href="project.demo" target="_blank" rel="noreferrer">Live Demo</a>
 			</div>
@@ -24,6 +25,8 @@
 <script setup>
 	import VanillaTilt from 'vanilla-tilt'
 	import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
+
+	const emit = defineEmits(['open-project'])
 
 	const props = defineProps({
 		project: {
@@ -202,11 +205,13 @@
 		padding: 0.48rem 0.75rem;
 		border-radius: 999px;
 		border: 1px solid rgba(125, 255, 202, 0.24);
+		background: rgba(12, 18, 14, 0.62);
 		font-size: 0.72rem;
 		letter-spacing: 0.08em;
 		text-transform: uppercase;
 		text-decoration: none;
 		color: var(--text);
+		cursor: pointer;
 		transition: border-color 180ms ease, box-shadow 180ms ease;
 	}
 

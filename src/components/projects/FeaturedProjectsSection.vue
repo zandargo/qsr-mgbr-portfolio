@@ -10,14 +10,29 @@
 			</header>
 
 			<div class="projects-grid">
-				<ProjectCard v-for="project in projects" :key="project.code" :project="project" />
+				<ProjectCard v-for="project in projects" :key="project.code" :project="project" @open-project="openProjectModal" />
 			</div>
 		</article>
+
+		<ProjectModal v-model="isProjectModalOpen" :project="selectedProject" @closed="selectedProject = null" />
 	</div>
 </template>
 
 <script setup>
+	import { ref } from 'vue'
 	import ProjectCard from './ProjectCard.vue'
+	import ProjectModal from './ProjectModal.vue'
+
+	const isProjectModalOpen = ref(false)
+	const selectedProject = ref(null)
+
+	const openProjectModal = (project) => {
+		selectedProject.value = project
+		isProjectModalOpen.value = true
+		if (typeof window !== 'undefined') {
+			window.dispatchEvent(new CustomEvent('circuit:pulse-burst'))
+		}
+	}
 
 	const projects = [
 		{
@@ -25,6 +40,23 @@
 			title: 'Product Data Lifecycle Manager',
 			summary: 'A centralized platform to control engineering documents, approvals, and lifecycle transitions for industrial products.',
 			tags: ['Vue', 'Quasar', 'REST API', 'PLM'],
+			overview:
+				'A product lifecycle platform that unifies engineering records, release workflows, and approval trails into a single interface for technical teams.',
+			architecture: [
+				'Modular Vue frontend with Quasar-based UI shells',
+				'Role-driven API gateway to control approvals and release permissions',
+				'Event timeline module for full lifecycle traceability'
+			],
+			challenges: [
+				'Consolidating legacy document states across disconnected repositories',
+				'Designing approval paths flexible enough for multi-department teams',
+				'Keeping large lifecycle tables fast on lower-power laptops'
+			],
+			screenshots: [
+				{ label: 'Release dashboard', type: 'Control panel' },
+				{ label: 'Approval route editor', type: 'Workflow' },
+				{ label: 'Lifecycle timeline', type: 'Audit view' }
+			],
 			thumbnail: 'linear-gradient(140deg, rgba(0, 255, 136, 0.26), rgba(16, 22, 19, 0.92)), radial-gradient(circle at 18% 20%, rgba(125, 255, 202, 0.3), transparent 42%)',
 			github: 'https://github.com/zandargo/qsr-mgbr-portfolio',
 			demo: '#projects'
@@ -34,6 +66,23 @@
 			title: 'CAD Automation Toolkit',
 			summary: 'Reusable automation scripts and templates that accelerate repetitive modeling and drawing tasks in production teams.',
 			tags: ['VBA', 'Python', 'SolidWorks', 'Automation'],
+			overview:
+				'A toolkit of scriptable CAD assistants that cuts repetitive operations and enforces consistent modeling standards across engineering squads.',
+			architecture: [
+				'Python and VBA command runners for CAD macro orchestration',
+				'Template library for validated drawing and BOM generation',
+				'Logging layer with execution reports for team review'
+			],
+			challenges: [
+				'Balancing flexibility for custom macros with strict template governance',
+				'Handling version drift across different CAD workstation setups',
+				'Providing clear diagnostics when scripts fail mid-pipeline'
+			],
+			screenshots: [
+				{ label: 'Macro launcher', type: 'Automation hub' },
+				{ label: 'Template selector', type: 'CAD panel' },
+				{ label: 'Execution report', type: 'Diagnostics' }
+			],
 			thumbnail: 'linear-gradient(135deg, rgba(16, 21, 18, 0.82), rgba(0, 255, 136, 0.2)), radial-gradient(circle at 80% 20%, rgba(125, 255, 202, 0.34), transparent 45%)',
 			github: 'https://github.com/zandargo/qsr-mgbr-portfolio',
 			demo: '#projects'
@@ -43,6 +92,23 @@
 			title: 'Mechanical Intelligence Portfolio',
 			summary: 'Interactive portfolio experience engineered with smooth motion systems, performance-focused rendering, and bold visual identity.',
 			tags: ['Anime.js', 'Quasar', 'SCSS', 'PWA'],
+			overview:
+				'A narrative-driven portfolio built as a single-page experience with layered motion, scroll choreography, and componentized section systems.',
+			architecture: [
+				'Vue 3 composition architecture with reusable animation composables',
+				'Quasar-powered responsive layout primitives and utility tokens',
+				'Background circuit system connected to interaction events'
+			],
+			challenges: [
+				'Keeping complex animation sequences smooth on mobile hardware',
+				'Building section transitions without visual overload',
+				'Maintaining accessibility for highly styled interactive cards'
+			],
+			screenshots: [
+				{ label: 'Hero command surface', type: 'Landing' },
+				{ label: 'Projects matrix', type: 'Showcase grid' },
+				{ label: 'Terminal contact panel', type: 'Conversion block' }
+			],
 			thumbnail: 'linear-gradient(125deg, rgba(125, 255, 202, 0.3), rgba(16, 21, 18, 0.84)), radial-gradient(circle at 50% 80%, rgba(0, 255, 136, 0.24), transparent 50%)',
 			github: 'https://github.com/zandargo/qsr-mgbr-portfolio',
 			demo: '#hero'
@@ -52,6 +118,23 @@
 			title: 'Excel Engineering Suite',
 			summary: 'Operational calculators and reporting flows tailored for engineering decisions, planning, and project execution visibility.',
 			tags: ['Excel', 'VBA', 'Data Models', 'Workflows'],
+			overview:
+				'An operations suite for engineering teams to standardize calculations, reduce manual spreadsheet errors, and accelerate decision reporting.',
+			architecture: [
+				'Excel interface layer with guided templates and protected logic',
+				'VBA automation modules for data normalization and report export',
+				'Workflow packs tailored to manufacturing and planning routines'
+			],
+			challenges: [
+				'Protecting formula integrity while preserving user flexibility',
+				'Normalizing different source formats from legacy files',
+				'Reducing refresh times for high-volume cost models'
+			],
+			screenshots: [
+				{ label: 'Engineering dashboard', type: 'Workbook' },
+				{ label: 'Capacity planner', type: 'Scenario grid' },
+				{ label: 'Auto report generator', type: 'Output flow' }
+			],
 			thumbnail: 'linear-gradient(155deg, rgba(16, 21, 18, 0.88), rgba(0, 255, 136, 0.16)), radial-gradient(circle at 20% 78%, rgba(125, 255, 202, 0.28), transparent 52%)',
 			github: 'https://github.com/zandargo/qsr-mgbr-portfolio',
 			demo: '#projects'
