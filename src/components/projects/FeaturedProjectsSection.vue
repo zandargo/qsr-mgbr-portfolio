@@ -2,10 +2,10 @@
 	<div class="section-container featured-projects-section">
 		<article class="projects-shell glass-panel glow-border">
 			<header class="projects-header">
-				<p class="section-kicker text-mono">Featured Projects</p>
-				<h2 id="projects-title" class="text-display">Software products shaped by engineering precision.</h2>
+				<p class="section-kicker text-mono">{{ t('projects.kicker') }}</p>
+				<h2 id="projects-title" class="text-display">{{ t('projects.title') }}</h2>
 				<p class="projects-header__description">
-					A selected set of systems that combine mechanical logic, frontend architecture, and automation efficiency.
+					{{ t('projects.description') }}
 				</p>
 			</header>
 
@@ -19,9 +19,12 @@
 </template>
 
 <script setup>
-	import { ref } from 'vue'
+	import { computed, ref } from 'vue'
+	import { useI18n } from 'vue-i18n'
 	import ProjectCard from './ProjectCard.vue'
 	import ProjectModal from './ProjectModal.vue'
+
+	const { t } = useI18n()
 
 	const isProjectModalOpen = ref(false)
 	const selectedProject = ref(null)
@@ -34,28 +37,27 @@
 		}
 	}
 
-	const projects = [
+	const projects = computed(() => [
 		{
 			code: 'PDLM',
-			title: 'Product Data Lifecycle Manager',
-			summary: 'A centralized platform to control engineering documents, approvals, and lifecycle transitions for industrial products.',
+			title: t('projects.items.pdlm.title'),
+			summary: t('projects.items.pdlm.summary'),
 			tags: ['Vue', 'Quasar', 'REST API', 'PLM'],
-			overview:
-				'A product lifecycle platform that unifies engineering records, release workflows, and approval trails into a single interface for technical teams.',
+			overview: t('projects.items.pdlm.overview'),
 			architecture: [
-				'Modular Vue frontend with Quasar-based UI shells',
-				'Role-driven API gateway to control approvals and release permissions',
-				'Event timeline module for full lifecycle traceability'
+				t('projects.items.pdlm.architecture.0'),
+				t('projects.items.pdlm.architecture.1'),
+				t('projects.items.pdlm.architecture.2')
 			],
 			challenges: [
-				'Consolidating legacy document states across disconnected repositories',
-				'Designing approval paths flexible enough for multi-department teams',
-				'Keeping large lifecycle tables fast on lower-power laptops'
+				t('projects.items.pdlm.challenges.0'),
+				t('projects.items.pdlm.challenges.1'),
+				t('projects.items.pdlm.challenges.2')
 			],
 			screenshots: [
-				{ label: 'Release dashboard', type: 'Control panel' },
-				{ label: 'Approval route editor', type: 'Workflow' },
-				{ label: 'Lifecycle timeline', type: 'Audit view' }
+				{ label: t('projects.items.pdlm.screenshots.0.label'), type: t('projects.items.pdlm.screenshots.0.type') },
+				{ label: t('projects.items.pdlm.screenshots.1.label'), type: t('projects.items.pdlm.screenshots.1.type') },
+				{ label: t('projects.items.pdlm.screenshots.2.label'), type: t('projects.items.pdlm.screenshots.2.type') }
 			],
 			thumbnail: 'linear-gradient(140deg, rgba(0, 255, 136, 0.26), rgba(16, 22, 19, 0.92)), radial-gradient(circle at 18% 20%, rgba(125, 255, 202, 0.3), transparent 42%)',
 			github: 'https://github.com/zandargo/qsr-mgbr-portfolio',
@@ -63,25 +65,24 @@
 		},
 		{
 			code: 'CADTK',
-			title: 'CAD Automation Toolkit',
-			summary: 'Reusable automation scripts and templates that accelerate repetitive modeling and drawing tasks in production teams.',
+			title: t('projects.items.cadtk.title'),
+			summary: t('projects.items.cadtk.summary'),
 			tags: ['VBA', 'Python', 'SolidWorks', 'Automation'],
-			overview:
-				'A toolkit of scriptable CAD assistants that cuts repetitive operations and enforces consistent modeling standards across engineering squads.',
+			overview: t('projects.items.cadtk.overview'),
 			architecture: [
-				'Python and VBA command runners for CAD macro orchestration',
-				'Template library for validated drawing and BOM generation',
-				'Logging layer with execution reports for team review'
+				t('projects.items.cadtk.architecture.0'),
+				t('projects.items.cadtk.architecture.1'),
+				t('projects.items.cadtk.architecture.2')
 			],
 			challenges: [
-				'Balancing flexibility for custom macros with strict template governance',
-				'Handling version drift across different CAD workstation setups',
-				'Providing clear diagnostics when scripts fail mid-pipeline'
+				t('projects.items.cadtk.challenges.0'),
+				t('projects.items.cadtk.challenges.1'),
+				t('projects.items.cadtk.challenges.2')
 			],
 			screenshots: [
-				{ label: 'Macro launcher', type: 'Automation hub' },
-				{ label: 'Template selector', type: 'CAD panel' },
-				{ label: 'Execution report', type: 'Diagnostics' }
+				{ label: t('projects.items.cadtk.screenshots.0.label'), type: t('projects.items.cadtk.screenshots.0.type') },
+				{ label: t('projects.items.cadtk.screenshots.1.label'), type: t('projects.items.cadtk.screenshots.1.type') },
+				{ label: t('projects.items.cadtk.screenshots.2.label'), type: t('projects.items.cadtk.screenshots.2.type') }
 			],
 			thumbnail: 'linear-gradient(135deg, rgba(16, 21, 18, 0.82), rgba(0, 255, 136, 0.2)), radial-gradient(circle at 80% 20%, rgba(125, 255, 202, 0.34), transparent 45%)',
 			github: 'https://github.com/zandargo/qsr-mgbr-portfolio',
@@ -89,25 +90,24 @@
 		},
 		{
 			code: 'PORTF',
-			title: 'Mechanical Intelligence Portfolio',
-			summary: 'Interactive portfolio experience engineered with smooth motion systems, performance-focused rendering, and bold visual identity.',
+			title: t('projects.items.portf.title'),
+			summary: t('projects.items.portf.summary'),
 			tags: ['Anime.js', 'Quasar', 'SCSS', 'PWA'],
-			overview:
-				'A narrative-driven portfolio built as a single-page experience with layered motion, scroll choreography, and componentized section systems.',
+			overview: t('projects.items.portf.overview'),
 			architecture: [
-				'Vue 3 composition architecture with reusable animation composables',
-				'Quasar-powered responsive layout primitives and utility tokens',
-				'Background circuit system connected to interaction events'
+				t('projects.items.portf.architecture.0'),
+				t('projects.items.portf.architecture.1'),
+				t('projects.items.portf.architecture.2')
 			],
 			challenges: [
-				'Keeping complex animation sequences smooth on mobile hardware',
-				'Building section transitions without visual overload',
-				'Maintaining accessibility for highly styled interactive cards'
+				t('projects.items.portf.challenges.0'),
+				t('projects.items.portf.challenges.1'),
+				t('projects.items.portf.challenges.2')
 			],
 			screenshots: [
-				{ label: 'Hero command surface', type: 'Landing' },
-				{ label: 'Projects matrix', type: 'Showcase grid' },
-				{ label: 'Terminal contact panel', type: 'Conversion block' }
+				{ label: t('projects.items.portf.screenshots.0.label'), type: t('projects.items.portf.screenshots.0.type') },
+				{ label: t('projects.items.portf.screenshots.1.label'), type: t('projects.items.portf.screenshots.1.type') },
+				{ label: t('projects.items.portf.screenshots.2.label'), type: t('projects.items.portf.screenshots.2.type') }
 			],
 			thumbnail: 'linear-gradient(125deg, rgba(125, 255, 202, 0.3), rgba(16, 21, 18, 0.84)), radial-gradient(circle at 50% 80%, rgba(0, 255, 136, 0.24), transparent 50%)',
 			github: 'https://github.com/zandargo/qsr-mgbr-portfolio',
@@ -115,31 +115,30 @@
 		},
 		{
 			code: 'XLSYS',
-			title: 'Excel Engineering Suite',
-			summary: 'Operational calculators and reporting flows tailored for engineering decisions, planning, and project execution visibility.',
+			title: t('projects.items.xlsys.title'),
+			summary: t('projects.items.xlsys.summary'),
 			tags: ['Excel', 'VBA', 'Data Models', 'Workflows'],
-			overview:
-				'An operations suite for engineering teams to standardize calculations, reduce manual spreadsheet errors, and accelerate decision reporting.',
+			overview: t('projects.items.xlsys.overview'),
 			architecture: [
-				'Excel interface layer with guided templates and protected logic',
-				'VBA automation modules for data normalization and report export',
-				'Workflow packs tailored to manufacturing and planning routines'
+				t('projects.items.xlsys.architecture.0'),
+				t('projects.items.xlsys.architecture.1'),
+				t('projects.items.xlsys.architecture.2')
 			],
 			challenges: [
-				'Protecting formula integrity while preserving user flexibility',
-				'Normalizing different source formats from legacy files',
-				'Reducing refresh times for high-volume cost models'
+				t('projects.items.xlsys.challenges.0'),
+				t('projects.items.xlsys.challenges.1'),
+				t('projects.items.xlsys.challenges.2')
 			],
 			screenshots: [
-				{ label: 'Engineering dashboard', type: 'Workbook' },
-				{ label: 'Capacity planner', type: 'Scenario grid' },
-				{ label: 'Auto report generator', type: 'Output flow' }
+				{ label: t('projects.items.xlsys.screenshots.0.label'), type: t('projects.items.xlsys.screenshots.0.type') },
+				{ label: t('projects.items.xlsys.screenshots.1.label'), type: t('projects.items.xlsys.screenshots.1.type') },
+				{ label: t('projects.items.xlsys.screenshots.2.label'), type: t('projects.items.xlsys.screenshots.2.type') }
 			],
 			thumbnail: 'linear-gradient(155deg, rgba(16, 21, 18, 0.88), rgba(0, 255, 136, 0.16)), radial-gradient(circle at 20% 78%, rgba(125, 255, 202, 0.28), transparent 52%)',
 			github: 'https://github.com/zandargo/qsr-mgbr-portfolio',
 			demo: '#projects'
 		}
-	]
+	])
 </script>
 
 <style scoped>

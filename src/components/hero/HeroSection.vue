@@ -9,61 +9,61 @@
             <span class="brand-mark__ring" />
             <span class="brand-mark__hub" />
           </div>
-          <p class="eyebrow text-mono">Mechanical Intelligence</p>
+          <p class="eyebrow text-mono">{{ t('hero.eyebrow') }}</p>
         </div>
 
-        <ScrambleTitle id="hero-title" class="hero-title text-display" text="MADSON GERMANO" initial-text="M4D50N G3RM4N0" :interval-delay="1800" />
+        <ScrambleTitle id="hero-title" class="hero-title text-display" :text="t('hero.title')" :initial-text="t('hero.titleScramble')" :interval-delay="1800" />
 
-        <div class="role-stack" aria-label="Primary roles">
-          <p>Mechanical Engineer</p>
-          <p>Frontend Developer</p>
-          <p>Automation Specialist</p>
+        <div class="role-stack" :aria-label="t('hero.rolesAria')">
+          <p>{{ t('hero.roles.engineer') }}</p>
+          <p>{{ t('hero.roles.frontend') }}</p>
+          <p>{{ t('hero.roles.automation') }}</p>
         </div>
 
         <div class="tag-row" aria-live="polite">
-          <span class="tag-row__label text-mono">Currently focused on</span>
+          <span class="tag-row__label text-mono">{{ t('hero.focusLabel') }}</span>
           <span ref="tagRef" class="tag-row__value text-display">{{ activeTag }}</span>
         </div>
 
         <div class="action-row">
           <a class="action-button action-button--solid" href="https://github.com/zandargo/qsr-mgbr-portfolio" target="_blank" rel="noreferrer">
             <Icon icon="mdi:github" />
-            <span>GitHub</span>
+            <span>{{ t('hero.actions.github') }}</span>
           </a>
           <a class="action-button" href="#links">
             <Icon icon="mdi:linkedin" />
-            <span>LinkedIn</span>
+            <span>{{ t('hero.actions.linkedin') }}</span>
           </a>
           <a class="action-button" href="#contact">
             <Icon icon="mdi:file-document-outline" />
-            <span>Resume</span>
+            <span>{{ t('hero.actions.resume') }}</span>
           </a>
         </div>
 
         <a class="scroll-hint text-mono" href="#biography">
-          <span>Scroll for timeline</span>
+          <span>{{ t('hero.scrollHint') }}</span>
           <Icon icon="mdi:chevron-down" class="scroll-hint__icon" />
         </a>
       </div>
 
       <div class="hero-status glass-panel">
-        <p class="status-label text-mono">Profile Signal</p>
+        <p class="status-label text-mono">{{ t('hero.status.label') }}</p>
         <div class="status-card">
-          <p>Designed like a workstation.</p>
-          <p>Built for mechanical systems, CAD automation, and polished frontend delivery.</p>
+          <p>{{ t('hero.status.line1') }}</p>
+          <p>{{ t('hero.status.line2') }}</p>
         </div>
         <ul class="status-metrics">
           <li>
             <span class="metric-value text-display">3</span>
-            <span class="metric-label">Core disciplines</span>
+            <span class="metric-label">{{ t('hero.status.metrics.coreDisciplines') }}</span>
           </li>
           <li>
             <span class="metric-value text-display">1</span>
-            <span class="metric-label">Portfolio system</span>
+            <span class="metric-label">{{ t('hero.status.metrics.portfolioSystem') }}</span>
           </li>
           <li>
             <span class="metric-value text-display">24/7</span>
-            <span class="metric-label">Available to iterate</span>
+            <span class="metric-label">{{ t('hero.status.metrics.available') }}</span>
           </li>
         </ul>
       </div>
@@ -74,23 +74,38 @@
 <script setup>
   import { Icon } from '@iconify/vue'
   import { animate } from 'animejs'
-  import { nextTick, onBeforeUnmount, onMounted, ref } from 'vue'
+  import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
+  import { useI18n } from 'vue-i18n'
   import ScrambleTitle from './ScrambleTitle.vue'
   import { useMouseGlow } from '../../composables/useMouseGlow'
 
+  const { t } = useI18n()
+
   const heroRootRef = ref(null)
   const tagRef = ref(null)
-  const activeTag = ref('Vue.js')
+  const activeTag = ref('')
 
-  const techTags = ['Vue.js', 'Quasar', 'SolidWorks', 'Python', 'VBA', 'PLM', 'CAD Automation']
+  const techTags = computed(() => [
+    t('hero.techTags.vue'),
+    t('hero.techTags.quasar'),
+    t('hero.techTags.solidworks'),
+    t('hero.techTags.python'),
+    t('hero.techTags.vba'),
+    t('hero.techTags.plm'),
+    t('hero.techTags.cadAutomation')
+  ])
   let tagIndex = 0
   let tagTimer = null
 
   const { glowStyle, enable, disable, mouseGlowRef } = useMouseGlow()
 
   const rotateTag = () => {
-    const nextIndex = (tagIndex + 1) % techTags.length
-    const nextTag = techTags[nextIndex]
+    if (techTags.value.length === 0) {
+      return
+    }
+
+    const nextIndex = (tagIndex + 1) % techTags.value.length
+    const nextTag = techTags.value[nextIndex]
     const tagNode = tagRef.value
 
     if (!tagNode) {
@@ -121,7 +136,24 @@
   onMounted(async () => {
     await nextTick()
     enable(heroRootRef.value)
+    activeTag.value = techTags.value[0] ?? ''
     tagTimer = window.setInterval(rotateTag, 2600)
+  })
+
+  watch(techTags, (nextTags) => {
+    if (nextTags.length === 0) {
+      activeTag.value = ''
+      tagIndex = 0
+      return
+    }
+
+    if (!nextTags.includes(activeTag.value)) {
+      tagIndex = 0
+      activeTag.value = nextTags[0]
+      return
+    }
+
+    tagIndex = nextTags.indexOf(activeTag.value)
   })
 
   onBeforeUnmount(() => {

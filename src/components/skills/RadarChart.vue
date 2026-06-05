@@ -5,14 +5,19 @@
 </template>
 
 <script setup>
+	import { computed } from 'vue'
+	import { useI18n } from 'vue-i18n'
+
+	const { t } = useI18n()
+
 	const chartSeries = [
 		{
-			name: 'Professional Strength',
+			name: t('radar.professionalStrength'),
 			data: [90, 88, 86, 92, 89, 94]
 		}
 	]
 
-	const chartOptions = {
+	const chartOptions = computed(() => ({
 		chart: {
 			toolbar: {
 				show: false
@@ -28,7 +33,14 @@
 			foreColor: '#8ba698'
 		},
 		xaxis: {
-			categories: ['Leadership', 'Communication', 'Creativity', 'Teamwork', 'Adaptability', 'Problem Solving'],
+			categories: [
+				t('radar.categories.0'),
+				t('radar.categories.1'),
+				t('radar.categories.2'),
+				t('radar.categories.3'),
+				t('radar.categories.4'),
+				t('radar.categories.5')
+			],
 			labels: {
 				style: {
 					colors: ['#8ba698', '#8ba698', '#8ba698', '#8ba698', '#8ba698', '#8ba698'],
@@ -108,7 +120,7 @@
 				}
 			}
 		]
-	}
+	}))
 </script>
 
 <style scoped>

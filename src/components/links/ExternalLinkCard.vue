@@ -1,5 +1,5 @@
 <template>
-	<article ref="cardRef" class="external-link-card glass-panel" :class="`external-link-card--${variant}`" tabindex="0" :aria-label="`${item.title} external card`">
+	<article ref="cardRef" class="external-link-card glass-panel" :class="`external-link-card--${variant}`" tabindex="0" :aria-label="t('externalCard.cardAria', { title: item.title })">
 		<div class="external-link-card__media" :style="mediaStyle" aria-hidden="true">
 			<div class="external-link-card__reflection" />
 			<p class="external-link-card__badge text-mono">{{ item.badge }}</p>
@@ -9,11 +9,11 @@
 			<h3 class="external-link-card__title text-display">{{ item.title }}</h3>
 			<p class="external-link-card__description">{{ item.description }}</p>
 
-			<ul v-if="item.tags?.length" class="external-link-card__tags" :aria-label="`${item.title} tags`">
+			<ul v-if="item.tags?.length" class="external-link-card__tags" :aria-label="t('externalCard.tagsAria', { title: item.title })">
 				<li v-for="tag in item.tags" :key="`${item.title}-${tag}`" class="external-link-card__tag text-mono">{{ tag }}</li>
 			</ul>
 
-			<a class="external-link-card__cta" :href="item.href" target="_blank" rel="noopener noreferrer" :aria-label="`Open ${item.title} in a new tab`">
+			<a class="external-link-card__cta" :href="item.href" target="_blank" rel="noopener noreferrer" :aria-label="t('externalCard.openAria', { title: item.title })">
 				<span>{{ item.ctaLabel }}</span>
 				<span aria-hidden="true">&#8594;</span>
 			</a>
@@ -24,6 +24,9 @@
 <script setup>
 	import VanillaTilt from 'vanilla-tilt'
 	import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
+	import { useI18n } from 'vue-i18n'
+
+	const { t } = useI18n()
 
 	const props = defineProps({
 		item: {

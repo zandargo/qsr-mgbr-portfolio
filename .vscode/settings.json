@@ -1,4 +1,13 @@
 {
   "editor.bracketPairColorization.enabled": true,
-  "editor.guides.bracketPairs": true
+  "editor.guides.bracketPairs": true,
+  "i18n-ally.enabledFrameworks": [
+    "vue"
+  ],
+  "i18n-ally.localesPaths": [
+    "src/i18n"
+  ],
+  "i18n-ally.keystyle": "nested",
+  "i18n-ally.namespace": true,
+  "i18n-ally.pathMatcher": "{locale}/index.json"
 }

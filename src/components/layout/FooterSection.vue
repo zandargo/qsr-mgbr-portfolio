@@ -8,15 +8,15 @@
 				</div>
 
 				<div class="footer-copy">
-					<p class="footer-kicker text-mono">Designed and developed by</p>
-					<p class="text-display footer-title">Madson Germano</p>
-					<p class="footer-meta">Mechanical Engineer</p>
-					<p class="footer-meta">& Frontend Developer</p>
-					<p class="footer-stack text-mono">Vue + Quasar + Anime.js</p>
+					<p class="footer-kicker text-mono">{{ t('footer.kicker') }}</p>
+					<p class="text-display footer-title">{{ t('footer.name') }}</p>
+					<p class="footer-meta">{{ t('footer.role1') }}</p>
+					<p class="footer-meta">{{ t('footer.role2') }}</p>
+					<p class="footer-stack text-mono">{{ t('footer.stack') }}</p>
 				</div>
 			</div>
 
-			<p class="footer-copyright text-mono">&copy; {{ currentYear }}</p>
+			<p class="footer-copyright text-mono">&copy; {{ currentYear }} {{ t('footer.rights') }}</p>
 		</div>
 	</footer>
 </template>
@@ -24,6 +24,9 @@
 <script setup>
 	import { animate } from 'animejs'
 	import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
+	import { useI18n } from 'vue-i18n'
+
+	const { t } = useI18n()
 
 	const logoRef = ref(null)
 	const currentYear = computed(() => new Date().getFullYear())

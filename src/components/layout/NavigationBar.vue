@@ -1,26 +1,37 @@
 <template>
 	<header class="nav-shell">
 		<nav class="nav-inner section-container glass-panel" aria-label="Primary navigation">
-			<a href="#hero" class="brand text-display" @click.prevent="handleNavAction('hero')">MGBR</a>
+			<a href="#hero" class="brand text-display" @click.prevent="handleNavAction('hero')">{{ t('nav.brand') }}</a>
 
 			<div class="desktop-nav-wrap">
-				<ul ref="desktopNavRef" class="nav-links nav-links--desktop">
-					<li v-for="item in navItems" :key="item.id">
-						<a :href="`#${item.id}`" :data-section="item.id" :class="{ 'is-active': activeSection === item.id }" @click.prevent="handleNavAction(item.id)">
-							{{ item.label }}
-						</a>
-					</li>
-				</ul>
-				<span class="active-underline" :style="{
-					transform: `translateX(${underlineState.x}px)`,
-					width: `${underlineState.width}px`,
-					opacity: underlineState.opacity
-				}" />
+				<div class="desktop-nav-main">
+					<ul ref="desktopNavRef" class="nav-links nav-links--desktop">
+						<li v-for="item in navItems" :key="item.id">
+							<a :href="`#${item.id}`" :data-section="item.id" :class="{ 'is-active': activeSection === item.id }" @click.prevent="handleNavAction(item.id)">
+								{{ item.label }}
+							</a>
+						</li>
+					</ul>
+					<span class="active-underline" :style="{
+						transform: `translateX(${underlineState.x}px)`,
+						width: `${underlineState.width}px`,
+						opacity: underlineState.opacity
+					}" />
+				</div>
+
+				<label class="locale-picker" :aria-label="t('nav.language')">
+					<span class="sr-only">{{ t('nav.language') }}</span>
+					<select v-model="selectedLocale" class="locale-select">
+						<option v-for="option in localeOptions" :key="option.code" :value="option.code">
+							{{ option.label }}
+						</option>
+					</select>
+				</label>
 			</div>
 
 			<button ref="menuButtonRef" class="menu-toggle" type="button" :aria-expanded="isMenuOpen ? 'true' : 'false'" aria-controls="mobile-nav-overlay" @click="toggleMenu">
-				<span aria-hidden="true">{{ isMenuOpen ? 'Close' : 'Menu' }}</span>
-				<span class="sr-only">Toggle navigation menu</span>
+				<span aria-hidden="true">{{ isMenuOpen ? t('nav.close') : t('nav.menu') }}</span>
+				<span class="sr-only">{{ t('nav.toggle') }}</span>
 			</button>
 		</nav>
 
@@ -33,6 +44,15 @@
 						</a>
 					</li>
 				</ul>
+
+				<label class="locale-picker locale-picker--mobile" :aria-label="t('nav.language')">
+					<span>{{ t('nav.language') }}</span>
+					<select v-model="selectedLocale" class="locale-select locale-select--mobile">
+						<option v-for="option in localeOptions" :key="option.code" :value="option.code">
+							{{ option.label }}
+						</option>
+					</select>
+				</label>
 			</div>
 		</transition>
 	</header>
@@ -40,17 +60,41 @@
 
 <script setup>
 	import { animate } from 'animejs'
-	import { nextTick, onMounted, onUnmounted, reactive, ref, watch } from 'vue'
+	import { computed, nextTick, onMounted, onUnmounted, reactive, ref, watch } from 'vue'
+	import { useI18n } from 'vue-i18n'
 	import { useLenis } from '../../composables/useLenis'
 
-	const navItems = [
-		{ id: 'biography', label: 'Biography' },
-		{ id: 'soft-skills', label: 'Skills' },
-		{ id: 'projects', label: 'Projects' },
-		{ id: 'experience', label: 'Experience' },
-		{ id: 'links', label: 'Links' },
-		{ id: 'contact', label: 'Contact' }
-	]
+	const LOCALE_STORAGE_KEY = 'qsr-locale'
+	const supportedLocales = ['en-US', 'pt-BR']
+	const { t, locale } = useI18n()
+
+	const navItems = computed(() => [
+		{ id: 'biography', label: t('nav.biography') },
+		{ id: 'soft-skills', label: t('nav.skills') },
+		{ id: 'projects', label: t('nav.projects') },
+		{ id: 'experience', label: t('nav.experience') },
+		{ id: 'links', label: t('nav.links') },
+		{ id: 'contact', label: t('nav.contact') }
+	])
+
+	const localeOptions = computed(() => [
+		{ code: 'en-US', label: t('locales.en-US') },
+		{ code: 'pt-BR', label: t('locales.pt-BR') }
+	])
+
+	const selectedLocale = computed({
+		get: () => locale.value,
+		set: (nextLocale) => {
+			if (!supportedLocales.includes(nextLocale)) {
+				return
+			}
+
+			locale.value = nextLocale
+			if (typeof window !== 'undefined') {
+				window.localStorage.setItem(LOCALE_STORAGE_KEY, nextLocale)
+			}
+		}
+	})
 
 	const { scrollTo } = useLenis()
 
@@ -261,8 +305,14 @@
 	}
 
 	.desktop-nav-wrap {
-		position: relative;
+		display: flex;
+		align-items: center;
+		gap: var(--space-sm);
 		justify-self: end;
+	}
+
+	.desktop-nav-main {
+		position: relative;
 	}
 
 	.nav-links {
@@ -319,6 +369,30 @@
 		cursor: pointer;
 	}
 
+	.locale-picker {
+		display: inline-flex;
+		align-items: center;
+	}
+
+	.locale-select {
+		min-width: 8.4rem;
+		border: 1px solid rgba(125, 255, 202, 0.24);
+		border-radius: 999px;
+		padding: 0.3rem 0.72rem;
+		background: rgba(10, 16, 13, 0.85);
+		color: var(--text);
+		font-family: var(--font-mono);
+		font-size: 0.72rem;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		outline: none;
+	}
+
+	.locale-select:focus-visible {
+		outline: 2px solid var(--primary-soft);
+		outline-offset: 2px;
+	}
+
 	.menu-toggle:focus-visible,
 	.nav-links a:focus-visible,
 	.brand:focus-visible {
@@ -345,6 +419,20 @@
 		display: grid;
 		gap: var(--space-md);
 		justify-items: center;
+	}
+
+	.locale-picker--mobile {
+		margin-top: var(--space-lg);
+		gap: var(--space-sm);
+		font-family: var(--font-mono);
+		font-size: 0.78rem;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: var(--text-muted);
+	}
+
+	.locale-select--mobile {
+		min-width: 11rem;
 	}
 
 	.nav-links--mobile a {

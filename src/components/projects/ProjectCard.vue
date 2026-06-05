@@ -1,5 +1,5 @@
 <template>
-	<article ref="cardRef" class="project-card glass-panel" tabindex="0" :aria-label="`${project.title} project card`">
+	<article ref="cardRef" class="project-card glass-panel" tabindex="0" :aria-label="t('projectCard.cardAria', { title: project.title })">
 		<div class="project-card__media" :style="mediaStyle">
 			<div class="project-card__reflection" aria-hidden="true" />
 			<p class="project-card__code text-mono">{{ project.code }}</p>
@@ -9,14 +9,14 @@
 			<h3 class="project-card__title text-display">{{ project.title }}</h3>
 			<p class="project-card__summary">{{ project.summary }}</p>
 
-			<ul class="project-card__tags" :aria-label="`${project.title} technologies`">
+			<ul class="project-card__tags" :aria-label="t('projectCard.technologiesAria', { title: project.title })">
 				<li v-for="tag in project.tags" :key="tag" class="project-card__tag text-mono">{{ tag }}</li>
 			</ul>
 
 			<div class="project-card__actions">
-				<button type="button" class="project-card__link" @click="emit('open-project', project)">Details</button>
-				<a class="project-card__link" :href="project.github" target="_blank" rel="noreferrer">GitHub</a>
-				<a class="project-card__link project-card__link--primary" :href="project.demo" target="_blank" rel="noreferrer">Live Demo</a>
+				<button type="button" class="project-card__link" @click="emit('open-project', project)">{{ t('projectCard.details') }}</button>
+				<a class="project-card__link" :href="project.github" target="_blank" rel="noreferrer">{{ t('projectCard.github') }}</a>
+				<a class="project-card__link project-card__link--primary" :href="project.demo" target="_blank" rel="noreferrer">{{ t('projectCard.liveDemo') }}</a>
 			</div>
 		</div>
 	</article>
@@ -25,6 +25,9 @@
 <script setup>
 	import VanillaTilt from 'vanilla-tilt'
 	import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
+	import { useI18n } from 'vue-i18n'
+
+	const { t } = useI18n()
 
 	const emit = defineEmits(['open-project'])
 

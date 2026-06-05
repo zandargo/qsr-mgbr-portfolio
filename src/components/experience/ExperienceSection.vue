@@ -2,14 +2,14 @@
 	<div ref="sectionRef" class="section-container experience-section">
 		<article class="experience-shell glass-panel glow-border">
 			<header ref="headerRef" class="experience-header">
-				<p class="section-kicker text-mono">Experience</p>
-				<h2 id="experience-title" class="text-display">A connected track record of engineering and software delivery.</h2>
+				<p class="section-kicker text-mono">{{ t('experience.kicker') }}</p>
+				<h2 id="experience-title" class="text-display">{{ t('experience.title') }}</h2>
 				<p class="experience-header__description">
-					Each role added a stronger layer of systems thinking, from CAD execution to automation and product-grade frontend work.
+					{{ t('experience.description') }}
 				</p>
 			</header>
 
-			<div class="experience-timeline" aria-label="Professional experience timeline">
+			<div class="experience-timeline" :aria-label="t('experience.timelineAria')">
 				<div class="experience-rail" aria-hidden="true">
 					<div ref="lineFillRef" class="experience-rail__fill" />
 				</div>
@@ -24,41 +24,44 @@
 
 <script setup>
 	import { animate } from 'animejs'
-	import { onBeforeUnmount, onMounted, ref } from 'vue'
+	import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
+	import { useI18n } from 'vue-i18n'
 	import { useIntersectionReveal } from '../../composables/useIntersectionReveal'
 	import ExperienceCard from './ExperienceCard.vue'
+
+	const { t } = useI18n()
 
 	const sectionRef = ref(null)
 	const headerRef = ref(null)
 	const lineFillRef = ref(null)
 	const cardRefs = ref([])
 
-	const experienceItems = [
+	const experienceItems = computed(() => [
 		{
-			year: '2010',
-			company: 'Invento',
-			role: 'CAD Designer',
-			summary: 'Built accurate technical documentation and optimized drawing quality for manufacturing and installation workflows.'
+			year: t('experience.items.0.year'),
+			company: t('experience.items.0.company'),
+			role: t('experience.items.0.role'),
+			summary: t('experience.items.0.summary')
 		},
 		{
-			year: '2012',
-			company: 'EKIPAR',
-			role: 'Mechanical Designer',
-			summary: 'Designed machines and assemblies with emphasis on manufacturability, reliability, and engineering clarity.'
+			year: t('experience.items.1.year'),
+			company: t('experience.items.1.company'),
+			role: t('experience.items.1.role'),
+			summary: t('experience.items.1.summary')
 		},
 		{
-			year: '2017',
-			company: 'Sangati Berga',
-			role: 'Innovation Agent',
-			summary: 'Introduced automation routines and data-driven processes to reduce repetitive engineering operations.'
+			year: t('experience.items.2.year'),
+			company: t('experience.items.2.company'),
+			role: t('experience.items.2.role'),
+			summary: t('experience.items.2.summary')
 		},
 		{
-			year: '2022',
-			company: 'Freelance · Upwork Top Rated Plus',
-			role: 'Automation and Frontend Specialist',
-			summary: 'Delivered custom software, CAD automation, and frontend systems for global clients in production contexts.'
+			year: t('experience.items.3.year'),
+			company: t('experience.items.3.company'),
+			role: t('experience.items.3.role'),
+			summary: t('experience.items.3.summary')
 		}
-	]
+	])
 
 	const lineState = { value: 0 }
 	let lineAnimation = null
@@ -114,7 +117,7 @@
 				ease: 'outExpo'
 			})
 
-			const progress = (payload.index + 1) / experienceItems.length
+			const progress = (payload.index + 1) / experienceItems.value.length
 			setLineProgress(progress)
 		}
 	})

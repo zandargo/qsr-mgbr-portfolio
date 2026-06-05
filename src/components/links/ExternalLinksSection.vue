@@ -2,17 +2,17 @@
 	<div class="section-container external-links-section">
 		<article class="links-shell glass-panel glow-border">
 			<header class="links-header">
-				<p class="section-kicker text-mono">External Links</p>
-				<h2 id="links-title" class="text-display">Professional presence and software products in one command center.</h2>
+				<p class="section-kicker text-mono">{{ t('linksSection.kicker') }}</p>
+				<h2 id="links-title" class="text-display">{{ t('linksSection.title') }}</h2>
 				<p class="links-header__description">
-					Explore profiles, credibility signals, and product systems developed for engineering and operations teams.
+					{{ t('linksSection.description') }}
 				</p>
 			</header>
 
 			<section class="links-group" aria-labelledby="profiles-title">
 				<div class="links-group__heading">
-					<p class="links-group__kicker text-mono">Profiles</p>
-					<h3 id="profiles-title" class="links-group__title text-display">Professional Channels</h3>
+					<p class="links-group__kicker text-mono">{{ t('linksSection.profiles.kicker') }}</p>
+					<h3 id="profiles-title" class="links-group__title text-display">{{ t('linksSection.profiles.title') }}</h3>
 				</div>
 
 				<div class="links-grid links-grid--profiles">
@@ -22,8 +22,8 @@
 
 			<section class="links-group" aria-labelledby="products-title">
 				<div class="links-group__heading">
-					<p class="links-group__kicker text-mono">Products</p>
-					<h3 id="products-title" class="links-group__title text-display">Developed Applications</h3>
+					<p class="links-group__kicker text-mono">{{ t('linksSection.products.kicker') }}</p>
+					<h3 id="products-title" class="links-group__title text-display">{{ t('linksSection.products.title') }}</h3>
 				</div>
 
 				<div class="links-grid links-grid--products">
@@ -35,93 +35,97 @@
 </template>
 
 <script setup>
+	import { computed } from 'vue'
+	import { useI18n } from 'vue-i18n'
 	import ExternalLinkCard from './ExternalLinkCard.vue'
 
-	const profileCards = [
+	const { t } = useI18n()
+
+	const profileCards = computed(() => [
 		{
-			title: 'GitHub',
-			description: 'Code repositories, frontend experiments, and automation proof-of-concepts shipped across engineering contexts.',
-			badge: 'Open Source',
+			title: t('linksSection.cards.github.title'),
+			description: t('linksSection.cards.github.description'),
+			badge: t('linksSection.cards.github.badge'),
 			tags: ['Vue', 'Automation', 'PWA'],
-			ctaLabel: 'Visit GitHub',
+			ctaLabel: t('linksSection.cards.github.ctaLabel'),
 			href: 'https://github.com/zandargo',
 			mediaBackground:
 				'linear-gradient(135deg, rgba(12, 16, 14, 0.9), rgba(0, 255, 136, 0.18)), radial-gradient(circle at 18% 22%, rgba(125, 255, 202, 0.28), transparent 42%)'
 		},
 		{
-			title: 'LinkedIn',
-			description: 'Career history, project outcomes, and technical leadership highlights across mechanical and digital product work.',
-			badge: 'Network',
+			title: t('linksSection.cards.linkedin.title'),
+			description: t('linksSection.cards.linkedin.description'),
+			badge: t('linksSection.cards.linkedin.badge'),
 			tags: ['Leadership', 'Projects', 'Industry'],
-			ctaLabel: 'Open LinkedIn',
+			ctaLabel: t('linksSection.cards.linkedin.ctaLabel'),
 			href: 'https://linkedin.com/in/madson-germano',
 			mediaBackground:
 				'linear-gradient(138deg, rgba(16, 22, 19, 0.88), rgba(125, 255, 202, 0.2)), radial-gradient(circle at 84% 18%, rgba(0, 255, 136, 0.26), transparent 45%)'
 		},
 		{
-			title: 'Upwork',
-			description: 'Freelance delivery track record with repeat clients, automation wins, and high-quality technical communication.',
-			badge: 'Top Rated Plus',
+			title: t('linksSection.cards.upwork.title'),
+			description: t('linksSection.cards.upwork.description'),
+			badge: t('linksSection.cards.upwork.badge'),
 			tags: ['Freelance', 'CAD', 'Automation'],
-			ctaLabel: 'View Upwork',
+			ctaLabel: t('linksSection.cards.upwork.ctaLabel'),
 			href: 'https://www.upwork.com',
 			mediaBackground:
 				'linear-gradient(150deg, rgba(8, 14, 11, 0.9), rgba(0, 255, 136, 0.16)), radial-gradient(circle at 50% 78%, rgba(125, 255, 202, 0.22), transparent 52%)'
 		},
 		{
-			title: 'Resume PDF',
-			description: 'Downloadable profile with engineering depth, software architecture experience, and measurable project results.',
-			badge: 'Download',
+			title: t('linksSection.cards.resume.title'),
+			description: t('linksSection.cards.resume.description'),
+			badge: t('linksSection.cards.resume.badge'),
 			tags: ['Experience', 'Skills', 'Results'],
-			ctaLabel: 'Open Resume',
+			ctaLabel: t('linksSection.cards.resume.ctaLabel'),
 			href: 'https://github.com/zandargo/qsr-mgbr-portfolio',
 			mediaBackground:
 				'linear-gradient(142deg, rgba(14, 18, 16, 0.92), rgba(125, 255, 202, 0.22)), radial-gradient(circle at 24% 82%, rgba(0, 255, 136, 0.2), transparent 48%)'
 		}
-	]
+	])
 
-	const productCards = [
+	const productCards = computed(() => [
 		{
-			title: 'PDLM',
-			description: 'Product Lifecycle Management platform with approval routing, document controls, and release traceability for engineering teams.',
-			badge: 'SaaS System',
+			title: t('linksSection.productsCards.pdlm.title'),
+			description: t('linksSection.productsCards.pdlm.description'),
+			badge: t('linksSection.productsCards.pdlm.badge'),
 			tags: ['PLM', 'Vue', 'Workflow'],
-			ctaLabel: 'View Project',
+			ctaLabel: t('linksSection.productsCards.pdlm.ctaLabel'),
 			href: 'https://github.com/zandargo/qsr-mgbr-portfolio',
 			mediaBackground:
 				'linear-gradient(132deg, rgba(10, 14, 12, 0.9), rgba(0, 255, 136, 0.23)), radial-gradient(circle at 18% 18%, rgba(125, 255, 202, 0.3), transparent 40%)'
 		},
 		{
-			title: 'CAD Automation Toolkit',
-			description: 'Reusable automation command packs that shorten repetitive modeling operations and standardize engineering deliverables.',
-			badge: 'Automation Suite',
+			title: t('linksSection.productsCards.cadtk.title'),
+			description: t('linksSection.productsCards.cadtk.description'),
+			badge: t('linksSection.productsCards.cadtk.badge'),
 			tags: ['Python', 'VBA', 'SolidWorks'],
-			ctaLabel: 'View Project',
+			ctaLabel: t('linksSection.productsCards.cadtk.ctaLabel'),
 			href: 'https://github.com/zandargo/qsr-mgbr-portfolio',
 			mediaBackground:
 				'linear-gradient(136deg, rgba(9, 14, 12, 0.9), rgba(125, 255, 202, 0.2)), radial-gradient(circle at 78% 20%, rgba(0, 255, 136, 0.24), transparent 42%)'
 		},
 		{
-			title: 'Excel Engineering Suite',
-			description: 'Operational calculators and reporting workflows for capacity, cost, and delivery planning inside manufacturing routines.',
-			badge: 'Ops Platform',
+			title: t('linksSection.productsCards.xlsys.title'),
+			description: t('linksSection.productsCards.xlsys.description'),
+			badge: t('linksSection.productsCards.xlsys.badge'),
 			tags: ['Excel', 'Data Models', 'Reports'],
-			ctaLabel: 'View Project',
+			ctaLabel: t('linksSection.productsCards.xlsys.ctaLabel'),
 			href: 'https://github.com/zandargo/qsr-mgbr-portfolio',
 			mediaBackground:
 				'linear-gradient(150deg, rgba(11, 15, 13, 0.92), rgba(0, 255, 136, 0.19)), radial-gradient(circle at 20% 84%, rgba(125, 255, 202, 0.24), transparent 48%)'
 		},
 		{
-			title: 'Internal Manufacturing Tools',
-			description: 'Lean internal apps for data entry, process checks, and production monitoring tailored to shop-floor constraints.',
-			badge: 'Internal Stack',
+			title: t('linksSection.productsCards.internalTools.title'),
+			description: t('linksSection.productsCards.internalTools.description'),
+			badge: t('linksSection.productsCards.internalTools.badge'),
 			tags: ['Dashboards', 'QA', 'Workflows'],
-			ctaLabel: 'View Project',
+			ctaLabel: t('linksSection.productsCards.internalTools.ctaLabel'),
 			href: 'https://github.com/zandargo/qsr-mgbr-portfolio',
 			mediaBackground:
 				'linear-gradient(148deg, rgba(12, 16, 14, 0.9), rgba(125, 255, 202, 0.22)), radial-gradient(circle at 80% 78%, rgba(0, 255, 136, 0.24), transparent 50%)'
 		}
-	]
+	])
 </script>
 
 <style scoped>
@@ -196,6 +200,7 @@
 	}
 
 	@media (max-width: 980px) {
+
 		.links-grid--profiles,
 		.links-grid--products {
 			grid-template-columns: 1fr;

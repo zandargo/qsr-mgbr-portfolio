@@ -2,22 +2,22 @@
 	<div ref="sectionRef" class="section-container technical-skills-section">
 		<article class="technical-shell glass-panel glow-border">
 			<header ref="headerRef" class="technical-header">
-				<p class="section-kicker text-mono">Technical Skills</p>
-				<h2 id="technical-skills-title" class="text-display">Three domains. One delivery engine.</h2>
+				<p class="section-kicker text-mono">{{ t('technicalSkills.kicker') }}</p>
+				<h2 id="technical-skills-title" class="text-display">{{ t('technicalSkills.title') }}</h2>
 				<p class="technical-header__description">
-					From frontend systems to mechanical design and automation pipelines, these are the technical layers I ship with daily.
+					{{ t('technicalSkills.description') }}
 				</p>
 			</header>
 
 			<div class="technical-groups">
 				<section v-for="group in skillGroups" :key="group.key" class="group-block">
 					<h3 class="group-title text-display">{{ group.title }}</h3>
-					<ul class="skills-row" :aria-label="`${group.title} skills`">
+					<ul class="skills-row" :aria-label="t('technicalSkills.groupAria', { group: group.title })">
 						<li v-for="skill in group.skills" :key="`${group.key}-${skill.name}`" :ref="(element) => setCardRef(element, `${group.key}-${skill.name}`)" class="technical-skill-card glass-panel" tabindex="0">
 							<SkillGauge :value="skill.value" :active="gaugesActive" />
 							<div class="technical-skill-card__copy">
 								<h4 class="text-display">{{ skill.name }}</h4>
-								<p class="text-mono technical-skill-card__meta">{{ skill.years }} years experience</p>
+								<p class="text-mono technical-skill-card__meta">{{ t('technicalSkills.yearsExperience', { years: skill.years }) }}</p>
 								<p class="technical-skill-card__details">{{ skill.context }}</p>
 							</div>
 						</li>
@@ -30,50 +30,53 @@
 
 <script setup>
 	import { animate } from 'animejs'
-	import { onBeforeUnmount, onMounted, ref } from 'vue'
+	import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
+	import { useI18n } from 'vue-i18n'
 	import { useIntersectionReveal } from '../../composables/useIntersectionReveal'
 	import SkillGauge from './SkillGauge.vue'
+
+	const { t } = useI18n()
 
 	const sectionRef = ref(null)
 	const headerRef = ref(null)
 	const gaugesActive = ref(false)
 	const cardRefMap = new Map()
 
-	const skillGroups = [
+	const skillGroups = computed(() => [
 		{
 			key: 'frontend',
-			title: 'Frontend',
+			title: t('technicalSkills.groups.frontend.title'),
 			skills: [
-				{ name: 'Vue.js', value: 95, years: 6, context: 'Architecture for production SPAs, reusable components, and scalable composition patterns.' },
-				{ name: 'Quasar', value: 90, years: 5, context: 'High-speed UI delivery with responsive design systems and custom theming.' },
-				{ name: 'JavaScript', value: 94, years: 7, context: 'Complex UI behavior, data orchestration, and interaction-heavy experiences.' },
-				{ name: 'Electron', value: 82, years: 3, context: 'Desktop apps connecting engineering workflows with modern interfaces.' },
-				{ name: 'HTML/CSS', value: 96, years: 8, context: 'Semantic layout systems and polished interaction details for robust UI foundations.' }
+				{ name: 'Vue.js', value: 95, years: 6, context: t('technicalSkills.groups.frontend.skills.vue') },
+				{ name: 'Quasar', value: 90, years: 5, context: t('technicalSkills.groups.frontend.skills.quasar') },
+				{ name: 'JavaScript', value: 94, years: 7, context: t('technicalSkills.groups.frontend.skills.javascript') },
+				{ name: 'Electron', value: 82, years: 3, context: t('technicalSkills.groups.frontend.skills.electron') },
+				{ name: 'HTML/CSS', value: 96, years: 8, context: t('technicalSkills.groups.frontend.skills.htmlcss') }
 			]
 		},
 		{
 			key: 'engineering',
-			title: 'Engineering',
+			title: t('technicalSkills.groups.engineering.title'),
 			skills: [
-				{ name: 'SolidWorks', value: 96, years: 10, context: 'Assemblies, parametric modeling, and manufacturing-ready technical outputs.' },
-				{ name: 'AutoCAD', value: 90, years: 9, context: '2D detailing, layout standardization, and production documentation.' },
-				{ name: 'SolidEdge', value: 80, years: 4, context: 'Mechanical part design and interoperability across engineering stacks.' },
-				{ name: 'BIM', value: 74, years: 3, context: 'Structured model collaboration and project-aware documentation flows.' },
-				{ name: '3D Printing', value: 88, years: 5, context: 'Prototype-to-iteration cycles for faster validation and design decisions.' }
+				{ name: 'SolidWorks', value: 96, years: 10, context: t('technicalSkills.groups.engineering.skills.solidworks') },
+				{ name: 'AutoCAD', value: 90, years: 9, context: t('technicalSkills.groups.engineering.skills.autocad') },
+				{ name: 'SolidEdge', value: 80, years: 4, context: t('technicalSkills.groups.engineering.skills.solidedge') },
+				{ name: 'BIM', value: 74, years: 3, context: t('technicalSkills.groups.engineering.skills.bim') },
+				{ name: '3D Printing', value: 88, years: 5, context: t('technicalSkills.groups.engineering.skills.printing3d') }
 			]
 		},
 		{
 			key: 'automation',
-			title: 'Automation',
+			title: t('technicalSkills.groups.automation.title'),
 			skills: [
-				{ name: 'VBA', value: 93, years: 8, context: 'Automated CAD and spreadsheet routines to remove repetitive engineering tasks.' },
-				{ name: 'Python', value: 87, years: 5, context: 'Data processing, scriptable tooling, and API-backed engineering utilities.' },
-				{ name: 'REST APIs', value: 84, years: 4, context: 'Service integrations for product data sync, dashboards, and custom tools.' },
-				{ name: 'Excel', value: 94, years: 10, context: 'Advanced formulas, process templates, and operational reporting systems.' },
-				{ name: 'Design Automation', value: 91, years: 6, context: 'Workflow-first automation that accelerates delivery without sacrificing quality.' }
+				{ name: 'VBA', value: 93, years: 8, context: t('technicalSkills.groups.automation.skills.vba') },
+				{ name: 'Python', value: 87, years: 5, context: t('technicalSkills.groups.automation.skills.python') },
+				{ name: 'REST APIs', value: 84, years: 4, context: t('technicalSkills.groups.automation.skills.rest') },
+				{ name: 'Excel', value: 94, years: 10, context: t('technicalSkills.groups.automation.skills.excel') },
+				{ name: 'Design Automation', value: 91, years: 6, context: t('technicalSkills.groups.automation.skills.designAutomation') }
 			]
 		}
-	]
+	])
 
 	const setCardRef = (element, key) => {
 		if (!element) {

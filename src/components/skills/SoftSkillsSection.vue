@@ -2,10 +2,10 @@
 	<div ref="sectionRef" class="section-container soft-skills-section">
 		<article class="skills-shell glass-panel glow-border">
 			<header class="skills-header">
-				<p class="section-kicker text-mono">Soft Skills</p>
-				<h2 id="soft-skills-title" class="text-display">Human skills engineered for high-complexity delivery.</h2>
+				<p class="section-kicker text-mono">{{ t('softSkills.kicker') }}</p>
+				<h2 id="soft-skills-title" class="text-display">{{ t('softSkills.title') }}</h2>
 				<p class="skills-header__description">
-					Technical systems work best when communication, leadership, and adaptability stay just as sharp as tooling.
+					{{ t('softSkills.description') }}
 				</p>
 			</header>
 
@@ -14,7 +14,7 @@
 					<RadarChart />
 				</div>
 
-				<ul class="traits-cloud" aria-label="Supporting soft skill traits">
+				<ul class="traits-cloud" :aria-label="t('softSkills.traitsAria')">
 					<li v-for="(trait, index) in traits" :key="trait" :ref="(element) => setTraitRef(element, index)" class="trait-chip text-mono">
 						{{ trait }}
 					</li>
@@ -26,14 +26,26 @@
 
 <script setup>
 	import { animate } from 'animejs'
-	import { onBeforeUnmount, onMounted, ref } from 'vue'
+	import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
+	import { useI18n } from 'vue-i18n'
 	import { useIntersectionReveal } from '../../composables/useIntersectionReveal'
 	import RadarChart from './RadarChart.vue'
+
+	const { t } = useI18n()
 
 	const sectionRef = ref(null)
 	const traitRefs = ref([])
 
-	const traits = ['Leadership', 'Critical Thinking', 'Innovation', 'Ownership', 'Fast Learner', 'Mentoring', 'Adaptability', 'System Thinking']
+	const traits = computed(() => [
+		t('softSkills.traits.0'),
+		t('softSkills.traits.1'),
+		t('softSkills.traits.2'),
+		t('softSkills.traits.3'),
+		t('softSkills.traits.4'),
+		t('softSkills.traits.5'),
+		t('softSkills.traits.6'),
+		t('softSkills.traits.7')
+	])
 
 	const setTraitRef = (element, index) => {
 		if (!element) {

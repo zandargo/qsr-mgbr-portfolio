@@ -1,28 +1,20 @@
 <template>
 	<Teleport to="body">
-		<div
-			v-if="isRendered"
-			ref="overlayRef"
-			class="project-modal"
-			role="dialog"
-			aria-modal="true"
-			:aria-labelledby="project ? `project-modal-title-${project.code}` : undefined"
-			@click.self="closeModal"
-		>
+		<div v-if="isRendered" ref="overlayRef" class="project-modal" role="dialog" aria-modal="true" :aria-labelledby="project ? `project-modal-title-${project.code}` : undefined" @click.self="closeModal">
 			<article ref="panelRef" class="project-modal__panel glass-panel glow-border">
 				<header class="project-modal__header">
 					<div>
-						<p class="project-modal__kicker text-mono">Project Deep Dive</p>
+						<p class="project-modal__kicker text-mono">{{ t('projectModal.kicker') }}</p>
 						<h3 v-if="project" :id="`project-modal-title-${project.code}`" class="project-modal__title text-display">{{ project.title }}</h3>
 					</div>
-					<button ref="closeButtonRef" type="button" class="project-modal__close" @click="closeModal" aria-label="Close project details">
-						Close
+					<button ref="closeButtonRef" type="button" class="project-modal__close" @click="closeModal" :aria-label="t('projectModal.closeAria')">
+						{{ t('projectModal.close') }}
 					</button>
 				</header>
 
 				<div v-if="project" class="project-modal__body">
-					<section class="project-modal__block" aria-label="Project screenshots">
-						<h4 class="project-modal__block-title text-mono">Screenshots</h4>
+					<section class="project-modal__block" :aria-label="t('projectModal.sections.screenshotsAria')">
+						<h4 class="project-modal__block-title text-mono">{{ t('projectModal.sections.screenshots') }}</h4>
 						<div class="project-modal__shots">
 							<article v-for="shot in project.screenshots ?? []" :key="`${project.code}-${shot.label}`" class="project-modal__shot">
 								<div class="project-modal__shot-image" :style="{ background: project.thumbnail }" aria-hidden="true" />
@@ -34,37 +26,37 @@
 						</div>
 					</section>
 
-					<section class="project-modal__block" aria-label="Project overview">
-						<h4 class="project-modal__block-title text-mono">Overview</h4>
+					<section class="project-modal__block" :aria-label="t('projectModal.sections.overviewAria')">
+						<h4 class="project-modal__block-title text-mono">{{ t('projectModal.sections.overview') }}</h4>
 						<p class="project-modal__paragraph">{{ project.overview }}</p>
 					</section>
 
-					<section class="project-modal__block" aria-label="Project architecture">
-						<h4 class="project-modal__block-title text-mono">Architecture</h4>
+					<section class="project-modal__block" :aria-label="t('projectModal.sections.architectureAria')">
+						<h4 class="project-modal__block-title text-mono">{{ t('projectModal.sections.architecture') }}</h4>
 						<ul class="project-modal__list">
 							<li v-for="item in project.architecture ?? []" :key="`${project.code}-${item}`">{{ item }}</li>
 						</ul>
 					</section>
 
-					<section class="project-modal__block" aria-label="Project technologies">
-						<h4 class="project-modal__block-title text-mono">Technologies</h4>
+					<section class="project-modal__block" :aria-label="t('projectModal.sections.technologiesAria')">
+						<h4 class="project-modal__block-title text-mono">{{ t('projectModal.sections.technologies') }}</h4>
 						<ul class="project-modal__chip-list">
 							<li v-for="tag in project.tags" :key="`${project.code}-${tag}`" class="project-modal__chip text-mono">{{ tag }}</li>
 						</ul>
 					</section>
 
-					<section class="project-modal__block" aria-label="Project challenges">
-						<h4 class="project-modal__block-title text-mono">Challenges</h4>
+					<section class="project-modal__block" :aria-label="t('projectModal.sections.challengesAria')">
+						<h4 class="project-modal__block-title text-mono">{{ t('projectModal.sections.challenges') }}</h4>
 						<ul class="project-modal__list">
 							<li v-for="challenge in project.challenges ?? []" :key="`${project.code}-${challenge}`">{{ challenge }}</li>
 						</ul>
 					</section>
 
-					<section class="project-modal__block" aria-label="Project links">
-						<h4 class="project-modal__block-title text-mono">Links</h4>
+					<section class="project-modal__block" :aria-label="t('projectModal.sections.linksAria')">
+						<h4 class="project-modal__block-title text-mono">{{ t('projectModal.sections.links') }}</h4>
 						<div class="project-modal__actions">
-							<a class="project-modal__action" :href="project.github" target="_blank" rel="noreferrer">GitHub</a>
-							<a class="project-modal__action project-modal__action--primary" :href="project.demo" target="_blank" rel="noreferrer">Live Demo</a>
+							<a class="project-modal__action" :href="project.github" target="_blank" rel="noreferrer">{{ t('projectModal.github') }}</a>
+							<a class="project-modal__action project-modal__action--primary" :href="project.demo" target="_blank" rel="noreferrer">{{ t('projectModal.liveDemo') }}</a>
 						</div>
 					</section>
 				</div>
@@ -76,6 +68,9 @@
 <script setup>
 	import { animate } from 'animejs'
 	import { nextTick, onBeforeUnmount, ref, watch } from 'vue'
+	import { useI18n } from 'vue-i18n'
+
+	const { t } = useI18n()
 
 	const props = defineProps({
 		modelValue: {

@@ -2,49 +2,49 @@
 	<div ref="sectionRef" class="section-container contact-section">
 		<article class="contact-shell glass-panel glow-border">
 			<header ref="headerRef" class="contact-header">
-				<p class="section-kicker text-mono">Contact</p>
-				<h2 id="contact-title" class="text-display">Open a direct channel for freelance and product collaboration.</h2>
+				<p class="section-kicker text-mono">{{ t('contact.kicker') }}</p>
+				<h2 id="contact-title" class="text-display">{{ t('contact.title') }}</h2>
 				<p class="contact-header__description">
-					Terminal-inspired presence with clear availability, direct links, and rapid response context for engineering-focused projects.
+					{{ t('contact.description') }}
 				</p>
 			</header>
 
-			<section class="terminal-panel" aria-label="Contact terminal interface">
+			<section class="terminal-panel" :aria-label="t('contact.terminal.aria')">
 				<div class="terminal-panel__topbar" aria-hidden="true">
 					<span class="terminal-panel__dot terminal-panel__dot--close" />
 					<span class="terminal-panel__dot terminal-panel__dot--min" />
 					<span class="terminal-panel__dot terminal-panel__dot--max" />
-					<p class="terminal-panel__label text-mono">madson@signal-node:~</p>
+					<p class="terminal-panel__label text-mono">{{ t('contact.terminal.prompt') }}</p>
 				</div>
 
 				<div class="terminal-panel__body text-mono">
 					<p :ref="(element) => setLineRef(element, 0)" class="terminal-line terminal-line--command">
-						&gt; connect --target madson
+						&gt; {{ t('contact.terminal.command') }}
 					</p>
 					<p :ref="(element) => setLineRef(element, 1)" class="terminal-line terminal-line--muted">
-						&gt; loading profile...
+						&gt; {{ t('contact.terminal.loading') }}
 					</p>
 					<p :ref="(element) => setLineRef(element, 2)" class="terminal-line terminal-line--muted">
-						&gt; connection established.
+						&gt; {{ t('contact.terminal.connected') }}
 					</p>
 
 					<div :ref="(element) => setLineRef(element, 3)" class="terminal-block" role="status" aria-live="polite">
-						<p class="terminal-block__label">STATUS:</p>
-						<p class="terminal-block__value">AVAILABLE FOR FREELANCE</p>
+						<p class="terminal-block__label">{{ t('contact.terminal.statusLabel') }}</p>
+						<p class="terminal-block__value">{{ t('contact.terminal.statusValue') }}</p>
 					</div>
 
 					<div :ref="(element) => setLineRef(element, 4)" class="terminal-block">
-						<p class="terminal-block__label">EMAIL:</p>
+						<p class="terminal-block__label">{{ t('contact.terminal.emailLabel') }}</p>
 						<a class="terminal-link" href="mailto:madson.br@gmail.com">madson.br@gmail.com</a>
 					</div>
 
 					<div :ref="(element) => setLineRef(element, 5)" class="terminal-block">
-						<p class="terminal-block__label">GITHUB:</p>
+						<p class="terminal-block__label">{{ t('contact.terminal.githubLabel') }}</p>
 						<a class="terminal-link" href="https://github.com/zandargo" target="_blank" rel="noopener noreferrer">github.com/zandargo</a>
 					</div>
 
 					<div :ref="(element) => setLineRef(element, 6)" class="terminal-block">
-						<p class="terminal-block__label">LINKEDIN:</p>
+						<p class="terminal-block__label">{{ t('contact.terminal.linkedinLabel') }}</p>
 						<a class="terminal-link" href="https://linkedin.com/in/madson-germano" target="_blank" rel="noopener noreferrer">linkedin.com/in/madson-germano</a>
 					</div>
 
@@ -64,8 +64,11 @@
 
 <script setup>
 	import { animate } from 'animejs'
-	import { onBeforeUnmount, onMounted, ref } from 'vue'
+	import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
+	import { useI18n } from 'vue-i18n'
 	import { useIntersectionReveal } from '../../composables/useIntersectionReveal'
+
+	const { t } = useI18n()
 
 	const sectionRef = ref(null)
 	const headerRef = ref(null)
@@ -73,8 +76,13 @@
 	const lineRefs = ref([])
 	const hasRevealed = ref(false)
 
-	const systemMessages = ['compiling portfolio...', 'loading CAD modules...', 'synchronizing project data...', 'rendering assembly...']
-	const currentSystemMessage = ref(systemMessages[0])
+	const systemMessages = computed(() => [
+		t('contact.terminal.systemMessages.0'),
+		t('contact.terminal.systemMessages.1'),
+		t('contact.terminal.systemMessages.2'),
+		t('contact.terminal.systemMessages.3')
+	])
+	const currentSystemMessage = ref(systemMessages.value[0] ?? '')
 
 	let rotateTimer = null
 	let messageIndex = 0
@@ -104,8 +112,8 @@
 			duration: 180,
 			ease: 'inQuad',
 			onComplete: () => {
-				messageIndex = (messageIndex + 1) % systemMessages.length
-				currentSystemMessage.value = systemMessages[messageIndex]
+				messageIndex = (messageIndex + 1) % systemMessages.value.length
+				currentSystemMessage.value = systemMessages.value[messageIndex]
 				animate(messageRef.value, {
 					opacity: [0, 1],
 					translateY: [6, 0],
@@ -178,7 +186,24 @@
 			observe(sectionRef.value)
 		}
 
+		currentSystemMessage.value = systemMessages.value[0] ?? ''
 		queueSystemMessage()
+	})
+
+	watch(systemMessages, (nextMessages) => {
+		if (nextMessages.length === 0) {
+			currentSystemMessage.value = ''
+			messageIndex = 0
+			return
+		}
+
+		if (!nextMessages.includes(currentSystemMessage.value)) {
+			messageIndex = 0
+			currentSystemMessage.value = nextMessages[0]
+			return
+		}
+
+		messageIndex = nextMessages.indexOf(currentSystemMessage.value)
 	})
 
 	onBeforeUnmount(() => {
@@ -353,6 +378,7 @@
 	}
 
 	@keyframes blink-cursor {
+
 		0%,
 		45% {
 			opacity: 1;

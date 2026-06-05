@@ -3,8 +3,8 @@
     <div class="biography-shell">
       <article class="profile-panel glass-panel glow-border">
         <header class="profile-panel__header">
-          <p class="section-kicker text-mono">Biography</p>
-          <h2 id="biography-title" class="text-display">Engineering roots, product mindset, digital execution.</h2>
+          <p class="section-kicker text-mono">{{ t('biography.kicker') }}</p>
+          <h2 id="biography-title" class="text-display">{{ t('biography.title') }}</h2>
         </header>
 
         <div class="profile-media">
@@ -12,16 +12,15 @@
             <!-- <span class="profile-media__initials text-display">MG</span> -->
             <q-img src="/public/img/profile/Profile002.png" spinner-color="primary" spinner-size="82px" height="520px" fit="cover" position="50% 100%" />
           </div>
-          <p class="profile-media__caption text-mono">Mechanical Engineer · CAD Automation · Frontend Systems</p>
+          <p class="profile-media__caption text-mono">{{ t('biography.caption') }}</p>
         </div>
 
         <p class="profile-panel__description">
-          My path started in mechanical design and evolved into building digital tools that reduce friction in engineering teams.
-          Today, I blend industrial precision with modern frontend architecture to ship interfaces that feel reliable and fast.
+          {{ t('biography.description') }}
         </p>
       </article>
 
-      <div ref="timelineRef" class="timeline-panel" aria-label="Career timeline">
+      <div ref="timelineRef" class="timeline-panel" :aria-label="t('biography.timelineAria')">
         <div class="timeline-rail" aria-hidden="true">
           <div ref="timelineFillRef" class="timeline-rail__fill" />
         </div>
@@ -36,42 +35,46 @@
 
 <script setup>
   import { animate } from 'animejs'
+  import { computed } from 'vue'
   import { onBeforeUnmount, onMounted, ref } from 'vue'
+  import { useI18n } from 'vue-i18n'
   import { useIntersectionReveal } from '../../composables/useIntersectionReveal'
   import TimelineCard from './TimelineCard.vue'
 
-  const timelineItems = [
+  const { t } = useI18n()
+
+  const timelineItems = computed(() => [
     {
-      year: '2010',
-      role: 'CAD Designer',
-      company: 'Invento',
-      summary: 'Created production-ready drawing packages and standardized detailing workflows for faster approvals.'
+      year: t('biography.timeline.0.year'),
+      role: t('biography.timeline.0.role'),
+      company: t('biography.timeline.0.company'),
+      summary: t('biography.timeline.0.summary')
     },
     {
-      year: '2012',
-      role: 'Mechanical Designer',
-      company: 'EKIPAR',
-      summary: 'Designed machine assemblies and improved manufacturability by combining SolidWorks precision with shop-floor feedback.'
+      year: t('biography.timeline.1.year'),
+      role: t('biography.timeline.1.role'),
+      company: t('biography.timeline.1.company'),
+      summary: t('biography.timeline.1.summary')
     },
     {
-      year: '2017',
-      role: 'Innovation Agent',
-      company: 'Sangati Berga',
-      summary: 'Led automation initiatives, connecting engineering data to practical software routines that removed repetitive tasks.'
+      year: t('biography.timeline.2.year'),
+      role: t('biography.timeline.2.role'),
+      company: t('biography.timeline.2.company'),
+      summary: t('biography.timeline.2.summary')
     },
     {
-      year: '2022',
-      role: 'Freelance Systems Builder',
-      company: 'Upwork Top Rated Plus',
-      summary: 'Delivered custom CAD and frontend solutions for international clients, focusing on scalable architecture and clarity.'
+      year: t('biography.timeline.3.year'),
+      role: t('biography.timeline.3.role'),
+      company: t('biography.timeline.3.company'),
+      summary: t('biography.timeline.3.summary')
     },
     {
-      year: 'Today',
-      role: 'Mechanical Intelligence Portfolio',
-      company: 'Independent',
-      summary: 'Merging engineering logic with premium web experiences to showcase technical depth and product-level execution.'
+      year: t('biography.timeline.4.year'),
+      role: t('biography.timeline.4.role'),
+      company: t('biography.timeline.4.company'),
+      summary: t('biography.timeline.4.summary')
     }
-  ]
+  ])
 
   const timelineRef = ref(null)
   const timelineFillRef = ref(null)

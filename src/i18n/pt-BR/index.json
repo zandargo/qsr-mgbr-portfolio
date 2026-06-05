@@ -1,0 +1,502 @@
+{
+	"common": {
+		"failed": "Acao falhou",
+		"success": "Acao concluida com sucesso"
+	},
+	"app": {
+		"mainAria": "Secoes do portfolio"
+	},
+	"nav": {
+		"brand": "MGBR",
+		"menu": "Menu",
+		"close": "Fechar",
+		"toggle": "Alternar menu de navegacao",
+		"biography": "Biografia",
+		"skills": "Habilidades",
+		"projects": "Projetos",
+		"experience": "Experiencia",
+		"links": "Links",
+		"contact": "Contato",
+		"language": "Idioma"
+	},
+	"locales": {
+		"en-US": "Ingles",
+		"pt-BR": "Portugues (Brasil)"
+	},
+	"hero": {
+		"eyebrow": "Inteligencia Mecanica",
+		"title": "MADSON GERMANO",
+		"titleScramble": "M4D50N G3RM4N0",
+		"rolesAria": "Funcoes principais",
+		"roles": {
+			"engineer": "Engenheiro Mecanico",
+			"frontend": "Desenvolvedor Frontend",
+			"automation": "Especialista em Automacao"
+		},
+		"focusLabel": "Foco atual",
+		"techTags": {
+			"vue": "Vue.js",
+			"quasar": "Quasar",
+			"solidworks": "SolidWorks",
+			"python": "Python",
+			"vba": "VBA",
+			"plm": "PLM",
+			"cadAutomation": "Automacao CAD"
+		},
+		"actions": {
+			"github": "GitHub",
+			"linkedin": "LinkedIn",
+			"resume": "Curriculo"
+		},
+		"scrollHint": "Role para a linha do tempo",
+		"status": {
+			"label": "Sinal de Perfil",
+			"line1": "Projetado como uma estacao de trabalho.",
+			"line2": "Construido para sistemas mecanicos, automacao CAD e entrega frontend refinada.",
+			"metrics": {
+				"coreDisciplines": "Disciplinas centrais",
+				"portfolioSystem": "Sistema de portfolio",
+				"available": "Disponivel para iterar"
+			}
+		}
+	},
+	"biography": {
+		"kicker": "Biografia",
+		"title": "Raizes em engenharia, mentalidade de produto, execucao digital.",
+		"caption": "Engenheiro Mecanico · Automacao CAD · Sistemas Frontend",
+		"description": "Meu caminho comecou no projeto mecanico e evoluiu para criar ferramentas digitais que reduzem atrito em equipes de engenharia. Hoje, combino precisao industrial com arquitetura frontend moderna para entregar interfaces confiaveis e rapidas.",
+		"timelineAria": "Linha do tempo de carreira",
+		"timeline": {
+			"0": {
+				"year": "2010",
+				"role": "Desenhista CAD",
+				"company": "Invento",
+				"summary": "Criei pacotes de desenho prontos para producao e padronizei fluxos de detalhamento para aprovacoes mais rapidas."
+			},
+			"1": {
+				"year": "2012",
+				"role": "Projetista Mecanico",
+				"company": "EKIPAR",
+				"summary": "Projetei conjuntos de maquinas e melhorei a fabricabilidade combinando precisao no SolidWorks com feedback de fabrica."
+			},
+			"2": {
+				"year": "2017",
+				"role": "Agente de Inovacao",
+				"company": "Sangati Berga",
+				"summary": "Liderei iniciativas de automacao, conectando dados de engenharia a rotinas de software praticas para eliminar tarefas repetitivas."
+			},
+			"3": {
+				"year": "2022",
+				"role": "Construtor de Sistemas Freelance",
+				"company": "Upwork Top Rated Plus",
+				"summary": "Entreguei solucoes personalizadas de CAD e frontend para clientes internacionais, com foco em arquitetura escalavel e clareza."
+			},
+			"4": {
+				"year": "Hoje",
+				"role": "Portfolio de Inteligencia Mecanica",
+				"company": "Independente",
+				"summary": "Unindo logica de engenharia com experiencias web premium para mostrar profundidade tecnica e execucao de produto."
+			}
+		}
+	},
+	"softSkills": {
+		"kicker": "Habilidades Comportamentais",
+		"title": "Competencias humanas projetadas para entregas de alta complexidade.",
+		"description": "Sistemas tecnicos funcionam melhor quando comunicacao, lideranca e adaptabilidade sao tao afiadas quanto as ferramentas.",
+		"traitsAria": "Tracos complementares de habilidades comportamentais",
+		"traits": {
+			"0": "Lideranca",
+			"1": "Pensamento Critico",
+			"2": "Inovacao",
+			"3": "Protagonismo",
+			"4": "Aprendizado Rapido",
+			"5": "Mentoria",
+			"6": "Adaptabilidade",
+			"7": "Pensamento Sistemico"
+		}
+	},
+	"technicalSkills": {
+		"kicker": "Habilidades Tecnicas",
+		"title": "Tres dominios. Um motor de entrega.",
+		"description": "De sistemas frontend a projeto mecanico e pipelines de automacao, estas sao as camadas tecnicas com que entrego diariamente.",
+		"groupAria": "Habilidades de {group}",
+		"yearsExperience": "{years} anos de experiencia",
+		"groups": {
+			"frontend": {
+				"title": "Frontend",
+				"skills": {
+					"vue": "Arquitetura para SPAs de producao, componentes reutilizaveis e padroes de composicao escalaveis.",
+					"quasar": "Entrega rapida de UI com sistemas responsivos e temas personalizados.",
+					"javascript": "Comportamentos complexos de UI, orquestracao de dados e experiencias ricas em interacao.",
+					"electron": "Apps desktop conectando fluxos de engenharia com interfaces modernas.",
+					"htmlcss": "Sistemas semanticos de layout e detalhes refinados de interacao para bases robustas de UI."
+				}
+			},
+			"engineering": {
+				"title": "Engenharia",
+				"skills": {
+					"solidworks": "Conjuntos, modelagem parametrica e saidas tecnicas prontas para manufatura.",
+					"autocad": "Detalhamento 2D, padronizacao de layout e documentacao de producao.",
+					"solidedge": "Projeto de pecas mecanicas e interoperabilidade entre pilhas de engenharia.",
+					"bim": "Colaboracao estruturada de modelos e fluxos de documentacao orientados ao projeto.",
+					"printing3d": "Ciclos de prototipagem e iteracao para validar e decidir mais rapido."
+				}
+			},
+			"automation": {
+				"title": "Automacao",
+				"skills": {
+					"vba": "Rotinas automatizadas em CAD e planilhas para eliminar tarefas repetitivas de engenharia.",
+					"python": "Processamento de dados, ferramentas scriptaveis e utilitarios de engenharia com APIs.",
+					"rest": "Integracoes de servicos para sincronizacao de dados de produto, dashboards e ferramentas customizadas.",
+					"excel": "Formulas avancadas, templates de processo e sistemas operacionais de relatorio.",
+					"designAutomation": "Automacao orientada a fluxo que acelera entregas sem perder qualidade."
+				}
+			}
+		}
+	},
+	"experience": {
+		"kicker": "Experiencia",
+		"title": "Um historico conectado de engenharia e entrega de software.",
+		"description": "Cada funcao adicionou uma camada mais forte de pensamento sistemico, da execucao CAD ate automacao e frontend de nivel de produto.",
+		"timelineAria": "Linha do tempo de experiencia profissional",
+		"items": {
+			"0": {
+				"year": "2010",
+				"company": "Invento",
+				"role": "Desenhista CAD",
+				"summary": "Criei documentacao tecnica precisa e otimizei qualidade de desenhos para fluxos de fabricacao e instalacao."
+			},
+			"1": {
+				"year": "2012",
+				"company": "EKIPAR",
+				"role": "Projetista Mecanico",
+				"summary": "Projetei maquinas e conjuntos com foco em fabricabilidade, confiabilidade e clareza de engenharia."
+			},
+			"2": {
+				"year": "2017",
+				"company": "Sangati Berga",
+				"role": "Agente de Inovacao",
+				"summary": "Introduzi rotinas de automacao e processos orientados a dados para reduzir operacoes repetitivas de engenharia."
+			},
+			"3": {
+				"year": "2022",
+				"company": "Freelance · Upwork Top Rated Plus",
+				"role": "Especialista em Automacao e Frontend",
+				"summary": "Entreguei software customizado, automacao CAD e sistemas frontend para clientes globais em contexto de producao."
+			}
+		}
+	},
+	"projects": {
+		"kicker": "Projetos em Destaque",
+		"title": "Produtos de software moldados por precisao de engenharia.",
+		"description": "Um conjunto selecionado de sistemas que combinam logica mecanica, arquitetura frontend e eficiencia em automacao.",
+		"items": {
+			"pdlm": {
+				"title": "Gerenciador de Ciclo de Vida de Produto",
+				"summary": "Plataforma centralizada para controlar documentos de engenharia, aprovacoes e transicoes de ciclo de vida de produtos industriais.",
+				"overview": "Uma plataforma de ciclo de vida que unifica registros de engenharia, fluxos de liberacao e trilhas de aprovacao em uma unica interface para equipes tecnicas.",
+				"architecture": {
+					"0": "Frontend Vue modular com shells de UI baseados em Quasar",
+					"1": "Gateway de API orientado por papeis para controlar aprovacoes e permissoes de liberacao",
+					"2": "Modulo de linha do tempo de eventos para rastreabilidade completa"
+				},
+				"challenges": {
+					"0": "Consolidar estados de documentos legados em repositorios desconectados",
+					"1": "Desenhar fluxos de aprovacao flexiveis para equipes multi-departamento",
+					"2": "Manter tabelas de ciclo de vida performaticas em notebooks menos potentes"
+				},
+				"screenshots": {
+					"0": {
+						"label": "Painel de liberacao",
+						"type": "Painel de controle"
+					},
+					"1": {
+						"label": "Editor de rota de aprovacao",
+						"type": "Fluxo"
+					},
+					"2": {
+						"label": "Linha do tempo de ciclo de vida",
+						"type": "Auditoria"
+					}
+				}
+			},
+			"cadtk": {
+				"title": "Toolkit de Automacao CAD",
+				"summary": "Scripts e templates reutilizaveis que aceleram tarefas repetitivas de modelagem e desenho em equipes de producao.",
+				"overview": "Um toolkit de assistentes CAD scriptaveis que reduz operacoes repetitivas e reforca padroes de modelagem entre equipes de engenharia.",
+				"architecture": {
+					"0": "Executores Python e VBA para orquestracao de macros CAD",
+					"1": "Biblioteca de templates para geracao validada de desenhos e BOM",
+					"2": "Camada de logs com relatorios de execucao para revisao da equipe"
+				},
+				"challenges": {
+					"0": "Equilibrar flexibilidade de macros customizadas com governanca de templates",
+					"1": "Lidar com variacoes de versao entre estacoes CAD",
+					"2": "Fornecer diagnosticos claros quando scripts falham no meio do pipeline"
+				},
+				"screenshots": {
+					"0": {
+						"label": "Lancador de macros",
+						"type": "Hub de automacao"
+					},
+					"1": {
+						"label": "Seletor de templates",
+						"type": "Painel CAD"
+					},
+					"2": {
+						"label": "Relatorio de execucao",
+						"type": "Diagnostico"
+					}
+				}
+			},
+			"portf": {
+				"title": "Portfolio Inteligencia Mecanica",
+				"summary": "Experiencia interativa de portfolio com sistemas de movimento suaves, renderizacao focada em desempenho e identidade visual marcante.",
+				"overview": "Um portfolio narrativo construido como experiencia de pagina unica com movimento em camadas, coreografia de scroll e secoes componentizadas.",
+				"architecture": {
+					"0": "Arquitetura Vue 3 com composables de animacao reutilizaveis",
+					"1": "Primitivas responsivas de layout com Quasar e tokens utilitarios",
+					"2": "Sistema de circuito de fundo conectado a eventos de interacao"
+				},
+				"challenges": {
+					"0": "Manter sequencias complexas de animacao suaves em hardware movel",
+					"1": "Construir transicoes de secao sem sobrecarga visual",
+					"2": "Preservar acessibilidade em cards interativos com estilo intenso"
+				},
+				"screenshots": {
+					"0": {
+						"label": "Superficie de comando hero",
+						"type": "Entrada"
+					},
+					"1": {
+						"label": "Matriz de projetos",
+						"type": "Grade de showcase"
+					},
+					"2": {
+						"label": "Painel terminal de contato",
+						"type": "Bloco de conversao"
+					}
+				}
+			},
+			"xlsys": {
+				"title": "Suite de Engenharia em Excel",
+				"summary": "Calculadoras operacionais e fluxos de relatorio para decisoes de engenharia, planejamento e visibilidade de execucao.",
+				"overview": "Uma suite operacional para equipes de engenharia padronizarem calculos, reduzirem erros manuais em planilhas e acelerarem relatorios de decisao.",
+				"architecture": {
+					"0": "Camada de interface Excel com templates guiados e logica protegida",
+					"1": "Modulos VBA para normalizacao de dados e exportacao de relatorios",
+					"2": "Pacotes de fluxo adaptados a rotinas de manufatura e planejamento"
+				},
+				"challenges": {
+					"0": "Proteger integridade de formulas mantendo flexibilidade ao usuario",
+					"1": "Normalizar formatos de origem diferentes de arquivos legados",
+					"2": "Reduzir tempo de atualizacao em modelos de custo de alto volume"
+				},
+				"screenshots": {
+					"0": {
+						"label": "Dashboard de engenharia",
+						"type": "Workbook"
+					},
+					"1": {
+						"label": "Planejador de capacidade",
+						"type": "Grade de cenarios"
+					},
+					"2": {
+						"label": "Gerador automatico de relatorios",
+						"type": "Fluxo de saida"
+					}
+				}
+			}
+		}
+	},
+	"projectCard": {
+		"cardAria": "Card de projeto {title}",
+		"technologiesAria": "Tecnologias de {title}",
+		"details": "Detalhes",
+		"github": "GitHub",
+		"liveDemo": "Demo"
+	},
+	"projectModal": {
+		"kicker": "Analise do Projeto",
+		"close": "Fechar",
+		"closeAria": "Fechar detalhes do projeto",
+		"github": "GitHub",
+		"liveDemo": "Demo",
+		"sections": {
+			"screenshots": "Capturas",
+			"screenshotsAria": "Capturas do projeto",
+			"overview": "Visao geral",
+			"overviewAria": "Visao geral do projeto",
+			"architecture": "Arquitetura",
+			"architectureAria": "Arquitetura do projeto",
+			"technologies": "Tecnologias",
+			"technologiesAria": "Tecnologias do projeto",
+			"challenges": "Desafios",
+			"challengesAria": "Desafios do projeto",
+			"links": "Links",
+			"linksAria": "Links do projeto"
+		}
+	},
+	"gallery": {
+		"kicker": "Galeria de Engenharia",
+		"title": "Visuais industriais de esbocos conceituais a conjuntos prontos para producao.",
+		"description": "Uma visao curada de sistemas mecanicos, desenhos tecnicos, prototipos 3D e estudos de render usados em fluxos reais de engenharia.",
+		"masonryAria": "Galeria de midia de engenharia",
+		"carouselAria": "Carrossel da galeria de engenharia",
+		"itemAria": "{title} ({type})",
+		"prev": "Anterior",
+		"next": "Proximo",
+		"prevAria": "Item anterior da galeria",
+		"nextAria": "Proximo item da galeria",
+		"items": {
+			"assyFrame": {
+				"title": "Conjunto de Estrutura de Esteira",
+				"type": "Montagem",
+				"tools": "SolidWorks, Weldments",
+				"alt": "Render detalhado de estrutura industrial de esteira com membros estruturais e fixadores."
+			},
+			"explodedModule": {
+				"title": "Modulo de Acionamento Explodido",
+				"type": "Quebra Tecnica",
+				"tools": "SolidWorks, Fluxo BOM",
+				"alt": "Ilustracao mecanica explodida destacando hierarquia de pecas e ordem de montagem."
+			},
+			"cncLayout": {
+				"title": "Layout de Fixacao CNC",
+				"type": "Setup de Manufatura",
+				"tools": "AutoCAD, Planejamento CAM",
+				"alt": "Mesa de setup com dispositivos CNC e referencias dimensionais."
+			},
+			"prototypePrint": {
+				"title": "Validacao Rapida de Prototipo",
+				"type": "Impressao 3D",
+				"tools": "Bambu Studio, PLA",
+				"alt": "Prototipo mecanico impresso em 3D para validacao de forma e encaixe."
+			},
+			"plantDrawing": {
+				"title": "Conjunto de Desenhos para Retrofit",
+				"type": "Desenho Tecnico",
+				"tools": "AutoCAD, Controle de Revisao",
+				"alt": "Folhas tecnicas organizadas em bancada para planejamento de retrofit industrial."
+			},
+			"renderBay": {
+				"title": "Estudo de Render Industrial",
+				"type": "Visualizacao",
+				"tools": "Blender, Cycles",
+				"alt": "Render industrial com alto contraste mostrando iluminacao e acabamentos de materiais."
+			}
+		}
+	},
+	"linksSection": {
+		"kicker": "Links Externos",
+		"title": "Presenca profissional e produtos de software em um unico centro de comando.",
+		"description": "Explore perfis, sinais de credibilidade e sistemas de produto desenvolvidos para equipes de engenharia e operacoes.",
+		"profiles": {
+			"kicker": "Perfis",
+			"title": "Canais Profissionais"
+		},
+		"products": {
+			"kicker": "Produtos",
+			"title": "Aplicacoes Desenvolvidas"
+		},
+		"cards": {
+			"github": {
+				"title": "GitHub",
+				"description": "Repositorios de codigo, experimentos frontend e provas de conceito em automacao aplicadas em contextos de engenharia.",
+				"badge": "Codigo Aberto",
+				"ctaLabel": "Visitar GitHub"
+			},
+			"linkedin": {
+				"title": "LinkedIn",
+				"description": "Historico de carreira, resultados de projetos e destaques de lideranca tecnica em trabalhos mecanicos e digitais.",
+				"badge": "Rede",
+				"ctaLabel": "Abrir LinkedIn"
+			},
+			"upwork": {
+				"title": "Upwork",
+				"description": "Historico de entregas freelance com clientes recorrentes, ganhos em automacao e comunicacao tecnica de alto nivel.",
+				"badge": "Top Rated Plus",
+				"ctaLabel": "Ver Upwork"
+			},
+			"resume": {
+				"title": "Curriculo PDF",
+				"description": "Perfil para download com profundidade em engenharia, experiencia em arquitetura de software e resultados mensuraveis.",
+				"badge": "Download",
+				"ctaLabel": "Abrir Curriculo"
+			}
+		},
+		"productsCards": {
+			"pdlm": {
+				"title": "PDLM",
+				"description": "Plataforma PLM com roteamento de aprovacao, controle de documentos e rastreabilidade de liberacoes para equipes de engenharia.",
+				"badge": "Sistema SaaS",
+				"ctaLabel": "Ver Projeto"
+			},
+			"cadtk": {
+				"title": "Toolkit de Automacao CAD",
+				"description": "Pacotes reutilizaveis de comandos de automacao que reduzem operacoes repetitivas e padronizam entregaveis de engenharia.",
+				"badge": "Suite de Automacao",
+				"ctaLabel": "Ver Projeto"
+			},
+			"xlsys": {
+				"title": "Suite de Engenharia em Excel",
+				"description": "Calculadoras operacionais e fluxos de relatorio para capacidade, custo e planejamento de entregas na manufatura.",
+				"badge": "Plataforma de Operacoes",
+				"ctaLabel": "Ver Projeto"
+			},
+			"internalTools": {
+				"title": "Ferramentas Internas de Manufatura",
+				"description": "Apps internos enxutos para entrada de dados, verificacoes de processo e monitoramento da producao no chao de fabrica.",
+				"badge": "Stack Interno",
+				"ctaLabel": "Ver Projeto"
+			}
+		}
+	},
+	"externalCard": {
+		"cardAria": "Card externo de {title}",
+		"tagsAria": "Tags de {title}",
+		"openAria": "Abrir {title} em nova aba"
+	},
+	"contact": {
+		"kicker": "Contato",
+		"title": "Abra um canal direto para colaboracao freelance e de produto.",
+		"description": "Presenca inspirada em terminal com disponibilidade clara, links diretos e contexto de resposta rapida para projetos de engenharia.",
+		"terminal": {
+			"aria": "Interface de terminal de contato",
+			"prompt": "madson\\@signal-node:~",
+			"command": "connect --target madson",
+			"loading": "carregando perfil...",
+			"connected": "conexao estabelecida.",
+			"statusLabel": "STATUS:",
+			"statusValue": "DISPONIVEL PARA FREELANCE",
+			"emailLabel": "EMAIL:",
+			"githubLabel": "GITHUB:",
+			"linkedinLabel": "LINKEDIN:",
+			"systemMessages": {
+				"0": "compilando portfolio...",
+				"1": "carregando modulos CAD...",
+				"2": "sincronizando dados de projeto...",
+				"3": "renderizando montagem..."
+			}
+		}
+	},
+	"footer": {
+		"kicker": "Projetado e desenvolvido por",
+		"name": "Madson Germano",
+		"role1": "Engenheiro Mecanico",
+		"role2": "& Desenvolvedor Frontend",
+		"stack": "Vue + Quasar + Anime.js",
+		"rights": "Todos os direitos reservados"
+	},
+	"radar": {
+		"professionalStrength": "Forca Profissional",
+		"categories": {
+			"0": "Lideranca",
+			"1": "Comunicacao",
+			"2": "Criatividade",
+			"3": "Trabalho em Equipe",
+			"4": "Adaptabilidade",
+			"5": "Resolucao de Problemas"
+		}
+	}
+}

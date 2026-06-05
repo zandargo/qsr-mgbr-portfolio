@@ -2,21 +2,15 @@
 	<div class="section-container engineering-gallery-section">
 		<article class="gallery-shell glass-panel glow-border">
 			<header class="gallery-header">
-				<p class="section-kicker text-mono">Engineering Gallery</p>
-				<h2 id="gallery-title" class="text-display">Industrial visuals from concept sketches to production-ready assemblies.</h2>
+				<p class="section-kicker text-mono">{{ t('gallery.kicker') }}</p>
+				<h2 id="gallery-title" class="text-display">{{ t('gallery.title') }}</h2>
 				<p class="gallery-header__description">
-					A curated view of mechanical systems, technical drawings, 3D prototypes, and render studies used in real engineering workflows.
+					{{ t('gallery.description') }}
 				</p>
 			</header>
 
-			<div class="gallery-masonry" aria-label="Engineering media gallery">
-				<article
-					v-for="(item, index) in galleryItems"
-					:key="`masonry-${item.id}`"
-					:ref="(element) => setMasonryRef(element, index)"
-					class="gallery-item"
-					:aria-label="`${item.title} (${item.type})`"
-				>
+			<div class="gallery-masonry" :aria-label="t('gallery.masonryAria')">
+				<article v-for="(item, index) in galleryItems" :key="`masonry-${item.id}`" :ref="(element) => setMasonryRef(element, index)" class="gallery-item" :aria-label="t('gallery.itemAria', { title: item.title, type: item.type })">
 					<div class="gallery-item__media-wrap">
 						<img class="gallery-item__media" :src="item.image" :alt="item.alt" loading="lazy" decoding="async" width="760" height="760" />
 					</div>
@@ -28,10 +22,10 @@
 				</article>
 			</div>
 
-			<div class="gallery-carousel-shell" aria-label="Engineering gallery carousel">
+			<div class="gallery-carousel-shell" :aria-label="t('gallery.carouselAria')">
 				<div ref="emblaRef" class="gallery-carousel">
 					<div class="gallery-carousel__container">
-						<article v-for="item in galleryItems" :key="`carousel-${item.id}`" class="gallery-slide" :aria-label="`${item.title} (${item.type})`">
+						<article v-for="item in galleryItems" :key="`carousel-${item.id}`" class="gallery-slide" :aria-label="t('gallery.itemAria', { title: item.title, type: item.type })">
 							<div class="gallery-slide__media-wrap">
 								<img class="gallery-slide__media" :src="item.image" :alt="item.alt" loading="lazy" decoding="async" width="760" height="760" />
 							</div>
@@ -45,11 +39,11 @@
 				</div>
 
 				<div class="gallery-carousel__controls">
-					<button type="button" class="gallery-carousel__button" :disabled="!canScrollPrev" @click="scrollPrev" aria-label="Previous gallery item">
-						Prev
+					<button type="button" class="gallery-carousel__button" :disabled="!canScrollPrev" @click="scrollPrev" :aria-label="t('gallery.prevAria')">
+						{{ t('gallery.prev') }}
 					</button>
-					<button type="button" class="gallery-carousel__button" :disabled="!canScrollNext" @click="scrollNext" aria-label="Next gallery item">
-						Next
+					<button type="button" class="gallery-carousel__button" :disabled="!canScrollNext" @click="scrollNext" :aria-label="t('gallery.nextAria')">
+						{{ t('gallery.next') }}
 					</button>
 				</div>
 			</div>
@@ -60,58 +54,61 @@
 <script setup>
 	import emblaCarouselVue from 'embla-carousel-vue'
 	import VanillaTilt from 'vanilla-tilt'
-	import { onBeforeUnmount, onMounted, ref, watch } from 'vue'
+	import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
+	import { useI18n } from 'vue-i18n'
 
-	const galleryItems = [
+	const { t } = useI18n()
+
+	const galleryItems = computed(() => [
 		{
 			id: 'assy-frame',
-			title: 'Conveyor Frame Assembly',
-			type: 'Assembly',
-			tools: 'SolidWorks, Weldments',
-			alt: 'Detailed industrial conveyor frame assembly render with structural members and fasteners.',
+			title: t('gallery.items.assyFrame.title'),
+			type: t('gallery.items.assyFrame.type'),
+			tools: t('gallery.items.assyFrame.tools'),
+			alt: t('gallery.items.assyFrame.alt'),
 			image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=80'
 		},
 		{
 			id: 'exploded-module',
-			title: 'Exploded Drive Module',
-			type: 'Technical Breakdown',
-			tools: 'SolidWorks, BOM Workflow',
-			alt: 'Exploded mechanical module illustration emphasizing part hierarchy and assembly order.',
+			title: t('gallery.items.explodedModule.title'),
+			type: t('gallery.items.explodedModule.type'),
+			tools: t('gallery.items.explodedModule.tools'),
+			alt: t('gallery.items.explodedModule.alt'),
 			image: 'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=1200&q=80'
 		},
 		{
 			id: 'cnc-layout',
-			title: 'CNC Workholding Layout',
-			type: 'Manufacturing Setup',
-			tools: 'AutoCAD, CAM Planning',
-			alt: 'Manufacturing setup board with CNC fixtures and dimensional references.',
+			title: t('gallery.items.cncLayout.title'),
+			type: t('gallery.items.cncLayout.type'),
+			tools: t('gallery.items.cncLayout.tools'),
+			alt: t('gallery.items.cncLayout.alt'),
 			image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80'
 		},
 		{
 			id: 'prototype-print',
-			title: 'Rapid Prototype Validation',
-			type: '3D Printing',
-			tools: 'Bambu Studio, PLA',
-			alt: 'Rapid 3D printed mechanical prototype used for form and fit validation.',
+			title: t('gallery.items.prototypePrint.title'),
+			type: t('gallery.items.prototypePrint.type'),
+			tools: t('gallery.items.prototypePrint.tools'),
+			alt: t('gallery.items.prototypePrint.alt'),
 			image: 'https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=1200&q=80'
 		},
 		{
 			id: 'plant-drawing',
-			title: 'Plant Retrofit Drawing Set',
-			type: 'Technical Drawing',
-			tools: 'AutoCAD, Revision Control',
-			alt: 'Printed technical drawing sheets arranged on a workstation for industrial retrofit planning.',
+			title: t('gallery.items.plantDrawing.title'),
+			type: t('gallery.items.plantDrawing.type'),
+			tools: t('gallery.items.plantDrawing.tools'),
+			alt: t('gallery.items.plantDrawing.alt'),
 			image: 'https://images.unsplash.com/photo-1581093450021-4a7360e9a9b0?auto=format&fit=crop&w=1200&q=80'
 		},
 		{
 			id: 'render-bay',
-			title: 'Industrial Render Study',
-			type: 'Visualization',
-			tools: 'Blender, Cycles',
-			alt: 'High-contrast industrial render showing machine bay lighting and material finishes.',
+			title: t('gallery.items.renderBay.title'),
+			type: t('gallery.items.renderBay.type'),
+			tools: t('gallery.items.renderBay.tools'),
+			alt: t('gallery.items.renderBay.alt'),
 			image: 'https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&w=1200&q=80'
 		}
-	]
+	])
 
 	const masonryRefs = ref([])
 	const canScrollPrev = ref(false)
