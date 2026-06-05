@@ -325,11 +325,11 @@ This plan converts the architecture in `docs/structure.md` into small, implement
 
 ### Subtasks
 
-- [ ] Create `FooterSection.vue` with final profile and stack line.
-- [ ] Add subtle logo pulse animation.
-- [ ] Add current year rendering.
-- [ ] Ensure spacing and typography hierarchy.
-- [ ] Verify footer behavior across breakpoints.
+- [x] Create `FooterSection.vue` with final profile and stack line.
+- [x] Add subtle logo pulse animation.
+- [x] Add current year rendering.
+- [x] Ensure spacing and typography hierarchy.
+- [x] Verify footer behavior across breakpoints.
 
 ### Acceptance
 
