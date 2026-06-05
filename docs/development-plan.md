@@ -227,12 +227,12 @@ This plan converts the architecture in `docs/structure.md` into small, implement
 
 ### Subtasks
 
-- [ ] Create `FeaturedProjectsSection.vue` grid scaffold.
-- [ ] Create reusable `ProjectCard.vue` with title, summary, tags, thumbnail.
-- [ ] Integrate VanillaTilt on mount with safe destroy on unmount.
-- [ ] Add border glow and reflection hover effects.
-- [ ] Add responsive behavior: grid desktop, single-column mobile.
-- [ ] Add keyboard-focus styles equivalent to hover intent.
+- [x] Create `FeaturedProjectsSection.vue` grid scaffold.
+- [x] Create reusable `ProjectCard.vue` with title, summary, tags, thumbnail.
+- [x] Integrate VanillaTilt on mount with safe destroy on unmount.
+- [x] Add border glow and reflection hover effects.
+- [x] Add responsive behavior: grid desktop, single-column mobile.
+- [x] Add keyboard-focus styles equivalent to hover intent.
 
 ### Acceptance
 
