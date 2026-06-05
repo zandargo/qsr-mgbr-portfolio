@@ -208,12 +208,12 @@ This plan converts the architecture in `docs/structure.md` into small, implement
 
 ### Subtasks
 
-- [ ] Create `ExperienceSection.vue` and `ExperienceCard.vue`.
-- [ ] Implement connected line between cards.
-- [ ] Animate cards sliding upward on reveal.
-- [ ] Animate connection line growth synchronized with reveal.
-- [ ] Add subtle hover lift and glow interaction.
-- [ ] Validate spacing and card readability on narrow screens.
+- [x] Create `ExperienceSection.vue` and `ExperienceCard.vue`.
+- [x] Implement connected line between cards.
+- [x] Animate cards sliding upward on reveal.
+- [x] Animate connection line growth synchronized with reveal.
+- [x] Add subtle hover lift and glow interaction.
+- [x] Validate spacing and card readability on narrow screens.
 
 ### Acceptance
 
