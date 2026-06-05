@@ -146,13 +146,13 @@ This plan converts the architecture in `docs/structure.md` into small, implement
 
 ### Subtasks
 
-- [ ] Create `BiographySection.vue` structure with photo area and timeline container.
-- [ ] Create `TimelineCard.vue` with alternating left/right desktop layout.
-- [ ] Add center vertical line and progressive fill element.
-- [ ] Create `useIntersectionReveal.js` for reveal-on-scroll behaviors.
-- [ ] Animate card entrance and line fill with Anime.js.
-- [ ] Add responsive breakpoint behavior for single-column mobile timeline.
-- [ ] Verify chronological readability and spacing.
+- [x] Create `BiographySection.vue` structure with photo area and timeline container.
+- [x] Create `TimelineCard.vue` with alternating left/right desktop layout.
+- [x] Add center vertical line and progressive fill element.
+- [x] Create `useIntersectionReveal.js` for reveal-on-scroll behaviors.
+- [x] Animate card entrance and line fill with Anime.js.
+- [x] Add responsive breakpoint behavior for single-column mobile timeline.
+- [x] Verify chronological readability and spacing.
 
 ### Acceptance
 
