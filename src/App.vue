@@ -46,6 +46,7 @@
 </template>
 
 <script setup>
+  import { onMounted, onUnmounted } from 'vue'
   import BackgroundLayer from './components/background/BackgroundLayer.vue'
   import HeroSection from './components/hero/HeroSection.vue'
   import BiographySection from './components/biography/BiographySection.vue'
@@ -58,6 +59,17 @@
   import ContactSection from './components/contact/ContactSection.vue'
   import NavigationBar from './components/layout/NavigationBar.vue'
   import FooterSection from './components/layout/FooterSection.vue'
+  import { useLenis } from './composables/useLenis'
+
+  const { init, destroy } = useLenis()
+
+  onMounted(() => {
+    init()
+  })
+
+  onUnmounted(() => {
+    destroy()
+  })
 </script>
 
 <style scoped>

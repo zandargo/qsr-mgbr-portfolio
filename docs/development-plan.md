@@ -103,14 +103,14 @@ This plan converts the architecture in `docs/structure.md` into small, implement
 
 ### Subtasks
 
-- [ ] Create `NavigationBar.vue` with logo and section links.
-- [ ] Implement desktop glass navbar styling and active underline animation.
-- [ ] Implement mobile full-screen overlay menu.
-- [ ] Add open/close transitions for mobile menu.
-- [ ] Create `useLenis.js` and initialize Lenis once at app level.
-- [ ] Connect nav links to smooth scrolling with section offset handling.
-- [ ] Add active section tracking via IntersectionObserver.
-- [ ] Validate keyboard navigation and focus management for mobile menu.
+- [x] Create `NavigationBar.vue` with logo and section links.
+- [x] Implement desktop glass navbar styling and active underline animation.
+- [x] Implement mobile full-screen overlay menu.
+- [x] Add open/close transitions for mobile menu.
+- [x] Create `useLenis.js` and initialize Lenis once at app level.
+- [x] Connect nav links to smooth scrolling with section offset handling.
+- [x] Add active section tracking via IntersectionObserver.
+- [x] Validate keyboard navigation and focus management for mobile menu.
 
 ### Acceptance
 
