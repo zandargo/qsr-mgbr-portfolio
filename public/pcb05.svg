@@ -1,0 +1,204 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1920 1080">
+  <g id="traces" stroke="#22C55E" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+
+```
+<!-- Top Left Cluster -->
+<path d="M-32 96 L80 96 L160 176 L288 176 L352 240"/>
+<path d="M160 176 L160 312 L248 400"/>
+<path d="M288 176 L416 48"/>
+<path d="M352 240 L480 240 L560 320"/>
+<path d="M248 400 L248 528 L336 616"/>
+<path d="M336 616 L488 616"/>
+<path d="M488 616 L584 520"/>
+<path d="M584 520 L704 520"/>
+<path d="M560 320 L704 320"/>
+<path d="M704 320 L808 216"/>
+<path d="M704 520 L816 632"/>
+<path d="M416 48 L536 -72"/>
+
+<!-- Upper Middle -->
+<path d="M808 216 L952 216 L1040 128"/>
+<path d="M952 216 L952 360"/>
+<path d="M952 360 L1080 488"/>
+<path d="M1080 488 L1224 488"/>
+<path d="M1224 488 L1320 392"/>
+<path d="M1040 128 L1184 128"/>
+<path d="M1184 128 L1296 16"/>
+<path d="M1184 128 L1312 256"/>
+<path d="M1312 256 L1456 256"/>
+<path d="M1456 256 L1560 152"/>
+<path d="M1456 256 L1576 376"/>
+<path d="M1320 392 L1456 392"/>
+
+<!-- Top Right -->
+<path d="M1560 152 L1728 152"/>
+<path d="M1728 152 L1856 24"/>
+<path d="M1728 152 L1728 304"/>
+<path d="M1728 304 L1840 416"/>
+<path d="M1576 376 L1704 504"/>
+<path d="M1704 504 L1856 504"/>
+<path d="M1856 504 L1952 600"/>
+<path d="M1456 392 L1456 536"/>
+<path d="M1456 536 L1576 656"/>
+<path d="M1576 656 L1728 656"/>
+<path d="M1728 656 L1848 776"/>
+<path d="M1848 776 L1960 776"/>
+
+<!-- Center Hub -->
+<path d="M816 632 L960 632"/>
+<path d="M960 632 L1088 632"/>
+<path d="M1088 632 L1200 744"/>
+<path d="M960 632 L960 776"/>
+<path d="M960 776 L856 880"/>
+<path d="M960 776 L1088 904"/>
+<path d="M856 880 L704 880"/>
+<path d="M1088 904 L1240 904"/>
+<path d="M1200 744 L1352 744"/>
+<path d="M1352 744 L1456 848"/>
+<path d="M1456 848 L1608 848"/>
+<path d="M1608 848 L1712 952"/>
+
+<!-- Bottom Left -->
+<path d="M704 880 L560 880"/>
+<path d="M560 880 L448 992"/>
+<path d="M448 992 L304 992"/>
+<path d="M304 992 L176 1120"/>
+<path d="M560 880 L560 736"/>
+<path d="M560 736 L432 608"/>
+<path d="M432 608 L288 608"/>
+<path d="M288 608 L184 712"/>
+<path d="M184 712 L32 712"/>
+<path d="M32 712 L-64 808"/>
+<path d="M304 992 L304 856"/>
+<path d="M304 856 L416 744"/>
+
+<!-- Bottom Middle -->
+<path d="M1240 904 L1360 1024"/>
+<path d="M1360 1024 L1504 1024"/>
+<path d="M1504 1024 L1616 1136"/>
+<path d="M960 776 L960 1032"/>
+<path d="M960 1032 L864 1128"/>
+<path d="M960 1032 L1088 1032"/>
+<path d="M1088 1032 L1184 1128"/>
+<path d="M704 880 L704 1024"/>
+<path d="M704 1024 L600 1128"/>
+<path d="M1352 744 L1352 904"/>
+<path d="M1608 848 L1608 1000"/>
+<path d="M1608 1000 L1728 1120"/>
+
+<!-- Decorative Outer Extensions -->
+<path d="M80 96 L80 -48"/>
+<path d="M480 240 L608 112"/>
+<path d="M1224 488 L1224 648"/>
+<path d="M1856 504 L1856 664"/>
+<path d="M432 608 L432 448"/>
+<path d="M1504 1024 L1680 1024"/>
+<path d="M1680 1024 L1800 904"/>
+<path d="M1800 904 L1952 904"/>
+<path d="M248 528 L96 528"/>
+<path d="M96 528 L-48 384"/>
+<path d="M1312 256 L1312 416"/>
+<path d="M1312 416 L1208 520"/>
+```
+
+  </g>
+
+  <g id="pads" stroke="#22C55E" stroke-width="2" fill="none">
+    <!-- Junction / terminal pads -->
+    <circle cx="80" cy="96" r="4"/>
+    <circle cx="160" cy="176" r="5"/>
+    <circle cx="288" cy="176" r="5"/>
+    <circle cx="352" cy="240" r="5"/>
+    <circle cx="248" cy="400" r="4"/>
+    <circle cx="336" cy="616" r="4"/>
+    <circle cx="488" cy="616" r="6"/>
+    <circle cx="584" cy="520" r="5"/>
+    <circle cx="704" cy="320" r="6"/>
+    <circle cx="704" cy="520" r="5"/>
+    <circle cx="808" cy="216" r="5"/>
+    <circle cx="952" cy="216" r="6"/>
+    <circle cx="952" cy="360" r="4"/>
+    <circle cx="1080" cy="488" r="5"/>
+    <circle cx="1224" cy="488" r="6"/>
+    <circle cx="1320" cy="392" r="5"/>
+    <circle cx="1184" cy="128" r="6"/>
+    <circle cx="1312" cy="256" r="6"/>
+    <circle cx="1456" cy="256" r="5"/>
+    <circle cx="1456" cy="392" r="5"/>
+    <circle cx="1560" cy="152" r="4"/>
+    <circle cx="1576" cy="376" r="4"/>
+    <circle cx="1728" cy="152" r="6"/>
+    <circle cx="1728" cy="304" r="5"/>
+    <circle cx="1840" cy="416" r="4"/>
+    <circle cx="1704" cy="504" r="4"/>
+    <circle cx="1856" cy="504" r="5"/>
+    <circle cx="1456" cy="536" r="4"/>
+    <circle cx="1576" cy="656" r="5"/>
+    <circle cx="1728" cy="656" r="5"/>
+    <circle cx="1848" cy="776" r="4"/>
+
+```
+<!-- Central hub -->
+<circle cx="960" cy="632" r="6" fill="#22C55E"/>
+<circle cx="1088" cy="632" r="5"/>
+<circle cx="1200" cy="744" r="5"/>
+<circle cx="960" cy="776" r="6" fill="#22C55E"/>
+<circle cx="856" cy="880" r="5"/>
+<circle cx="1088" cy="904" r="5"/>
+<circle cx="704" cy="880" r="5"/>
+<circle cx="1240" cy="904" r="5"/>
+<circle cx="1352" cy="744" r="6"/>
+<circle cx="1456" cy="848" r="5"/>
+<circle cx="1608" cy="848" r="5"/>
+<circle cx="1712" cy="952" r="4"/>
+
+<!-- Lower area -->
+<circle cx="560" cy="880" r="5"/>
+<circle cx="448" cy="992" r="4"/>
+<circle cx="304" cy="992" r="5"/>
+<circle cx="560" cy="736" r="4"/>
+<circle cx="432" cy="608" r="5"/>
+<circle cx="288" cy="608" r="4"/>
+<circle cx="184" cy="712" r="4"/>
+<circle cx="32" cy="712" r="5"/>
+<circle cx="304" cy="856" r="4"/>
+<circle cx="416" cy="744" r="4"/>
+
+<!-- Bottom extensions -->
+<circle cx="1360" cy="1024" r="5"/>
+<circle cx="1504" cy="1024" r="5"/>
+<circle cx="960" cy="1032" r="6"/>
+<circle cx="1088" cy="1032" r="5"/>
+<circle cx="704" cy="1024" r="5"/>
+<circle cx="1608" cy="1000" r="4"/>
+<circle cx="1680" cy="1024" r="4"/>
+
+<!-- Edge terminals -->
+<circle cx="-32" cy="96" r="4"/>
+<circle cx="536" cy="-72" r="4"/>
+<circle cx="1296" cy="16" r="4"/>
+<circle cx="1856" cy="24" r="4"/>
+<circle cx="1952" cy="600" r="4"/>
+<circle cx="1960" cy="776" r="4"/>
+<circle cx="176" cy="1120" r="4"/>
+<circle cx="-64" cy="808" r="4"/>
+<circle cx="1616" cy="1136" r="4"/>
+<circle cx="864" cy="1128" r="4"/>
+<circle cx="1184" cy="1128" r="4"/>
+<circle cx="600" cy="1128" r="4"/>
+<circle cx="1728" cy="1120" r="4"/>
+<circle cx="80" cy="-48" r="4"/>
+<circle cx="608" cy="112" r="4"/>
+<circle cx="1224" cy="648" r="4"/>
+<circle cx="1856" cy="664" r="4"/>
+<circle cx="432" cy="448" r="4"/>
+<circle cx="1800" cy="904" r="4"/>
+<circle cx="1952" cy="904" r="4"/>
+<circle cx="96" cy="528" r="4"/>
+<circle cx="-48" cy="384" r="4"/>
+<circle cx="1312" cy="416" r="4"/>
+<circle cx="1208" cy="520" r="4"/>
+```
+
+  </g>
+</svg>

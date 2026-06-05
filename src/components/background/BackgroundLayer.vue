@@ -1,25 +1,28 @@
 <template>
 	<div class="background-layer" aria-hidden="true">
 		<div class="background-gradient" />
-		<svg class="background-circuit" viewBox="0 0 1920 1080" preserveAspectRatio="none">
-			<g class="background-circuit__paths">
-				<path d="M80 210 H420 V340 H760 V520 H1130" />
-				<path d="M170 800 H510 V660 H930 V860 H1280 V940 H1680" />
-				<path d="M320 120 H320 V470 H590 V710 H910" />
-				<path d="M1240 120 V320 H1520 V500 H1840" />
-				<path d="M1420 390 H1100 V600 H760 V840" />
-				<path d="M1550 940 V730 H1370 V540 H1040 V390 H870" />
-			</g>
-		</svg>
+		<CircuitBoard ref="circuitBoardRef" />
 		<div class="background-noise" />
 	</div>
 </template>
 
 <script setup>
 	import { animate } from 'animejs'
-	import { onMounted, onUnmounted } from 'vue'
+	import { onMounted, onUnmounted, ref } from 'vue'
+	import CircuitBoard from './CircuitBoard.vue'
+	import { useCircuitAnimation } from '../../composables/useCircuitAnimation'
 
 	let gradientAnimation = null
+	const circuitBoardRef = ref(null)
+	const { start, stop, destroy, triggerPulseBurst } = useCircuitAnimation()
+
+	const handlePulseBurst = () => {
+		triggerPulseBurst()
+	}
+
+	const getCircuitRoot = () => {
+		return circuitBoardRef.value?.circuitRoot ?? null
+	}
 
 	onMounted(() => {
 		gradientAnimation = animate('.background-gradient', {
@@ -34,11 +37,21 @@
 			direction: 'alternate',
 			loop: true
 		})
+
+		start(getCircuitRoot())
+		window.addEventListener('circuit:pulse-burst', handlePulseBurst)
 	})
 
 	onUnmounted(() => {
 		gradientAnimation?.pause()
 		gradientAnimation = null
+		window.removeEventListener('circuit:pulse-burst', handlePulseBurst)
+		stop()
+		destroy()
+	})
+
+	defineExpose({
+		triggerCircuitPulseBurst: triggerPulseBurst
 	})
 </script>
 
@@ -64,22 +77,6 @@
 			radial-gradient(circle at var(--gradient-a-x) var(--gradient-a-y), rgba(0, 255, 136, 0.11), transparent 46%),
 			radial-gradient(circle at var(--gradient-b-x) var(--gradient-b-y), rgba(125, 255, 202, 0.08), transparent 40%),
 			radial-gradient(circle at var(--gradient-c-x) var(--gradient-c-y), rgba(0, 255, 136, 0.06), transparent 34%);
-	}
-
-	.background-circuit {
-		position: absolute;
-		inset: 0;
-		opacity: 0.2;
-		filter: drop-shadow(0 0 8px rgba(0, 255, 136, 0.12));
-	}
-
-	.background-circuit__paths {
-		fill: none;
-		stroke: rgba(125, 255, 202, 0.22);
-		stroke-width: 1.4;
-		stroke-linecap: square;
-		stroke-linejoin: round;
-		vector-effect: non-scaling-stroke;
 	}
 
 	.background-noise {

@@ -83,11 +83,11 @@ This plan converts the architecture in `docs/structure.md` into small, implement
 
 ### Subtasks
 
-- [ ] Create `CircuitBoard.vue` for SVG path definitions.
-- [ ] Build `useCircuitAnimation.js` composable.
-- [ ] Animate pulse elements along paths using Anime.js motion paths.
-- [ ] Add start/stop controls for lifecycle-safe mount/unmount.
-- [ ] Expose a method to trigger a pulse burst for project modal open.
+- [x] Create `CircuitBoard.vue` for SVG path definitions.
+- [x] Build `useCircuitAnimation.js` composable.
+- [x] Animate pulse elements along paths using Anime.js motion paths.
+- [x] Add start/stop controls for lifecycle-safe mount/unmount.
+- [x] Expose a method to trigger a pulse burst for project modal open.
 - [ ] Verify animation CPU cost stays low.
 
 ### Acceptance
