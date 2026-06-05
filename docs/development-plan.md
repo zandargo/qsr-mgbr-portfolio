@@ -62,13 +62,13 @@ This plan converts the architecture in `docs/structure.md` into small, implement
 
 ### Subtasks
 
-- [ ] Create `BackgroundLayer.vue` with fixed full-screen container and negative z-index.
-- [ ] Implement Layer A radial gradients with CSS variables.
-- [ ] Animate gradient positions slowly with Anime.js (30-40s alternate loop).
-- [ ] Add Layer B scaffold using inline SVG paths for PCB network.
-- [ ] Add Layer C subtle film noise overlay with very low opacity.
-- [ ] Ensure pointer events are disabled for background layers.
-- [ ] Validate readability of foreground text over background.
+- [x] Create `BackgroundLayer.vue` with fixed full-screen container and negative z-index.
+- [x] Implement Layer A radial gradients with CSS variables.
+- [x] Animate gradient positions slowly with Anime.js (30-40s alternate loop).
+- [x] Add Layer B scaffold using inline SVG paths for PCB network.
+- [x] Add Layer C subtle film noise overlay with very low opacity.
+- [x] Ensure pointer events are disabled for background layers.
+- [x] Validate readability of foreground text over background.
 
 ### Acceptance
 
