@@ -267,12 +267,12 @@ This plan converts the architecture in `docs/structure.md` into small, implement
 
 ### Subtasks
 
-- [ ] Create `EngineeringGallerySection.vue`.
-- [ ] Add desktop masonry grid layout.
-- [ ] Add mobile Embla carousel setup and controls.
-- [ ] Add image metadata overlays (title/type/tools).
-- [ ] Add subtle hover tilt and zoom for desktop items.
-- [ ] Lazy-load images for performance.
+- [x] Create `EngineeringGallerySection.vue`.
+- [x] Add desktop masonry grid layout.
+- [x] Add mobile Embla carousel setup and controls.
+- [x] Add image metadata overlays (title/type/tools).
+- [x] Add subtle hover tilt and zoom for desktop items.
+- [x] Lazy-load images for performance.
 - [ ] Validate touch gestures on mobile carousel.
 
 ### Acceptance
