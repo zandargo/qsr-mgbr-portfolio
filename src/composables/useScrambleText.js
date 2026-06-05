@@ -33,7 +33,11 @@ export function useScrambleText() {
       }),
       duration: options.duration ?? 1400,
       ease: options.timelineEase ?? 'outQuart',
+      onUpdate: () => {
+        options.onUpdateText?.(target.textContent ?? '')
+      },
       onComplete: () => {
+        options.onUpdateText?.(target.textContent ?? text)
         isRunning.value = false
       }
     })

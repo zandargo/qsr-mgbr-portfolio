@@ -1,5 +1,5 @@
 <template>
-  <component :is="tag" ref="titleRef" v-bind="attrs" :class="['scramble-title', attrs.class]">
+  <component :is="tag" ref="titleRef" v-bind="attrs" :class="['scramble-title', attrs.class]" :data-text="displayedText">
     {{ displayedText }}
   </component>
 </template>
@@ -40,6 +40,15 @@
   const { playScramble, cancelScramble } = useScrambleText()
   let loopTimer = null
 
+  const syncOverlayText = (value) => {
+    const target = titleRef.value
+    if (!target) {
+      return
+    }
+
+    target.setAttribute('data-text', value)
+  }
+
   const clearLoopTimer = () => {
     if (loopTimer !== null) {
       window.clearTimeout(loopTimer)
@@ -55,12 +64,15 @@
       return
     }
 
+    syncOverlayText(target.textContent ?? displayedText.value)
+
     playScramble(target, targetText, {
       duration: props.duration,
       chars: 'a-zA-Z0-9!%#_',
       from: 'center',
       reversed: false,
-      cursor: '_'
+      cursor: '_',
+      onUpdateText: syncOverlayText
     })
 
     if (animateIn) {
@@ -105,6 +117,7 @@
   )
 
   onMounted(() => {
+    syncOverlayText(displayedText.value)
     startLoop()
   })
 
@@ -116,7 +129,39 @@
 
 <style scoped>
   .scramble-title {
+    position: relative;
     display: block;
     white-space: pre-line;
+    isolation: isolate;
+    text-shadow:
+      0 0 4px rgba(96, 255, 128, 0.85),
+      0 0 12px rgba(96, 255, 128, 0.55),
+      0 0 24px rgba(96, 255, 128, 0.35);
+  }
+
+  .scramble-title::before,
+  .scramble-title::after {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    white-space: inherit;
+  }
+
+  .scramble-title::before {
+    z-index: -1;
+    color: rgba(120, 255, 155, 0.45);
+    filter: blur(8px);
+  }
+
+  .scramble-title::after {
+    color: transparent;
+    background: repeating-linear-gradient(to bottom,
+        rgba(185, 255, 185, 0.6) 0 1px,
+        rgba(15, 55, 20, 0.2) 1px 3px);
+    background-clip: text;
+    -webkit-background-clip: text;
+    mix-blend-mode: screen;
+    opacity: 0.6;
   }
 </style>
