@@ -287,12 +287,12 @@ This plan converts the architecture in `docs/structure.md` into small, implement
 
 ### Subtasks
 
-- [ ] Create `ExternalLinksSection.vue` and `ExternalLinkCard.vue`.
-- [ ] Add profile cards: GitHub, LinkedIn, Upwork, Resume.
-- [ ] Add developed application cards with richer product presentation.
-- [ ] Apply tilt, image zoom, and glow interactions.
-- [ ] Add clear external link CTAs with safe target attributes.
-- [ ] Ensure card hierarchy and readability in mobile stacked layout.
+- [x] Create `ExternalLinksSection.vue` and `ExternalLinkCard.vue`.
+- [x] Add profile cards: GitHub, LinkedIn, Upwork, Resume.
+- [x] Add developed application cards with richer product presentation.
+- [x] Apply tilt, image zoom, and glow interactions.
+- [x] Add clear external link CTAs with safe target attributes.
+- [x] Ensure card hierarchy and readability in mobile stacked layout.
 
 ### Acceptance
 
