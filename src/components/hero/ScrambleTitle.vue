@@ -26,11 +26,11 @@
     },
     duration: {
       type: Number,
-      default: 1400
+      default: 2400
     },
     intervalDelay: {
       type: Number,
-      default: 2200
+      default: 4200
     }
   })
 
@@ -134,9 +134,9 @@
     white-space: pre-line;
     isolation: isolate;
     text-shadow:
-      0 0 4px rgba(96, 255, 128, 0.85),
-      0 0 12px rgba(96, 255, 128, 0.55),
-      0 0 24px rgba(96, 255, 128, 0.35);
+      0 0 4px rgba(96, 255, 128, 0.55),
+      0 0 12px rgba(96, 255, 128, 0.25),
+      0 0 24px rgba(96, 255, 128, 0.15);
   }
 
   .scramble-title::before,
@@ -150,7 +150,7 @@
 
   .scramble-title::before {
     z-index: -1;
-    color: rgba(120, 255, 155, 0.45);
+    color: rgba(120, 255, 155, 0.25);
     filter: blur(8px);
   }
 
@@ -162,6 +162,6 @@
     background-clip: text;
     -webkit-background-clip: text;
     mix-blend-mode: screen;
-    opacity: 0.6;
+    opacity: 0.2;
   }
 </style>
