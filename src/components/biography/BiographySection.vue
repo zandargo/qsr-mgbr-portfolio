@@ -10,7 +10,7 @@
         <div class="profile-media">
           <div class="profile-media__frame" aria-hidden="true">
             <!-- <span class="profile-media__initials text-display">MG</span> -->
-            <q-img src="/public/img/profile/Profile002.png" spinner-color="primary" spinner-size="82px" height="520px" fit="cover" position="50% 100%" />
+            <q-img src="/img/profile/Profile002.png" spinner-color="primary" spinner-size="82px" height="520px" fit="cover" position="50% 100%" />
           </div>
           <p class="profile-media__caption text-mono">{{ t('biography.caption') }}</p>
         </div>

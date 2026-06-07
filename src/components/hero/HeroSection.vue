@@ -26,11 +26,11 @@
         </div>
 
         <div class="action-row">
-          <a class="action-button action-button--solid" href="https://github.com/zandargo/qsr-mgbr-portfolio" target="_blank" rel="noreferrer">
+          <a class="action-button action-button--solid" href="https://github.com/zandargo/" target="_blank" rel="noreferrer">
             <Icon icon="mdi:github" />
             <span>{{ t('hero.actions.github') }}</span>
           </a>
-          <a class="action-button" href="#links">
+          <a class="action-button" href="https://www.linkedin.com/in/madson-br/">
             <Icon icon="mdi:linkedin" />
             <span>{{ t('hero.actions.linkedin') }}</span>
           </a>
@@ -86,6 +86,7 @@
   const activeTag = ref('')
 
   const techTags = computed(() => [
+    t('hero.techTags.solidedge'),
     t('hero.techTags.vue'),
     t('hero.techTags.quasar'),
     t('hero.techTags.solidworks'),

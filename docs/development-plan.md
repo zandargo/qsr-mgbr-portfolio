@@ -407,3 +407,12 @@ These can run in parallel after Phase 5:
 - Milestone 2: End of Phase 10 (core content sections complete).
 - Milestone 3: End of Phase 16 (all feature sections and branding complete).
 - Milestone 4: End of Phase 19 (release-ready).
+
+
+## To Do
+- [ ] Language variable resumee download link
+- [ ] 
+- [ ] 
+- [ ] 
+- [ ] 
+- [ ] 
