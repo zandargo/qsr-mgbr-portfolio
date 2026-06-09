@@ -39,7 +39,15 @@
   import { useI18n } from 'vue-i18n'
   import ExternalLinkCard from './ExternalLinkCard.vue'
 
-  const { t } = useI18n()
+  const { t, locale } = useI18n()
+
+  const resumeHref = computed(() => {
+    // Map the active locale to a language-specific resume file in `public/resume/`.
+    // Add the corresponding PDF files to `public/resume/` (example names below).
+    return locale.value === 'pt-BR'
+      ? '/resume/Madson_Germano_Resume_PT-BR.pdf'
+      : '/resume/Madson_Germano_Resume_EN-US.pdf'
+  })
 
   const profileCards = computed(() => [
     {
@@ -81,7 +89,7 @@
       badge: t('linksSection.cards.resume.badge'),
       tags: ['Experience', 'Skills', 'Results'],
       ctaLabel: t('linksSection.cards.resume.ctaLabel'),
-      href: 'https://github.com/zandargo/qsr-mgbr-portfolio',
+      href: resumeHref.value,
       mediaBackground:
         'linear-gradient(142deg, rgba(14, 18, 16, 0.92), rgba(125, 255, 202, 0.22)), radial-gradient(circle at 24% 82%, rgba(0, 255, 136, 0.2), transparent 48%)'
     }

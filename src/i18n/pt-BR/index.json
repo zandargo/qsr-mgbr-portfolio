@@ -69,34 +69,52 @@
 		"timelineAria": "Linha do tempo de carreira",
 		"timeline": {
 			"0": {
-				"year": "2010",
-				"role": "Desenhista CAD",
-				"company": "Invento",
-				"summary": "Criei pacotes de desenho prontos para produção e padronizei fluxos de detalhamento para aprovações mais rápidas."
+				"year": "2008",
+				"role": "Monitor de Desenho Técnico",
+				"company": "Universidade Federal do Ceará (UFC)",
+				"summary": "Preparei materiais didáticos e auxiliei alunos no desenvolvimento de habilidades de desenho técnico e representação gráfica para engenharia."
 			},
 			"1": {
-				"year": "2012",
-				"role": "Projetista Mecânico",
-				"company": "EKIPAR",
-				"summary": "Projetei conjuntos de máquinas e melhorei a fabricabilidade combinando precisão no SolidWorks com feedback de fábrica."
+				"year": "2010",
+				"role": "Desenhista CAD (Estagiário)",
+				"company": "Invento Projetos Tecnológicos",
+				"summary": "Desenvolvi e revisei projetos mecânicos em SolidEdge e AutoCAD, aprimorando processos de modelagem 3D, detalhamento técnico e documentação para fabricação."
 			},
 			"2": {
-				"year": "2017",
-				"role": "Agente de Inovação",
-				"company": "Sangati Berga",
-				"summary": "Liderei iniciativas de automação, conectando dados de engenharia a rotinas de software práticas para eliminar tarefas repetitivas."
+				"year": "2011",
+				"role": "Monitor de Metrologia",
+				"company": "LAMETRO / UFC",
+				"summary": "Criei materiais de apoio e atividades práticas para disciplinas de metrologia, incluindo um ambiente virtual desenvolvido em Blender para ensino de medições."
 			},
 			"3": {
-				"year": "2022",
-				"role": "Construtor de Sistemas Freelance",
-				"company": "Upwork Top Rated Plus",
-				"summary": "Entreguei soluções personalizadas de CAD e frontend para clientes internacionais, com foco em arquitetura escalável e clareza."
+				"year": "2012",
+				"role": "Projetista Mecânico",
+				"company": "EKIPAR Engenharia",
+				"summary": "Projetei equipamentos industriais em SolidWorks, acompanhando a fabricação e identificando melhorias de qualidade, segurança operacional e conformidade técnica."
 			},
 			"4": {
-				"year": "Hoje",
-				"role": "Portfólio de Inteligência Mecânica",
-				"company": "Independente",
-				"summary": "Unindo lógica de engenharia com experiências web premium para mostrar profundidade técnica e execução de produto."
+				"year": "2017",
+				"role": "Agente Local de Inovação",
+				"company": "SEBRAE-CE",
+				"summary": "Realizei diagnósticos de inovação em empresas do setor metalmecânico, identificando oportunidades de melhoria em produtos, processos e gestão."
+			},
+			"5": {
+				"year": "2017",
+				"role": "Analista de Projetos e Automação",
+				"company": "Sangati Berga",
+				"summary": "Implementei automações e integrações entre Excel, AutoCAD e SolidWorks, reduzindo em até 80% o tempo de etapas críticas de engenharia e padronizando fluxos BIM."
+			},
+			"6": {
+				"year": "2022",
+				"role": "Desenvolvedor Freelancer",
+				"company": "Upwork",
+				"summary": "Desenvolvo aplicações web, automações para Excel e SolidWorks, interfaces modernas em Vue.js e soluções personalizadas para clientes globais, mantendo 100% de avaliações positivas."
+			},
+			"7": {
+				"year": "2025",
+				"role": "Projetista Mecânico",
+				"company": "Perfisul",
+				"summary": "Atuei no desenvolvimento e detalhamento de projetos mecânicos industriais, aplicando modelagem 3D, documentação técnica e otimização de soluções para fabricação."
 			}
 		}
 	},

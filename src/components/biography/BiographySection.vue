@@ -73,6 +73,24 @@
       role: t('biography.timeline.4.role'),
       company: t('biography.timeline.4.company'),
       summary: t('biography.timeline.4.summary')
+    },
+    {
+      year: t('biography.timeline.5.year'),
+      role: t('biography.timeline.5.role'),
+      company: t('biography.timeline.5.company'),
+      summary: t('biography.timeline.5.summary')
+    },
+    {
+      year: t('biography.timeline.6.year'),
+      role: t('biography.timeline.6.role'),
+      company: t('biography.timeline.6.company'),
+      summary: t('biography.timeline.6.summary')
+    },
+    {
+      year: t('biography.timeline.7.year'),
+      role: t('biography.timeline.7.role'),
+      company: t('biography.timeline.7.company'),
+      summary: t('biography.timeline.7.summary')
     }
   ])
 

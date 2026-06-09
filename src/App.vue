@@ -20,9 +20,9 @@
         <TechnicalSkillsSection />
       </section>
 
-      <section id="experience" class="page-section" aria-labelledby="experience-title">
+      <!-- <section id="experience" class="page-section" aria-labelledby="experience-title">
         <ExperienceSection />
-      </section>
+      </section> -->
 
       <section id="projects" class="page-section" aria-labelledby="projects-title">
         <FeaturedProjectsSection />
