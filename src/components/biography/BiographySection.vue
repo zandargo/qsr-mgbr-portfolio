@@ -4,13 +4,13 @@
       <article class="profile-panel glass-panel glow-border">
         <header class="profile-panel__header">
           <p class="section-kicker text-mono">{{ t('biography.kicker') }}</p>
-          <h2 id="biography-title" class="text-display">{{ t('biography.title') }}</h2>
+          <h4 id="biography-title" class="text-display q-ma-none">{{ t('biography.title') }}</h4>
         </header>
 
         <div class="profile-media">
           <div class="profile-media__frame" aria-hidden="true">
             <!-- <span class="profile-media__initials text-display">MG</span> -->
-            <q-img src="/img/profile/Profile002.png" spinner-color="primary" spinner-size="82px" height="520px" fit="cover" position="50% 100%" />
+            <q-img src="/img/profile/Profile002.png" spinner-color="primary" spinner-size="82px" height="100%" fit="cover" position="50% 25%" />
           </div>
           <p class="profile-media__caption text-mono">{{ t('biography.caption') }}</p>
         </div>
@@ -208,11 +208,9 @@
   }
 
   .profile-panel {
-    display: grid;
-    align-content: start;
-    gap: var(--space-lg);
     padding: clamp(1.25rem, 2vw, 2rem);
-    height: fit-content;
+    /* height: fit-content; */
+    height: 85vh;
     position: sticky;
     top: 114px;
   }
@@ -234,6 +232,9 @@
   .profile-media {
     display: grid;
     gap: var(--space-sm);
+    height: 50vh;
+    /* min-height: 420px; */
+    /* align-content: start; */
   }
 
   .profile-media__frame {
@@ -246,6 +247,8 @@
       radial-gradient(circle at 25% 25%, rgba(0, 255, 136, 0.3), transparent 58%),
       linear-gradient(140deg, rgba(12, 18, 14, 0.94), rgba(10, 14, 12, 0.74));
     overflow: hidden;
+    height: 100%;
+    position: relative;
   }
 
   .profile-media__frame::before {
