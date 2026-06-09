@@ -135,7 +135,7 @@
 		}
 	},
 	"technicalSkills": {
-		"kicker": "Habilidades écnicas",
+		"kicker": "Habilidades Técnicas",
 		"title": "Três domínios. Um motor de entrega.",
 		"description": "De sistemas frontend a projeto mecânico e pipelines de automação, estas são as camadas técnicas com que entrego diariamente.",
 		"groupAria": "Habilidades de {group}",
