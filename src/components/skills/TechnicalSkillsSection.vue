@@ -50,40 +50,41 @@
     return '#ff7b7b'
   }
 
-  const chartOptions = (skill) => ({
-    chart: {
-      type: 'bar',
-      sparkline: { enabled: true },
-      animations: { enabled: true },
-      dropShadow: { enabled: true, top: 0, left: 0, blur: 4, opacity: 0.45 }
-    },
-    plotOptions: {
-      bar: {
-        horizontal: true,
-        borderRadius: 6,
-        barHeight: '60%'
-      }
-    },
-    xaxis: {
-      max: 100,
-      labels: { show: false },
-      axisTicks: { show: false },
-      axisBorder: { show: false }
-    },
-    yaxis: { show: false },
-    grid: { show: false },
-    dataLabels: { enabled: false },
-    tooltip: { enabled: true, y: { formatter: (val) => `${val}%` } },
-    fill: { colors: [skillColor(skill.value)] }
-  })
+  // const chartOptions = (skill) => ({
+  //   chart: {
+  //     type: 'bar',
+  //     sparkline: { enabled: true },
+  //     animations: { enabled: true },
+  //     dropShadow: { enabled: true, top: 0, left: 0, blur: 4, opacity: 0.45 }
+  //   },
+  //   plotOptions: {
+  //     bar: {
+  //       horizontal: true,
+  //       borderRadius: 6,
+  //       barHeight: '60%'
+  //     }
+  //   },
+  //   xaxis: {
+  //     max: 100,
+  //     labels: { show: false },
+  //     axisTicks: { show: false },
+  //     axisBorder: { show: false }
+  //   },
+  //   yaxis: { show: false },
+  //   grid: { show: false },
+  //   dataLabels: { enabled: false },
+  //   tooltip: { enabled: true, y: { formatter: (val) => `${val}%` } },
+  //   fill: { colors: [skillColor(skill.value)] }
+  // })
 
-  const chartSeries = (skill) => [{ data: [skill.value] }]
+  // const chartSeries = (skill) => [{ data: [skill.value] }]
 
   const chartOptionsGroup = (group) => {
     const categories = group.skills.map(s => s.name)
     return {
       chart: {
         type: 'bar',
+        width: '100%',
         // offsetX: 80,
         animations: { enabled: true },
         toolbar: { show: false },
@@ -100,12 +101,13 @@
         bar: {
           horizontal: true,
           borderRadius: 8,
-          barHeight: '50%'
+          barHeight: '80%',
+          columnWidth: '6%'
         }
       },
       xaxis: {
         categories,
-        max: 100,
+        max: 15,
         labels: {
           show: true,
           style: {
@@ -142,14 +144,22 @@
       },
       dataLabels: {
         enabled: true,
-        formatter: (val) => `${val}%`,
+        // formatter: (val) => `${val}%`,
         offsetY: 8,
         style: {
           colors: ['#000000DD'],
           fontFamily: 'Fira Code',
           fontSize: '1.0rem',
           fontWeight: '600'
-        }
+        },
+        dropShadow: {
+          enabled: false,
+          top: 0,
+          left: 0,
+          blur: 2,
+          color: '#AAFFDD',
+          opacity: 0.85
+        },
       },
       tooltip: {
         enabled: false,
@@ -179,12 +189,52 @@
                 opacity: 1
               }
 
+            ],
+            [
+              {
+                offset: 0,
+                color: 'rgba(160, 255, 240, 0.3)',
+                opacity: 1
+              },
+              {
+                offset: 50,
+                color: 'rgba(160, 255, 240, 0.75)',
+                opacity: 1
+              },
+              {
+                offset: 100,
+                color: 'rgba(160, 255, 240, 0.45)',
+                opacity: 1
+              }
+
             ]
           ]
 
         }
       },
-      legend: { show: false }
+      legend: {
+        show: true,
+        position: 'right',
+        horizontalAlign: 'left',
+        fontFamily: 'Fira Code',
+        fontSize: '0.85rem',
+        fontWeight: '400',
+        labels: {
+          colors: ['#CCFFEEAA', '#CCFFEEAA']
+          // useSeriesColors: true
+        },
+        customLegendItems: ['Nível de Habilidade', 'Anos de Experiência'],
+        markers: {
+          shape: 'circle',
+          size: 8,
+          fillColors: ['rgba(0, 255, 136, 0.75)', 'rgba(160, 255, 240, 0.75)'],
+          // colors: ['#FF00FF', 'red'],
+          strokeWidth: 0,
+          offsetX: -8,
+          // customHTML: function () { return '\<span className="custom-marker">\<i className="fas fa-chart-pie">\</i>\</span>' }
+        }
+      }
+
       // grid: {
       //   row: {
       //     colors: ['#000', '#fff', '#000']
@@ -196,9 +246,12 @@
     }
   }
 
-  const chartSeriesGroup = (group) => [{ data: group.skills.map(s => s.value) }]
+  const chartSeriesGroup = (group) => [
+    { data: group.skills.map(s => s.value) },
+    { data: group.skills.map(s => s.years) }
+  ]
 
-  const groupChartHeight = (group) => Math.max(140, group.skills.length * 48)
+  const groupChartHeight = (group) => Math.max(140, group.skills.length * 60)
 
   const hexToRgba = (hex, alpha = 0.36) => {
     const h = hex.replace('#', '')
@@ -219,33 +272,33 @@
       key: 'engineering',
       title: t('technicalSkills.groups.engineering.title'),
       skills: [
-        { name: 'SolidWorks', value: 96, years: 10, context: t('technicalSkills.groups.engineering.skills.solidworks') },
-        { name: 'AutoCAD', value: 85, years: 9, context: t('technicalSkills.groups.engineering.skills.autocad') },
-        { name: 'SolidEdge', value: 80, years: 4, context: t('technicalSkills.groups.engineering.skills.solidedge') },
-        { name: 'BIM', value: 74, years: 3, context: t('technicalSkills.groups.engineering.skills.bim') },
-        { name: '3D Printing', value: 88, years: 5, context: t('technicalSkills.groups.engineering.skills.printing3d') }
+        { name: 'SolidWorks', value: 9.6, years: 10, context: t('technicalSkills.groups.engineering.skills.solidworks') },
+        { name: 'AutoCAD', value: 8.5, years: 9, context: t('technicalSkills.groups.engineering.skills.autocad') },
+        { name: 'SolidEdge', value: 8.0, years: 4, context: t('technicalSkills.groups.engineering.skills.solidedge') },
+        { name: 'BIM', value: 7.4, years: 3, context: t('technicalSkills.groups.engineering.skills.bim') },
+        { name: '3D Printing', value: 8.8, years: 5, context: t('technicalSkills.groups.engineering.skills.printing3d') }
       ]
     },
     {
       key: 'frontend',
       title: t('technicalSkills.groups.frontend.title'),
       skills: [
-        { name: 'Vue.js', value: 95, years: 6, context: t('technicalSkills.groups.frontend.skills.vue') },
-        { name: 'Quasar', value: 90, years: 5, context: t('technicalSkills.groups.frontend.skills.quasar') },
-        { name: 'JavaScript', value: 94, years: 7, context: t('technicalSkills.groups.frontend.skills.javascript') },
-        { name: 'Electron', value: 82, years: 3, context: t('technicalSkills.groups.frontend.skills.electron') },
-        { name: 'HTML/CSS', value: 96, years: 8, context: t('technicalSkills.groups.frontend.skills.htmlcss') }
+        { name: 'Vue.js', value: 9.5, years: 6, context: t('technicalSkills.groups.frontend.skills.vue') },
+        { name: 'Quasar', value: 9.0, years: 5, context: t('technicalSkills.groups.frontend.skills.quasar') },
+        { name: 'JavaScript', value: 9.4, years: 7, context: t('technicalSkills.groups.frontend.skills.javascript') },
+        { name: 'Electron', value: 8.2, years: 3, context: t('technicalSkills.groups.frontend.skills.electron') },
+        { name: 'HTML/CSS', value: 9.6, years: 8, context: t('technicalSkills.groups.frontend.skills.htmlcss') }
       ]
     },
     {
       key: 'automation',
       title: t('technicalSkills.groups.automation.title'),
       skills: [
-        { name: 'VBA', value: 93, years: 8, context: t('technicalSkills.groups.automation.skills.vba') },
-        { name: 'Python', value: 87, years: 5, context: t('technicalSkills.groups.automation.skills.python') },
-        { name: 'REST APIs', value: 84, years: 4, context: t('technicalSkills.groups.automation.skills.rest') },
-        { name: 'Excel', value: 94, years: 10, context: t('technicalSkills.groups.automation.skills.excel') },
-        { name: 'Design Automation', value: 91, years: 6, context: t('technicalSkills.groups.automation.skills.designAutomation') }
+        { name: 'VBA', value: 9.3, years: 8, context: t('technicalSkills.groups.automation.skills.vba') },
+        { name: 'Python', value: 8.7, years: 5, context: t('technicalSkills.groups.automation.skills.python') },
+        { name: 'REST APIs', value: 8.4, years: 4, context: t('technicalSkills.groups.automation.skills.rest') },
+        { name: 'Excel', value: 9.4, years: 10, context: t('technicalSkills.groups.automation.skills.excel') },
+        { name: 'Design Automation', value: 9.1, years: 6, context: t('technicalSkills.groups.automation.skills.designAutomation') }
       ]
     }
   ])
@@ -357,50 +410,6 @@
     color: var(--accent);
   }
 
-  .skills-row {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: var(--space-md);
-  }
-
-  .technical-skill-card {
-    padding: var(--space-md);
-    display: grid;
-    justify-items: start;
-    gap: var(--space-md);
-    text-align: left;
-    opacity: 0;
-    transform: translateY(20px);
-    border: 1px solid rgba(125, 255, 202, 0.18);
-    transition:
-      border-color 200ms ease,
-      box-shadow 240ms ease,
-      transform 220ms ease;
-  }
-
-  .technical-skill-card:hover,
-  .technical-skill-card:focus-visible {
-    outline: none;
-    border-color: rgba(0, 255, 136, 0.45);
-    box-shadow:
-      0 0 0 1px rgba(0, 255, 136, 0.14) inset,
-      0 0 22px rgba(0, 255, 136, 0.22);
-    transform: translateY(-3px);
-  }
-
-  .technical-skill-card__copy {
-    display: grid;
-    gap: 0.35rem;
-  }
-
-  .skill-bar {
-    width: 100%;
-    max-width: 420px;
-    align-self: center;
-  }
 
   .group-chart-wrapper {
     display: grid;
@@ -410,7 +419,7 @@
 
   .group-chart {
     width: 100%;
-    max-width: 720px;
+    max-width: 1200px;
   }
 
   /* amplify bar glow */
@@ -443,83 +452,14 @@
     gap: 0.4rem;
   }
 
-  .skill-legend-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.2rem 0.4rem;
-    background: transparent;
-    border-radius: 6px;
-  }
-
-  .skill-legend-name {
-    font-weight: 600;
-  }
-
-  .skill-legend-meta {
-    font-size: 0.75rem;
-    color: var(--text-muted);
-  }
-
-  .technical-skill-card__copy h4 {
+  /* legacy legend markup removed from template; keep layout vars if reused elsewhere */
+  .skills-legend {
+    list-style: none;
     margin: 0;
-    font-size: 1.02rem;
-  }
-
-  .technical-skill-card__meta {
-    margin: 0;
-    font-size: 0.68rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--primary-soft);
-  }
-
-  .technical-skill-card__details {
-    margin: 0;
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    color: var(--text-muted);
-    line-height: 1.55;
-    transition:
-      max-height 260ms ease,
-      opacity 260ms ease,
-      margin-top 260ms ease;
-  }
-
-  .technical-skill-card:hover .technical-skill-card__details,
-  .technical-skill-card:focus-visible .technical-skill-card__details {
-    max-height: 8.5rem;
-    opacity: 1;
-    margin-top: 0.4rem;
-  }
-
-  @media (max-width: 1280px) {
-    .skills-row {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-  }
-
-  @media (max-width: 1100px) {
-    .skills-row {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-  }
-
-  @media (max-width: 860px) {
-    .skills-row {
-      display: grid;
-      grid-auto-flow: column;
-      grid-auto-columns: minmax(220px, 74vw);
-      overflow-x: auto;
-      overscroll-behavior-x: contain;
-      scroll-snap-type: x mandatory;
-      padding-bottom: var(--space-xs);
-    }
-
-    .technical-skill-card {
-      scroll-snap-align: start;
-    }
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 0.4rem;
   }
 
   @media (max-width: 640px) {
