@@ -4,7 +4,7 @@
       <article class="profile-panel glass-panel glow-border">
         <header class="profile-panel__header">
           <p class="section-kicker text-mono">{{ t('biography.kicker') }}</p>
-          <h4 id="biography-title" class="text-display q-ma-none">{{ t('biography.title') }}</h4>
+          <h5 id="biography-title" class="text-display q-ma-none">{{ t('biography.title') }}</h5>
         </header>
 
         <div class="profile-media">
@@ -210,7 +210,7 @@
   .profile-panel {
     padding: clamp(1.25rem, 2vw, 2rem);
     /* height: fit-content; */
-    height: 85vh;
+    height: calc(100vh - 128px);
     position: sticky;
     top: 114px;
   }
