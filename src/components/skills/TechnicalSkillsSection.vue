@@ -233,7 +233,71 @@
           offsetX: -8,
           // customHTML: function () { return '\<span className="custom-marker">\<i className="fas fa-chart-pie">\</i>\</span>' }
         }
-      }
+      },
+      responsive: [
+        {
+          breakpoint: 640,
+          options: {
+            chart: {
+              width: '100%'
+            },
+            plotOptions: {
+              bar: {
+                horizontal: false,
+                columnWidth: '55%',
+                borderRadius: 5,
+                borderRadiusApplication: 'end',
+              },
+            },
+            yaxis: {
+              labels: {
+                show: true,
+                minWidth: 20,
+                style: {
+                  colors: '#CCFFEE66',
+                  fontSize: '0.8rem',
+                  fontFamily: 'Fira Code',
+                  fontWeight: '200'
+                }
+              }
+            },
+            xaxis: {
+              show: true,
+              labels: {
+                show: true,
+                minWidth: 240,
+                style: {
+                  colors: '#CCFFEEDD',
+                  fontSize: '0.9rem',
+                  fontFamily: 'Fira Code',
+                }
+              },
+            },
+            legend: {
+              show: true,
+              position: 'bottom',
+              horizontalAlign: 'left',
+              fontFamily: 'Fira Code',
+              fontSize: '0.5rem',
+              fontWeight: '300',
+              // labels: {
+              //   colors: ['#CCFFEEAA', '#CCFFEEAA']
+              //   // useSeriesColors: true
+              // },
+              // customLegendItems: ['Nível de Habilidade', 'Anos de Experiência'],
+              // markers: {
+              //   shape: 'circle',
+              //   size: 8,
+              //   fillColors: ['rgba(0, 255, 136, 0.75)', 'rgba(160, 255, 240, 0.75)'],
+              //   // colors: ['#FF00FF', 'red'],
+              //   strokeWidth: 0,
+              //   offsetX: -8,
+              //   // customHTML: function () { return '\<span className="custom-marker">\<i className="fas fa-chart-pie">\</i>\</span>' }
+              // }
+            },
+          }
+        }
+      ],
     }
   }
 
