@@ -234,15 +234,6 @@
           // customHTML: function () { return '\<span className="custom-marker">\<i className="fas fa-chart-pie">\</i>\</span>' }
         }
       }
-
-      // grid: {
-      //   row: {
-      //     colors: ['#000', '#fff', '#000']
-      //   },
-      //   column: {
-      //     colors: ['#000', '#fff', '#000']
-      //   }
-      // }
     }
   }
 
@@ -272,33 +263,33 @@
       key: 'engineering',
       title: t('technicalSkills.groups.engineering.title'),
       skills: [
-        { name: 'SolidWorks', value: 9.6, years: 10, context: t('technicalSkills.groups.engineering.skills.solidworks') },
-        { name: 'AutoCAD', value: 8.5, years: 9, context: t('technicalSkills.groups.engineering.skills.autocad') },
-        { name: 'SolidEdge', value: 8.0, years: 4, context: t('technicalSkills.groups.engineering.skills.solidedge') },
-        { name: 'BIM', value: 7.4, years: 3, context: t('technicalSkills.groups.engineering.skills.bim') },
-        { name: '3D Printing', value: 8.8, years: 5, context: t('technicalSkills.groups.engineering.skills.printing3d') }
+        { name: 'SolidWorks', value: 9.6, years: 10 },
+        { name: 'AutoCAD', value: 8.5, years: 9 },
+        { name: 'SolidEdge', value: 8.0, years: 4 },
+        { name: 'BIM', value: 7.4, years: 3 },
+        { name: '3D Printing', value: 8.8, years: 5 }
       ]
     },
     {
       key: 'frontend',
       title: t('technicalSkills.groups.frontend.title'),
       skills: [
-        { name: 'Vue.js', value: 9.5, years: 6, context: t('technicalSkills.groups.frontend.skills.vue') },
-        { name: 'Quasar', value: 9.0, years: 5, context: t('technicalSkills.groups.frontend.skills.quasar') },
-        { name: 'JavaScript', value: 9.4, years: 7, context: t('technicalSkills.groups.frontend.skills.javascript') },
-        { name: 'Electron', value: 8.2, years: 3, context: t('technicalSkills.groups.frontend.skills.electron') },
-        { name: 'HTML/CSS', value: 9.6, years: 8, context: t('technicalSkills.groups.frontend.skills.htmlcss') }
+        { name: 'Vue.js', value: 9.5, years: 6 },
+        { name: 'Quasar', value: 9.0, years: 5 },
+        { name: 'JavaScript', value: 9.4, years: 7 },
+        { name: 'Electron', value: 8.2, years: 3 },
+        { name: 'HTML/CSS', value: 9.6, years: 8 }
       ]
     },
     {
       key: 'automation',
       title: t('technicalSkills.groups.automation.title'),
       skills: [
-        { name: 'VBA', value: 9.3, years: 8, context: t('technicalSkills.groups.automation.skills.vba') },
-        { name: 'Python', value: 8.7, years: 5, context: t('technicalSkills.groups.automation.skills.python') },
-        { name: 'REST APIs', value: 8.4, years: 4, context: t('technicalSkills.groups.automation.skills.rest') },
-        { name: 'Excel', value: 9.4, years: 10, context: t('technicalSkills.groups.automation.skills.excel') },
-        { name: 'Design Automation', value: 9.1, years: 6, context: t('technicalSkills.groups.automation.skills.designAutomation') }
+        { name: 'VBA', value: 9.3, years: 8 },
+        { name: 'Python', value: 8.7, years: 5 },
+        { name: 'REST APIs', value: 8.4, years: 4 },
+        { name: 'Excel', value: 9.4, years: 10 },
+        { name: 'Design Automation', value: 9.1, years: 6 }
       ]
     }
   ])
@@ -419,7 +410,7 @@
 
   .group-chart {
     width: 100%;
-    max-width: 1200px;
+    max-width: calc(100vw - 80px);
   }
 
   /* amplify bar glow */

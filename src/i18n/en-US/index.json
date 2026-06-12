@@ -142,34 +142,13 @@
     "yearsExperience": "{years} years experience",
     "groups": {
       "frontend": {
-        "title": "Frontend",
-        "skills": {
-          "vue": "Architecture for production SPAs, reusable components, and scalable composition patterns.",
-          "quasar": "High-speed UI delivery with responsive design systems and custom theming.",
-          "javascript": "Complex UI behavior, data orchestration, and interaction-heavy experiences.",
-          "electron": "Desktop apps connecting engineering workflows with modern interfaces.",
-          "htmlcss": "Semantic layout systems and polished interaction details for robust UI foundations."
-        }
+        "title": "Frontend"
       },
       "engineering": {
-        "title": "Engineering",
-        "skills": {
-          "solidworks": "Assemblies, parametric modeling, and manufacturing-ready technical outputs.",
-          "autocad": "2D detailing, layout standardization, and production documentation.",
-          "solidedge": "Mechanical part design and interoperability across engineering stacks.",
-          "bim": "Structured model collaboration and project-aware documentation flows.",
-          "printing3d": "Prototype-to-iteration cycles for faster validation and design decisions."
-        }
+        "title": "Engineering"
       },
       "automation": {
-        "title": "Automation",
-        "skills": {
-          "vba": "Automated CAD and spreadsheet routines to remove repetitive engineering tasks.",
-          "python": "Data processing, scriptable tooling, and API-backed engineering utilities.",
-          "rest": "Service integrations for product data sync, dashboards, and custom tools.",
-          "excel": "Advanced formulas, process templates, and operational reporting systems.",
-          "designAutomation": "Workflow-first automation that accelerates delivery without sacrificing quality."
-        }
+        "title": "Automation"
       }
     }
   },

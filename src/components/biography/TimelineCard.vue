@@ -85,5 +85,11 @@
       left: -30px;
       right: auto;
     }
+
+    .timeline-card--left::before,
+    .timeline-card--right::before {
+      right: -22px;
+      left: -22px;
+    }
   }
 </style>

@@ -142,34 +142,13 @@
 		"yearsExperience": "{years} anos de experiência",
 		"groups": {
 			"frontend": {
-				"title": "Frontend",
-				"skills": {
-					"vue": "Arquitetura para SPAs de produção, componentes reutilizáveis e padrões de composição escaláveis.",
-					"quasar": "Entrega rápida de UI com sistemas responsivos e temas personalizados.",
-					"javascript": "Comportamentos complexos de UI, orquestração de dados e experiências ricas em interação.",
-					"electron": "Apps desktop conectando fluxos de engenharia com interfaces modernas.",
-					"htmlcss": "Sistemas semânticos de layout e detalhes refinados de interação para bases robustas de UI."
-				}
+				"title": "Frontend"
 			},
 			"engineering": {
-				"title": "Engenharia",
-				"skills": {
-					"solidworks": "Conjuntos, modelagem paramétrica e saídas técnicas prontas para manufatura.",
-					"autocad": "Detalhamento 2D, padronização de layout e documentação de produção.",
-					"solidedge": "Projeto de peças mecânicas e interoperabilidade entre pilhas de engenharia.",
-					"bim": "Colaboração estruturada de modelos e fluxos de documentação orientados ao projeto.",
-					"printing3d": "Ciclos de prototipagem e iteração para validar e decidir mais rápido."
-				}
+				"title": "Engenharia"
 			},
 			"automation": {
-				"title": "Automação",
-				"skills": {
-					"vba": "Rotinas automatizadas em CAD e planilhas para eliminar tarefas repetitivas de engenharia.",
-					"python": "Processamento de dados, ferramentas scriptáveis e utilitários de engenharia com APIs.",
-					"rest": "Integrações de serviços para sincronização de dados de produto, dashboards e ferramentas customizadas.",
-					"excel": "órmulas avançadas, templates de processo e sistemas operacionais de relatório.",
-					"designAutomation": "Automação orientada a fluxo que acelera entregas sem perder qualidade."
-				}
+				"title": "Automação"
 			}
 		}
 	},

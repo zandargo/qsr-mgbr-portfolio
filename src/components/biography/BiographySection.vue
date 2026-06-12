@@ -1,7 +1,8 @@
 <template>
   <div class="section-container biography-section">
     <div class="biography-shell">
-      <article class="profile-panel glass-panel glow-border">
+      <!-- *// -------------------- PROFILE PICTURE ------------------- //* -->
+      <article class="profile-panel glass-panel glow-border column justify-between">
         <header class="profile-panel__header">
           <p class="section-kicker text-mono">{{ t('biography.kicker') }}</p>
           <h5 id="biography-title" class="text-display q-ma-none">{{ t('biography.title') }}</h5>
@@ -9,17 +10,19 @@
 
         <div class="profile-media">
           <div class="profile-media__frame" aria-hidden="true">
-            <!-- <span class="profile-media__initials text-display">MG</span> -->
-            <q-img src="/img/profile/Profile002.png" spinner-color="primary" spinner-size="82px" height="100%" fit="cover" position="50% 25%" />
+            <q-img src="/img/profile/Profile002.png" spinner-color="primary" spinner-size="82px" height="100%" fit="cover" position="50% 25%" style="opacity: 0.01;" />
           </div>
           <p class="profile-media__caption text-mono">{{ t('biography.caption') }}</p>
         </div>
 
-        <p class="profile-panel__description">
-          {{ t('biography.description') }}
-        </p>
+        <div class="">
+          <p class="profile-panel__description text-justify">
+            {{ t('biography.description') }}
+          </p>
+        </div>
       </article>
 
+      <!-- *// ----------------------- TIMELINE ----------------------- //* -->
       <div ref="timelineRef" class="timeline-panel" :aria-label="t('biography.timelineAria')">
         <div class="timeline-rail" aria-hidden="true">
           <div ref="timelineFillRef" class="timeline-rail__fill" />
@@ -247,8 +250,8 @@
       radial-gradient(circle at 25% 25%, rgba(0, 255, 136, 0.3), transparent 58%),
       linear-gradient(140deg, rgba(12, 18, 14, 0.94), rgba(10, 14, 12, 0.74));
     overflow: hidden;
-    height: 100%;
-    position: relative;
+    /* height: 100%; */
+    /* position: relative; */
   }
 
   .profile-media__frame::before {
@@ -258,14 +261,6 @@
     background:
       linear-gradient(90deg, transparent 0%, rgba(125, 255, 202, 0.12) 36%, transparent 100%),
       repeating-linear-gradient(0deg, rgba(125, 255, 202, 0.06) 0 1px, transparent 1px 12px);
-  }
-
-  .profile-media__initials {
-    position: relative;
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    letter-spacing: 0.08em;
-    color: rgba(228, 255, 241, 0.92);
-    text-shadow: 0 0 18px rgba(0, 255, 136, 0.28);
   }
 
   .profile-media__caption {
@@ -332,6 +327,7 @@
 
     .profile-panel {
       position: static;
+      height: auto;
     }
 
     .timeline-panel {

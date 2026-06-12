@@ -25,17 +25,17 @@
           <span ref="tagRef" class="tag-row__value text-display">{{ activeTag }}</span>
         </div>
 
-        <div class="action-row">
-          <a class="action-button action-button--solid" href="https://github.com/zandargo/" target="_blank" rel="noreferrer">
-            <Icon icon="mdi:github" />
+        <div class="xaction-row row q-gutter-md q-pr-md">
+          <a class="action-button action-button--solid col-12 col-md-3" href="https://github.com/zandargo/" target="_blank" rel="noreferrer">
+            <Icon icon="mdi:github" height="24px" />
             <span>{{ t('hero.actions.github') }}</span>
           </a>
-          <a class="action-button" href="https://www.linkedin.com/in/madson-br/">
-            <Icon icon="mdi:linkedin" />
+          <a class="action-button col-12 col-md-3" href="https://www.linkedin.com/in/madson-br/">
+            <Icon icon="mdi:linkedin" height="24px" />
             <span>{{ t('hero.actions.linkedin') }}</span>
           </a>
-          <a class="action-button" href="#contact">
-            <Icon icon="mdi:file-document-outline" />
+          <a class="action-button col-12 col-md-3" href="#contact">
+            <Icon icon="mdi:file-document-outline" height="24px" />
             <span>{{ t('hero.actions.resume') }}</span>
           </a>
         </div>
