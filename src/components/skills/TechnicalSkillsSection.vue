@@ -14,13 +14,6 @@
           <h3 class="group-title text-display">{{ group.title }}</h3>
           <div class="group-chart-wrapper" :aria-label="t('technicalSkills.groupAria', { group: group.title })" :style="groupGlowStyle(group)">
             <component :is="ApexCharts" type="bar" :options="chartOptionsGroup(group)" :series="chartSeriesGroup(group)" :height="groupChartHeight(group)" class="group-chart" />
-
-            <!-- <ul class="skills-legend">
-              <li v-for="skill in group.skills" :key="`${group.key}-${skill.name}`" class="skill-legend-item">
-                <span class="skill-legend-name">{{ skill.name }}</span>
-                <span class="skill-legend-meta">{{ t('technicalSkills.yearsExperience', { years: skill.years }) }}</span>
-              </li>
-            </ul> -->
           </div>
         </section>
       </div>
@@ -110,7 +103,6 @@
       },
       grid: {
         show: false,
-        // borderColor: '#0f90',
         xaxis: {
           lines: { show: true }
         },
@@ -120,9 +112,7 @@
       },
       dataLabels: {
         enabled: true,
-        // formatter: (val) => `${val}%`,
         offsetY: 8,
-        // textAnchor: 'end',
         style: {
           colors: ['#000000DD'],
           fontFamily: 'Fira Code',
@@ -205,10 +195,8 @@
           shape: 'circle',
           size: 8,
           fillColors: ['rgba(0, 255, 136, 0.75)', 'rgba(160, 255, 240, 0.75)'],
-          // colors: ['#FF00FF', 'red'],
           strokeWidth: 0,
           offsetX: -12,
-          // customHTML: function () { return '\<span className="custom-marker">\<i className="fas fa-chart-pie">\</i>\</span>' }
         }
       },
       responsive: [
@@ -271,20 +259,6 @@
               fontFamily: 'Fira Code',
               fontSize: '0.5rem',
               fontWeight: '300',
-              // labels: {
-              //   colors: ['#CCFFEEAA', '#CCFFEEAA']
-              //   // useSeriesColors: true
-              // },
-              // customLegendItems: ['Nível de Habilidade', 'Anos de Experiência'],
-              // markers: {
-              //   shape: 'circle',
-              //   size: 8,
-              //   fillColors: ['rgba(0, 255, 136, 0.75)', 'rgba(160, 255, 240, 0.75)'],
-              //   // colors: ['#FF00FF', 'red'],
-              //   strokeWidth: 0,
-              //   offsetX: -8,
-              //   // customHTML: function () { return '\<span className="custom-marker">\<i className="fas fa-chart-pie">\</i>\</span>' }
-              // }
             },
           }
         }
