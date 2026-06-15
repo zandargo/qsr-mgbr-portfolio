@@ -268,7 +268,7 @@
               position: 'bottom',
               horizontalAlign: 'left',
               fontFamily: 'Fira Code',
-              fontSize: '0.75rem',
+              fontSize: '0.85rem',
               fontWeight: '300',
 
               labels: {
