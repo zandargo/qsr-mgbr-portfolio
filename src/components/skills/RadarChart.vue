@@ -52,10 +52,11 @@
         style: {
           colors: ['#8ba698', '#8ba698', '#8ba698', '#8ba698', '#8ba698', '#8ba698'],
           fontFamily: 'Fira Code, Barlow, Segoe UI, sans-serif',
-          fontSize: '16px'
+          fontSize: '16px',
+          rotate: 45,
+          // rotateAlways: true,
+          trim: true,
         },
-        rotate: 25,
-        rotateAlways: true,
       },
     },
     yaxis: {
@@ -95,7 +96,10 @@
       }
     },
     legend: {
-      show: false
+      show: true,
+      customLegendItems: [
+        '1', '2', '3', '4', '5', '6'
+      ],
     },
     tooltip: {
       theme: 'dark'
@@ -121,12 +125,12 @@
           },
           xaxis: {
             labels: {
-              show: false,
+              show: true,
               style: {
                 fontSize: '10px'
               },
-              rotate: 25,
-              rotateAlways: true,
+              // rotate: 25,
+              // rotateAlways: true,
             }
           },
           // yaxis: {
@@ -138,17 +142,17 @@
           //     rotateAlways: true,
           //   }
           // },
-          legend: {
-            show: true,
-            position: 'bottom',
-            horizontalAlign: 'center',
-            fontSize: '12px',
-            markers: {
-              width: 10,
-              height: 10,
-              radius: 5
-            }
-          }
+          // legend: {
+          //   show: true,
+          //   position: 'bottom',
+          //   horizontalAlign: 'center',
+          //   fontSize: '12px',
+          //   markers: {
+          //     width: 10,
+          //     height: 10,
+          //     radius: 5
+          //   }
+          // }
         }
       }
     ]
@@ -157,7 +161,7 @@
 
 <style scoped>
   .radar-chart {
-    width: 100%;
+    width: 80%;
     height: clamp(300px, 48vw, 430px);
   }
 </style>
