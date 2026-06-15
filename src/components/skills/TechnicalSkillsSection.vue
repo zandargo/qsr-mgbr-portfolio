@@ -50,35 +50,6 @@
     return '#ff7b7b'
   }
 
-  // const chartOptions = (skill) => ({
-  //   chart: {
-  //     type: 'bar',
-  //     sparkline: { enabled: true },
-  //     animations: { enabled: true },
-  //     dropShadow: { enabled: true, top: 0, left: 0, blur: 4, opacity: 0.45 }
-  //   },
-  //   plotOptions: {
-  //     bar: {
-  //       horizontal: true,
-  //       borderRadius: 6,
-  //       barHeight: '60%'
-  //     }
-  //   },
-  //   xaxis: {
-  //     max: 100,
-  //     labels: { show: false },
-  //     axisTicks: { show: false },
-  //     axisBorder: { show: false }
-  //   },
-  //   yaxis: { show: false },
-  //   grid: { show: false },
-  //   dataLabels: { enabled: false },
-  //   tooltip: { enabled: true, y: { formatter: (val) => `${val}%` } },
-  //   fill: { colors: [skillColor(skill.value)] }
-  // })
-
-  // const chartSeries = (skill) => [{ data: [skill.value] }]
-
   const chartOptionsGroup = (group) => {
     const categories = group.skills.map(s => s.name)
     return {
@@ -101,9 +72,14 @@
         bar: {
           horizontal: true,
           borderRadius: 8,
-          barHeight: '80%',
-          columnWidth: '6%'
+          barHeight: '85%',
+          columnWidth: '6%',
         }
+      },
+      stroke: {
+        show: true,
+        width: 2,
+        colors: ['transparent'],
       },
       xaxis: {
         categories,
@@ -146,6 +122,7 @@
         enabled: true,
         // formatter: (val) => `${val}%`,
         offsetY: 8,
+        // textAnchor: 'end',
         style: {
           colors: ['#000000DD'],
           fontFamily: 'Fira Code',
@@ -230,7 +207,7 @@
           fillColors: ['rgba(0, 255, 136, 0.75)', 'rgba(160, 255, 240, 0.75)'],
           // colors: ['#FF00FF', 'red'],
           strokeWidth: 0,
-          offsetX: -8,
+          offsetX: -12,
           // customHTML: function () { return '\<span className="custom-marker">\<i className="fas fa-chart-pie">\</i>\</span>' }
         }
       },
@@ -245,8 +222,22 @@
               bar: {
                 horizontal: false,
                 columnWidth: '55%',
-                borderRadius: 5,
+                borderRadius: 4,
                 borderRadiusApplication: 'end',
+                dataLabels: {
+                  position: 'top',
+                  orientation: 'vertical',
+                },
+              },
+            },
+            dataLabels: {
+              offsetX: 8,
+              offsetY: 8,
+              style: {
+                colors: ['#FFFFFFDD'],
+                fontFamily: 'Fira Code',
+                fontSize: '0.8rem',
+                fontWeight: '400'
               },
             },
             yaxis: {
@@ -327,7 +318,7 @@
       key: 'engineering',
       title: t('technicalSkills.groups.engineering.title'),
       skills: [
-        { name: 'SolidWorks', value: 9.6, years: 10 },
+        { name: 'SolidWorks', value: 9, years: 13 },
         { name: 'AutoCAD', value: 8.5, years: 9 },
         { name: 'SolidEdge', value: 8.0, years: 4 },
         { name: 'BIM', value: 7.4, years: 3 },

@@ -51,10 +51,12 @@
       labels: {
         style: {
           colors: ['#8ba698', '#8ba698', '#8ba698', '#8ba698', '#8ba698', '#8ba698'],
-          fontFamily: 'Barlow, Segoe UI, sans-serif',
-          fontSize: '12px'
-        }
-      }
+          fontFamily: 'Fira Code, Barlow, Segoe UI, sans-serif',
+          fontSize: '16px'
+        },
+        rotate: 25,
+        rotateAlways: true,
+      },
     },
     yaxis: {
       show: false,
@@ -112,16 +114,39 @@
       {
         breakpoint: 700,
         options: {
-          xaxis: {
-            labels: {
-              style: {
-                fontSize: '11px'
-              }
-            }
-          },
           plotOptions: {
             radar: {
-              size: 104
+              size: 80
+            }
+          },
+          xaxis: {
+            labels: {
+              show: false,
+              style: {
+                fontSize: '10px'
+              },
+              rotate: 25,
+              rotateAlways: true,
+            }
+          },
+          // yaxis: {
+          //   labels: {
+          //     style: {
+          //       fontSize: '11px'
+          //     },
+          //     rotate: 25,
+          //     rotateAlways: true,
+          //   }
+          // },
+          legend: {
+            show: true,
+            position: 'bottom',
+            horizontalAlign: 'center',
+            fontSize: '12px',
+            markers: {
+              width: 10,
+              height: 10,
+              radius: 5
             }
           }
         }
