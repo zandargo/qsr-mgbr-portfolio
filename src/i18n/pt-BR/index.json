@@ -140,6 +140,10 @@
 		"description": "De sistemas frontend a projeto mecânico e pipelines de automação, estas são as camadas técnicas com que entrego diariamente.",
 		"groupAria": "Habilidades de {group}",
 		"yearsExperience": "{years} anos de experiência",
+		"axes": {
+			"skillLevel": "Nível de Habilidade",
+			"years": "Anos de Experiência"
+		},
 		"groups": {
 			"frontend": {
 				"title": "Frontend"

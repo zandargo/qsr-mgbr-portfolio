@@ -140,6 +140,10 @@
     "description": "From frontend systems to mechanical design and automation pipelines, these are the technical layers I ship with daily.",
     "groupAria": "{group} skills",
     "yearsExperience": "{years} years experience",
+    "axes": {
+      "skillLevel": "Skill Level",
+      "years": "Years of Experience"
+    },
     "groups": {
       "frontend": {
         "title": "Frontend"

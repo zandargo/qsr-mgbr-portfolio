@@ -9,7 +9,7 @@
         </p>
       </header>
 
-      <div class="technical-groups">
+      <div class="technical-groups ">
         <section v-for="group in skillGroups" :key="group.key" class="group-block">
           <h3 class="group-title text-display">{{ group.title }}</h3>
           <div class="group-chart-wrapper" :aria-label="t('technicalSkills.groupAria', { group: group.title })" :style="groupGlowStyle(group)">
@@ -47,9 +47,8 @@
     const categories = group.skills.map(s => s.name)
     return {
       chart: {
-        type: 'bar',
+        type: 'line',
         width: '100%',
-        // offsetX: 80,
         animations: { enabled: true },
         toolbar: { show: false },
         dropShadow: {
@@ -63,44 +62,82 @@
       },
       plotOptions: {
         bar: {
-          horizontal: true,
+          horizontal: false,
           borderRadius: 8,
-          barHeight: '85%',
-          columnWidth: '6%',
+          columnWidth: '55%',
         }
       },
       stroke: {
         show: true,
-        width: 2,
-        colors: ['transparent'],
+        width: [0, 6],
+        curve: 'straight',
+        colors: ['transparent', '#A0FFF0'],
       },
       xaxis: {
         categories,
-        max: 15,
         labels: {
           show: true,
           style: {
-            colors: '#CCFFEE66',
-            fontSize: '0.8rem',
+            colors: '#CCFFEEDD',
+            fontSize: '1rem',
             fontFamily: 'Fira Code',
             fontWeight: '200'
-          }
+          },
+          rotate: -45,
+          rotateAlways: true,
         },
         axisTicks: { show: false },
         axisBorder: { show: false }
       },
-      yaxis: {
-        show: true,
-        labels: {
+      yaxis: [
+        {
           show: true,
-          minWidth: 420,
-          style: {
-            colors: '#CCFFEEDD',
-            fontSize: '0.9rem',
-            fontFamily: 'Fira Code',
+          title: {
+            text: t('technicalSkills.axes.skillLevel'),
+            style: {
+              color: '#CCFFEEDD',
+              fontFamily: 'Fira Code',
+              fontSize: '0.85rem'
+            }
+          },
+          min: 0,
+          max: 100,
+          tickAmount: 5,
+          labels: {
+            show: true,
+            minWidth: 80,
+            style: {
+              colors: '#CCFFEEDD',
+              fontSize: '0.9rem',
+              fontFamily: 'Fira Code',
+            }
           }
         },
-      },
+        {
+          opposite: true,
+          show: true,
+          title: {
+            text: t('technicalSkills.axes.years'),
+            style: {
+              color: '#CCFFEEDD',
+              fontFamily: 'Fira Code',
+              fontSize: '0.85rem'
+            }
+          },
+          min: 0,
+          max: 15,
+          tickAmount: 5,
+          labels: {
+            show: true,
+            minWidth: 80,
+            style: {
+              colors: '#CCFFEEDD',
+              fontSize: '0.9rem',
+              fontFamily: 'Fira Code',
+            }
+          }
+        }
+      ],
       grid: {
         show: false,
         xaxis: {
@@ -112,31 +149,52 @@
       },
       dataLabels: {
         enabled: true,
-        offsetY: 8,
+        enabledOnSeries: [1],
+        // formatter: (val, { seriesIndex }) => seriesIndex === 1 ? `${val} anos` : `${val}`,
+        // offsetY: 8,
         style: {
           colors: ['#000000DD'],
           fontFamily: 'Fira Code',
-          fontSize: '1.0rem',
-          fontWeight: '600'
+          fontSize: '1.2rem',
+          fontWeight: '400'
         },
         dropShadow: {
-          enabled: false,
+          enabled: true,
           top: 0,
           left: 0,
           blur: 2,
           color: '#AAFFDD',
           opacity: 0.85
         },
+        background: {
+          enabled: true,
+          foreColor: '#CCFFEEBB',
+          borderRadius: 8,
+          padding: 8,
+          // opacity: 0.75,
+          borderWidth: 3,
+          borderColor: '#CCFFEEAA',
+          dropShadow: {
+            enabled: true,
+            top: 0,
+            left: 0,
+            blur: 4,
+            color: '#AAFFBB',
+            opacity: 0.85
+          }
+        }
       },
       tooltip: {
         enabled: false,
-        y: { formatter: (val) => `${val}%` }
+        y: {
+          formatter: (val, { seriesIndex }) => seriesIndex === 0 ? `${val}%` : `${val} anos`
+        }
       },
       fill: {
         type: 'gradient',
         gradient: {
           shade: 'dark',
-          type: "horizontal",
+          type: 'vertical',
           shadeIntensity: 0.95,
           colorStops: [
             [
@@ -155,7 +213,6 @@
                 color: 'rgba(125, 255, 202, 0.45)',
                 opacity: 1
               }
-
             ],
             [
               {
@@ -173,31 +230,12 @@
                 color: 'rgba(160, 255, 240, 0.45)',
                 opacity: 1
               }
-
             ]
           ]
-
         }
       },
       legend: {
-        show: true,
-        position: 'right',
-        horizontalAlign: 'left',
-        fontFamily: 'Fira Code',
-        fontSize: '0.85rem',
-        fontWeight: '400',
-        labels: {
-          colors: ['#CCFFEEAA', '#CCFFEEAA']
-          // useSeriesColors: true
-        },
-        customLegendItems: ['Nível de Habilidade', 'Anos de Experiência'],
-        markers: {
-          shape: 'circle',
-          size: 8,
-          fillColors: ['rgba(0, 255, 136, 0.75)', 'rgba(160, 255, 240, 0.75)'],
-          strokeWidth: 0,
-          offsetX: -12,
-        }
+        show: false,
       },
       responsive: [
         {
@@ -206,50 +244,23 @@
             chart: {
               width: '100%'
             },
-            plotOptions: {
-              bar: {
-                horizontal: false,
-                columnWidth: '55%',
-                borderRadius: 4,
-                borderRadiusApplication: 'end',
-                dataLabels: {
-                  position: 'top',
-                  orientation: 'vertical',
-                },
-              },
-            },
-            dataLabels: {
-              offsetX: 8,
-              offsetY: 8,
-              style: {
-                colors: ['#FFFFFFDD'],
-                fontFamily: 'Fira Code',
-                fontSize: '0.8rem',
-                fontWeight: '400'
-              },
-            },
-            yaxis: {
-              labels: {
-                show: true,
-                minWidth: 20,
-                style: {
-                  colors: '#CCFFEE66',
-                  fontSize: '0.8rem',
-                  fontFamily: 'Fira Code',
-                  fontWeight: '200'
+            yaxis: [
+              {
+                show: false,
+                labels: {
+                  minWidth: 0,
                 }
-              }
-            },
+              },
+              {
+                show: false,
+                labels: {
+                  minWidth: 0,
+                }
+              },
+            ],
             xaxis: {
-              show: true,
               labels: {
-                show: true,
-                minWidth: 240,
-                style: {
-                  colors: '#CCFFEEDD',
-                  fontSize: '0.9rem',
-                  fontFamily: 'Fira Code',
-                }
+                rotate: -75,
               },
             },
             legend: {
@@ -257,8 +268,20 @@
               position: 'bottom',
               horizontalAlign: 'left',
               fontFamily: 'Fira Code',
-              fontSize: '0.5rem',
+              fontSize: '0.75rem',
               fontWeight: '300',
+
+              labels: {
+                colors: ['#CCFFEEAA', '#CCFFEEAA']
+              },
+              customLegendItems: [t('technicalSkills.axes.skillLevel'), t('technicalSkills.axes.years')],
+              markers: {
+                shape: 'circle',
+                size: 8,
+                fillColors: ['rgba(0, 255, 136, 0.75)', 'rgba(160, 255, 240, 0.75)'],
+                strokeWidth: 0,
+                offsetX: -12,
+              }
             },
           }
         }
@@ -267,8 +290,8 @@
   }
 
   const chartSeriesGroup = (group) => [
-    { data: group.skills.map(s => s.value) },
-    { data: group.skills.map(s => s.years) }
+    { name: t('technicalSkills.axes.skillLevel'), type: 'column', data: group.skills.map(s => s.value) },
+    { name: t('technicalSkills.axes.years'), type: 'line', data: group.skills.map(s => s.years) }
   ]
 
   const groupChartHeight = (group) => Math.max(140, group.skills.length * 60)
@@ -292,33 +315,33 @@
       key: 'engineering',
       title: t('technicalSkills.groups.engineering.title'),
       skills: [
-        { name: 'SolidWorks', value: 9, years: 13 },
-        { name: 'AutoCAD', value: 8.5, years: 9 },
-        { name: 'SolidEdge', value: 8.0, years: 4 },
-        { name: 'BIM', value: 7.4, years: 3 },
-        { name: '3D Printing', value: 8.8, years: 5 }
+        { name: 'SolidWorks', value: 90, years: 13 },
+        { name: 'AutoCAD', value: 85, years: 9 },
+        { name: 'SolidEdge', value: 80, years: 4 },
+        { name: 'BIM', value: 74, years: 3 },
+        { name: '3D Printing', value: 88, years: 5 }
       ]
     },
     {
       key: 'frontend',
       title: t('technicalSkills.groups.frontend.title'),
       skills: [
-        { name: 'Vue.js', value: 9.5, years: 6 },
-        { name: 'Quasar', value: 9.0, years: 5 },
-        { name: 'JavaScript', value: 9.4, years: 7 },
-        { name: 'Electron', value: 8.2, years: 3 },
-        { name: 'HTML/CSS', value: 9.6, years: 8 }
+        { name: 'Vue.js', value: 95, years: 6 },
+        { name: 'Quasar', value: 90, years: 5 },
+        { name: 'JavaScript', value: 94, years: 7 },
+        { name: 'Electron', value: 82, years: 3 },
+        { name: 'HTML/CSS', value: 96, years: 8 }
       ]
     },
     {
       key: 'automation',
       title: t('technicalSkills.groups.automation.title'),
       skills: [
-        { name: 'VBA', value: 9.3, years: 8 },
-        { name: 'Python', value: 8.7, years: 5 },
-        { name: 'REST APIs', value: 8.4, years: 4 },
-        { name: 'Excel', value: 9.4, years: 10 },
-        { name: 'Design Automation', value: 9.1, years: 6 }
+        { name: 'VBA', value: 93, years: 8 },
+        { name: 'Python', value: 87, years: 5 },
+        { name: 'REST APIs', value: 84, years: 4 },
+        { name: 'Excel', value: 94, years: 10 },
+        { name: 'Design Automation', value: 91, years: 6 }
       ]
     }
   ])
@@ -431,16 +454,16 @@
   }
 
 
-  .group-chart-wrapper {
+  /* .group-chart-wrapper {
     display: grid;
     gap: 0.8rem;
     align-items: center;
-  }
+  } */
 
-  .group-chart {
+  /* .group-chart {
     width: 100%;
     max-width: calc(100vw - 80px);
-  }
+  } */
 
   /* amplify bar glow */
   .group-chart .apexcharts-bar-area .apexcharts-bar:nth-child(1) {
