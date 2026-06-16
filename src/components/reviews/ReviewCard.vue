@@ -1,0 +1,72 @@
+<template>
+  <article class="review-card glass-panel" tabindex="0" :aria-label="t('reviews.cardAria', { client: review.client, rating: review.rating })">
+    <div class="review-card__top row items-center justify-between gap-sm">
+      <h3 class="col-12 review-card__client text-display q-mb-none">{{ review.client }}</h3>
+      <div class="col-12 review-card__rating row items-center gap-xs">
+        <q-rating :model-value="review.rating" max="5" readonly dense color="green" size="sm" icon="star_border" icon-selected="star" icon-half="star_half" />
+        <span class="review-card__score text-mono">{{ review.rating }}/5</span>
+      </div>
+    </div>
+
+    <p class="review-card__text">{{ review.text }}</p>
+  </article>
+</template>
+
+<script setup>
+  import { useI18n } from 'vue-i18n'
+
+  const props = defineProps({
+    review: {
+      type: Object,
+      required: true
+    }
+  })
+
+  const { t } = useI18n()
+</script>
+
+<style scoped>
+  .review-card {
+    padding: clamp(1.15rem, 2.5vw, 1.4rem);
+    display: grid;
+    gap: var(--space-sm);
+    min-height: 220px;
+    background: rgba(16, 22, 19, 0.72);
+  }
+
+  .review-card__top {
+    align-items: flex-start;
+  }
+
+  .review-card__client {
+    margin: 0;
+    font-size: clamp(1.05rem, 1.3vw, 1.2rem);
+    line-height: 1.2;
+  }
+
+  .review-card__rating {
+    white-space: nowrap;
+  }
+
+  .review-card__score {
+    margin-left: 0.4rem;
+    color: var(--text-muted);
+  }
+
+  .review-card__text {
+    margin: 0;
+    color: var(--text-muted);
+    line-height: 1.78;
+  }
+
+  @media (max-width: 700px) {
+    .review-card__top {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .review-card__score {
+      margin-left: 0;
+    }
+  }
+</style>

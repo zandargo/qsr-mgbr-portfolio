@@ -15,6 +15,7 @@
 		"skills": "Habilidades",
 		"projects": "Projetos",
 		"experience": "Experiência",
+		"reviews": "Depoimentos",
 		"links": "Links",
 		"contact": "Contato",
 		"language": "Idioma"
@@ -185,6 +186,24 @@
 				"company": "Freelance · Upwork Top Rated Plus",
 				"role": "Especialista em Automação e Frontend",
 				"summary": "Entreguei software customizado, automação CAD e sistemas frontend para clientes globais em contexto de produção."
+			}
+		}
+	},
+	"reviews": {
+		"kicker": "Depoimentos",
+		"title": "Avaliações de clientes que refletem confiabilidade e entrega.",
+		"description": "Feedback real de clientes e colaboradores que confiaram no fluxo de trabalho, na qualidade e na execução.",
+		"listAria": "Lista de depoimentos de clientes",
+		"cardAria": "Depoimento de {client} com avaliação {rating} de 5",
+		"items": {
+			"0": {
+				"text": "Entregou resultados excelentes com comunicação clara e iteração rápida — o trabalho superou as expectativas."
+			},
+			"1": {
+				"text": "Entendimento técnico e rapidez de resposta tornaram a colaboração tranquila. A qualidade se manteve constante durante o projeto."
+			},
+			"2": {
+				"text": "Entrega forte dentro do prazo, com recomendações bem pensadas e implementação sólida. Altamente recomendado para software de engenharia complexo."
 			}
 		}
 	},

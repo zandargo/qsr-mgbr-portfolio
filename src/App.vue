@@ -28,6 +28,10 @@
         <FeaturedProjectsSection />
       </section>
 
+      <section id="reviews" class="page-section" aria-labelledby="reviews-title">
+        <ReviewsSection />
+      </section>
+
       <section id="gallery" class="page-section" aria-labelledby="gallery-title">
         <EngineeringGallerySection />
       </section>
@@ -55,6 +59,7 @@
   import TechnicalSkillsSection from './components/skills/TechnicalSkillsSection.vue'
   import ExperienceSection from './components/experience/ExperienceSection.vue'
   import FeaturedProjectsSection from './components/projects/FeaturedProjectsSection.vue'
+  import ReviewsSection from './components/reviews/ReviewsSection.vue'
   import EngineeringGallerySection from './components/gallery/EngineeringGallerySection.vue'
   import ExternalLinksSection from './components/links/ExternalLinksSection.vue'
   import ContactSection from './components/contact/ContactSection.vue'

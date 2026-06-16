@@ -17,6 +17,7 @@
     "experience": "Experience",
     "links": "Links",
     "contact": "Contact",
+    "reviews": "Reviews",
     "language": "Language"
   },
   "locales": {
@@ -153,6 +154,24 @@
       },
       "automation": {
         "title": "Automation"
+      }
+    }
+  },
+  "reviews": {
+    "kicker": "Testimonials",
+    "title": "Client reviews that reflect reliability and delivery.",
+    "description": "Real feedback from clients and collaborators who trusted the workflow, quality, and execution.",
+    "listAria": "Client review list",
+    "cardAria": "Review by {client} with rating {rating} out of 5",
+    "items": {
+      "0": {
+        "text": "Delivered excellent results with clear communication and fast iteration — the work exceeded expectations."
+      },
+      "1": {
+        "text": "Technical understanding and responsiveness made the collaboration feel effortless. Quality was consistent throughout the project."
+      },
+      "2": {
+        "text": "Strong delivery on deadline, with thoughtful recommendations and solid implementation. Highly recommended for complex engineering software."
       }
     }
   },

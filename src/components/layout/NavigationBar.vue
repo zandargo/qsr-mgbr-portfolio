@@ -72,6 +72,7 @@
     { id: 'biography', label: t('nav.biography') },
     { id: 'soft-skills', label: t('nav.skills') },
     { id: 'projects', label: t('nav.projects') },
+    { id: 'reviews', label: t('nav.reviews') },
     { id: 'experience', label: t('nav.experience') },
     { id: 'links', label: t('nav.links') },
     { id: 'contact', label: t('nav.contact') }
