@@ -13,7 +13,7 @@
         <section v-for="group in skillGroups" :key="group.key" class="group-block">
           <h3 class="group-title text-display">{{ group.title }}</h3>
           <div class="group-chart-wrapper" :aria-label="t('technicalSkills.groupAria', { group: group.title })" :style="groupGlowStyle(group)">
-            <component :is="ApexCharts" type="bar" :options="chartOptionsGroup(group)" :series="chartSeriesGroup(group)" :height="groupChartHeight(group)" class="group-chart" />
+            <component :is="ApexCharts" type="bar" :options="chartOptionsGroup(group)" :series="chartSeriesGroup(group)" :height="groupChartHeight(group)" class="" />
           </div>
         </section>
       </div>
@@ -454,36 +454,11 @@
   }
 
 
-  /* .group-chart-wrapper {
-    display: grid;
+  .group-chart-wrapper {
+    /* display: grid;
     gap: 0.8rem;
-    align-items: center;
-  } */
-
-  /* .group-chart {
-    width: 100%;
-    max-width: calc(100vw - 80px);
-  } */
-
-  /* amplify bar glow */
-  .group-chart .apexcharts-bar-area .apexcharts-bar:nth-child(1) {
-    filter: drop-shadow(0 0 14px var(--glow-1, rgba(0, 255, 136, 0.12)));
-  }
-
-  .group-chart .apexcharts-bar-area .apexcharts-bar:nth-child(2) {
-    filter: drop-shadow(0 0 14px var(--glow-2, rgba(0, 209, 255, 0.12)));
-  }
-
-  .group-chart .apexcharts-bar-area .apexcharts-bar:nth-child(3) {
-    filter: drop-shadow(0 0 14px var(--glow-3, rgba(255, 209, 102, 0.12)));
-  }
-
-  .group-chart .apexcharts-bar-area .apexcharts-bar:nth-child(4) {
-    filter: drop-shadow(0 0 14px var(--glow-4, rgba(255, 123, 123, 0.12)));
-  }
-
-  .group-chart .apexcharts-bar-area .apexcharts-bar:nth-child(5) {
-    filter: drop-shadow(0 0 14px var(--glow-5, rgba(0, 255, 136, 0.12)));
+    align-items: center; */
+    width: clamp(100%, 100%, 1200px);
   }
 
   .skills-legend {

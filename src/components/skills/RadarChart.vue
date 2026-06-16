@@ -41,12 +41,12 @@
     },
     xaxis: {
       categories: [
-        t('radar.categories.0'),
-        t('radar.categories.1'),
-        t('radar.categories.2'),
-        t('radar.categories.3'),
-        t('radar.categories.4'),
-        t('radar.categories.5')
+        t('radar.categories.0').split(' '),
+        t('radar.categories.1').split(' '),
+        t('radar.categories.2').split(' '),
+        t('radar.categories.3').split(' '),
+        t('radar.categories.4').split(' '),
+        t('radar.categories.5').split(' ')
       ],
       labels: {
         style: {

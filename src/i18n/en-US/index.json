@@ -142,7 +142,7 @@
     "yearsExperience": "{years} years experience",
     "axes": {
       "skillLevel": "Skill Level",
-      "years": "Years of Experience"
+      "years": "Experience (Years)"
     },
     "groups": {
       "frontend": {
