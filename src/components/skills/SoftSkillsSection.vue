@@ -118,14 +118,6 @@
     opacity: 0;
   }
 
-  .section-kicker {
-    margin: 0;
-    color: var(--primary-soft);
-    letter-spacing: 0.17em;
-    text-transform: uppercase;
-    font-size: 0.72rem;
-  }
-
   h2 {
     margin: 0;
     font-size: clamp(1.8rem, 3vw, 2.8rem);

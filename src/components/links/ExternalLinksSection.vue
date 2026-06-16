@@ -155,14 +155,6 @@
     gap: var(--space-sm);
   }
 
-  .section-kicker {
-    margin: 0;
-    font-size: 0.72rem;
-    letter-spacing: 0.17em;
-    text-transform: uppercase;
-    color: var(--primary-soft);
-  }
-
   h2 {
     margin: 0;
     font-size: clamp(1.8rem, 3vw, 2.8rem);

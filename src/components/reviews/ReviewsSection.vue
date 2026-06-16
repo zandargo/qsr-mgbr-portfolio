@@ -3,7 +3,7 @@
     <article class="reviews-shell glass-panel glow-border">
       <header class="reviews-header">
         <p class="section-kicker text-mono">{{ t('reviews.kicker') }}</p>
-        <h2 id="reviews-title" class="text-display">{{ t('reviews.title') }}</h2>
+        <h5 id="reviews-title" class="text-display">{{ t('reviews.title') }}</h5>
         <p class="reviews-header__description">{{ t('reviews.description') }}</p>
       </header>
 
@@ -49,20 +49,12 @@
   .reviews-shell {
     padding: clamp(1.25rem, 2.8vw, 2.4rem);
     display: grid;
-    gap: clamp(1.2rem, 2.6vw, 2rem);
+    /* gap: clamp(1.2rem, 2.6vw, 2rem); */
   }
 
   .reviews-header {
     display: grid;
     gap: var(--space-sm);
-  }
-
-  .section-kicker {
-    margin: 0;
-    color: var(--primary-soft);
-    letter-spacing: 0.17em;
-    text-transform: uppercase;
-    font-size: 0.72rem;
   }
 
   .reviews-header__description {

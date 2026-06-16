@@ -64,6 +64,14 @@ body {
 	font-family: var(--font-mono);
 }
 
+.section-kicker {
+	margin: 0;
+	color: var(--primary-soft);
+	letter-spacing: 0.17em;
+	text-transform: uppercase;
+	font-size: 0.72rem;
+}
+
 .section-container {
 	width: min(1200px, calc(100% - (2 * var(--space-xl))));
 	margin-inline: auto;
