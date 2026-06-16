@@ -1,6 +1,6 @@
 <template>
   <div class="radar-chart">
-    <apexchart type="radar" width="100%" height="100%" :options="chartOptions" :series="chartSeries" />
+    <apexchart class="" width="100%" height="100%" :options="chartOptions" :series="chartSeries" />
   </div>
 </template>
 
@@ -26,6 +26,8 @@
 
   const chartOptions = computed(() => ({
     chart: {
+      type: 'radar',
+      width: '100%',
       toolbar: {
         show: false
       },
@@ -53,9 +55,9 @@
           colors: ['#8ba698', '#8ba698', '#8ba698', '#8ba698', '#8ba698', '#8ba698'],
           fontFamily: 'Fira Code, Barlow, Segoe UI, sans-serif',
           fontSize: '16px',
-          rotate: 45,
+          // rotate: 45,
           // rotateAlways: true,
-          trim: true,
+          // trim: true,
         },
       },
     },
@@ -86,7 +88,8 @@
     },
     plotOptions: {
       radar: {
-        size: 130,
+        size: 100,
+        // offsetX: -40,
         polygons: {
           strokeColors: 'rgba(125, 255, 202, 0.18)',
           fill: {
@@ -109,9 +112,9 @@
         breakpoint: 1200,
         options: {
           plotOptions: {
-            radar: {
-              size: 120
-            }
+            // radar: {
+            //   size: 120
+            // }
           }
         }
       },
@@ -119,9 +122,9 @@
         breakpoint: 700,
         options: {
           plotOptions: {
-            radar: {
-              size: 80
-            }
+            // radar: {
+            //   size: 80
+            // }
           },
           xaxis: {
             labels: {
@@ -161,7 +164,6 @@
 
 <style scoped>
   .radar-chart {
-    width: 80%;
-    height: clamp(300px, 48vw, 430px);
+    max-width: 100%;
   }
 </style>
