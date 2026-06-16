@@ -1,10 +1,10 @@
 <template>
   <div ref="sectionRef" class="section-container contact-section">
     <article class="contact-shell glass-panel glow-border">
-      <header ref="headerRef" class="contact-header">
+      <header ref="headerRef" class="contact-header section-header">
         <p class="section-kicker text-mono">{{ t('contact.kicker') }}</p>
-        <h2 id="contact-title" class="text-display">{{ t('contact.title') }}</h2>
-        <p class="contact-header__description">
+        <h2 id="contact-title" class="text-display section-title">{{ t('contact.title') }}</h2>
+        <p class="section-description">
           {{ t('contact.description') }}
         </p>
       </header>
@@ -229,19 +229,6 @@
     opacity: 0;
   }
 
-  h2 {
-    margin: 0;
-    font-size: clamp(1.8rem, 3vw, 2.8rem);
-    line-height: 1.06;
-  }
-
-  .contact-header__description {
-    margin: 0;
-    max-width: 74ch;
-    line-height: 1.68;
-    color: var(--text-muted);
-  }
-
   .terminal-panel {
     border: 1px solid rgba(125, 255, 202, 0.24);
     border-radius: var(--radius-lg);
@@ -397,7 +384,7 @@
   }
 
   @media (max-width: 640px) {
-    h2 {
+    .section-title {
       font-size: clamp(1.6rem, 7vw, 2.1rem);
     }
   }

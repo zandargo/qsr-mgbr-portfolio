@@ -1,10 +1,10 @@
 <template>
   <div ref="sectionRef" class="section-container soft-skills-section">
     <article class="skills-shell glass-panel glow-border">
-      <header class="skills-header">
+      <header class="skills-header section-header">
         <p class="section-kicker text-mono">{{ t('softSkills.kicker') }}</p>
-        <h2 id="soft-skills-title" class="text-display">{{ t('softSkills.title') }}</h2>
-        <p class="skills-header__description">
+        <h2 id="soft-skills-title" class="text-display section-title">{{ t('softSkills.title') }}</h2>
+        <p class="section-description">
           {{ t('softSkills.description') }}
         </p>
       </header>
@@ -118,20 +118,6 @@
     opacity: 0;
   }
 
-  h2 {
-    margin: 0;
-    font-size: clamp(1.8rem, 3vw, 2.8rem);
-    line-height: 1.08;
-    /* max-width: 23ch; */
-  }
-
-  .skills-header__description {
-    margin: 0;
-    color: var(--text-muted);
-    line-height: 1.7;
-    /* max-width: 72ch; */
-  }
-
   .skills-stage {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(260px, 0.7fr);
@@ -195,7 +181,7 @@
   }
 
   @media (max-width: 680px) {
-    h2 {
+    .section-title {
       font-size: clamp(1.6rem, 7vw, 2.1rem);
     }
 

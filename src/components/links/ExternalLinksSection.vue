@@ -1,10 +1,10 @@
 <template>
   <div class="section-container external-links-section">
     <article class="links-shell glass-panel glow-border">
-      <header class="links-header">
+      <header class="links-header section-header">
         <p class="section-kicker text-mono">{{ t('linksSection.kicker') }}</p>
-        <h2 id="links-title" class="text-display">{{ t('linksSection.title') }}</h2>
-        <p class="links-header__description">
+        <h2 id="links-title" class="text-display section-title">{{ t('linksSection.title') }}</h2>
+        <p class="section-description">
           {{ t('linksSection.description') }}
         </p>
       </header>
@@ -155,19 +155,6 @@
     gap: var(--space-sm);
   }
 
-  h2 {
-    margin: 0;
-    font-size: clamp(1.8rem, 3vw, 2.8rem);
-    line-height: 1.06;
-  }
-
-  .links-header__description {
-    margin: 0;
-    max-width: 74ch;
-    line-height: 1.68;
-    color: var(--text-muted);
-  }
-
   .links-group {
     display: grid;
     gap: var(--space-md);
@@ -211,7 +198,7 @@
   }
 
   @media (max-width: 640px) {
-    h2 {
+    .section-title {
       font-size: clamp(1.6rem, 7vw, 2.1rem);
     }
   }

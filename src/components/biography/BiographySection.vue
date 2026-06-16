@@ -3,9 +3,9 @@
     <div class="biography-shell">
       <!-- *// -------------------- PROFILE PICTURE ------------------- //* -->
       <article class="profile-panel glass-panel glow-border column justify-between">
-        <header class="profile-panel__header">
+        <header class="profile-panel__header section-header">
           <p class="section-kicker text-mono">{{ t('biography.kicker') }}</p>
-          <h5 id="biography-title" class="text-display q-ma-none">{{ t('biography.title') }}</h5>
+          <h5 id="biography-title" class="text-display section-title q-ma-none">{{ t('biography.title') }}</h5>
         </header>
 
         <div class="profile-media">
@@ -16,7 +16,7 @@
         </div>
 
         <div class="">
-          <p class="profile-panel__description text-justify">
+          <p class="section-description text-justify">
             {{ t('biography.description') }}
           </p>
         </div>
@@ -218,12 +218,6 @@
     top: 114px;
   }
 
-  h2 {
-    margin: var(--space-xs) 0 0;
-    font-size: clamp(1.9rem, 3vw, 2.8rem);
-    line-height: 1.05;
-  }
-
   .profile-media {
     display: grid;
     gap: var(--space-sm);
@@ -261,12 +255,6 @@
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--text-muted);
-  }
-
-  .profile-panel__description {
-    margin: 0;
-    color: var(--text-muted);
-    line-height: 1.7;
   }
 
   .timeline-panel {
@@ -307,7 +295,7 @@
   }
 
   @media (max-width: 1200px) {
-    h2 {
+    .section-title {
       font-size: clamp(1.7rem, 2.5vw, 2.35rem);
     }
   }

@@ -1,11 +1,11 @@
 <template>
   <div ref="sectionRef" class="section-container technical-skills-section">
     <article class="technical-shell glass-panel glow-border">
-      <header ref="headerRef" class="technical-header">
+      <header ref="headerRef" class="technical-header section-header">
         <p class="section-kicker text-mono">{{ t('technicalSkills.kicker') }}</p>
         <div style="width: 95%">
-          <h2 id="technical-skills-title" class="text-display">{{ t('technicalSkills.title') }}</h2>
-          <p class="technical-header__description">
+          <h2 id="technical-skills-title" class="text-display section-title">{{ t('technicalSkills.title') }}</h2>
+          <p class="section-description">
             {{ t('technicalSkills.description') }}
           </p>
 
@@ -422,19 +422,6 @@
     opacity: 0;
   }
 
-  h2 {
-    margin: 0;
-    font-size: clamp(1.8rem, 3vw, 2.8rem);
-    line-height: 1.06;
-  }
-
-  .technical-header__description {
-    margin: 0;
-    color: var(--text-muted);
-    line-height: 1.7;
-    /* max-width: 72ch; */
-  }
-
   .technical-groups {
     display: grid;
     gap: var(--space-xl);
@@ -480,7 +467,7 @@
   }
 
   @media (max-width: 640px) {
-    h2 {
+    .section-title {
       font-size: clamp(1.6rem, 7vw, 2.15rem);
     }
   }

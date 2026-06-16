@@ -1,10 +1,10 @@
 <template>
   <div ref="sectionRef" class="section-container reviews-section">
     <article class="reviews-shell glass-panel glow-border">
-      <header class="reviews-header">
+      <header class="reviews-header section-header">
         <p class="section-kicker text-mono">{{ t('reviews.kicker') }}</p>
-        <h5 id="reviews-title" class="text-display">{{ t('reviews.title') }}</h5>
-        <p class="reviews-header__description">{{ t('reviews.description') }}</p>
+        <h5 id="reviews-title" class="text-display section-title">{{ t('reviews.title') }}</h5>
+        <p class="section-description">{{ t('reviews.description') }}</p>
       </header>
 
       <div class="reviews-grid" :aria-label="t('reviews.listAria')">
@@ -57,13 +57,6 @@
     gap: var(--space-sm);
   }
 
-  .reviews-header__description {
-    margin: 0;
-    max-width: 74ch;
-    color: var(--text-muted);
-    line-height: 1.68;
-  }
-
   .reviews-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -77,7 +70,7 @@
   }
 
   @media (max-width: 640px) {
-    h2 {
+    .section-title {
       font-size: clamp(1.6rem, 7vw, 2.1rem);
     }
   }

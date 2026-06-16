@@ -1,10 +1,10 @@
 <template>
   <div class="section-container featured-projects-section">
     <article class="projects-shell glass-panel glow-border">
-      <header class="projects-header">
+      <header class="projects-header section-header">
         <p class="section-kicker text-mono">{{ t('projects.kicker') }}</p>
-        <h2 id="projects-title" class="text-display">{{ t('projects.title') }}</h2>
-        <p class="projects-header__description">
+        <h2 id="projects-title" class="text-display section-title">{{ t('projects.title') }}</h2>
+        <p class="section-description">
           {{ t('projects.description') }}
         </p>
       </header>
@@ -157,19 +157,6 @@
     gap: var(--space-sm);
   }
 
-  h2 {
-    margin: 0;
-    font-size: clamp(1.8rem, 3vw, 2.8rem);
-    line-height: 1.06;
-  }
-
-  .projects-header__description {
-    margin: 0;
-    max-width: 74ch;
-    line-height: 1.68;
-    color: var(--text-muted);
-  }
-
   .projects-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -183,7 +170,7 @@
   }
 
   @media (max-width: 640px) {
-    h2 {
+    .section-title {
       font-size: clamp(1.6rem, 7vw, 2.1rem);
     }
   }

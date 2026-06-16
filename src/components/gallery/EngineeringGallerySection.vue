@@ -1,10 +1,10 @@
 <template>
   <div class="section-container engineering-gallery-section">
     <article class="gallery-shell glass-panel glow-border">
-      <header class="gallery-header">
+      <header class="gallery-header section-header">
         <p class="section-kicker text-mono">{{ t('gallery.kicker') }}</p>
-        <h2 id="gallery-title" class="text-display">{{ t('gallery.title') }}</h2>
-        <p class="gallery-header__description">
+        <h2 id="gallery-title" class="text-display section-title">{{ t('gallery.title') }}</h2>
+        <p class="section-description">
           {{ t('gallery.description') }}
         </p>
       </header>
@@ -233,19 +233,6 @@
     gap: var(--space-sm);
   }
 
-  h2 {
-    margin: 0;
-    font-size: clamp(1.8rem, 3vw, 2.8rem);
-    line-height: 1.06;
-  }
-
-  .gallery-header__description {
-    margin: 0;
-    max-width: 74ch;
-    line-height: 1.68;
-    color: var(--text-muted);
-  }
-
   .gallery-masonry {
     column-count: 3;
     column-gap: var(--space-md);
@@ -401,7 +388,7 @@
   }
 
   @media (max-width: 640px) {
-    h2 {
+    .section-title {
       font-size: clamp(1.6rem, 7vw, 2.1rem);
     }
 

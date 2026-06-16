@@ -1,10 +1,10 @@
 <template>
   <div ref="sectionRef" class="section-container experience-section">
     <article class="experience-shell glass-panel glow-border">
-      <header ref="headerRef" class="experience-header">
+      <header ref="headerRef" class="experience-header section-header">
         <p class="section-kicker text-mono">{{ t('experience.kicker') }}</p>
-        <h2 id="experience-title" class="text-display">{{ t('experience.title') }}</h2>
-        <p class="experience-header__description">
+        <h2 id="experience-title" class="text-display section-title">{{ t('experience.title') }}</h2>
+        <p class="section-description">
           {{ t('experience.description') }}
         </p>
       </header>
@@ -159,19 +159,6 @@
     opacity: 0;
   }
 
-  h2 {
-    margin: 0;
-    font-size: clamp(1.8rem, 3vw, 2.8rem);
-    line-height: 1.06;
-  }
-
-  .experience-header__description {
-    margin: 0;
-    max-width: 74ch;
-    line-height: 1.68;
-    color: var(--text-muted);
-  }
-
   .experience-timeline {
     position: relative;
     padding-inline: clamp(1rem, 2vw, 1.5rem);
@@ -227,7 +214,7 @@
   }
 
   @media (max-width: 640px) {
-    h2 {
+    .section-title {
       font-size: clamp(1.6rem, 7vw, 2.1rem);
     }
 

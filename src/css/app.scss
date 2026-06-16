@@ -72,6 +72,24 @@ body {
 	font-size: 0.72rem;
 }
 
+.section-header {
+	display: grid;
+	gap: var(--space-sm);
+}
+
+.section-title {
+	margin: 0;
+	font-size: clamp(1.8rem, 3vw, 2.8rem);
+	line-height: 1.06;
+}
+
+.section-description {
+	margin: 0;
+	max-width: 74ch;
+	color: var(--text-muted);
+	line-height: 1.68;
+}
+
 .section-container {
 	width: min(1200px, calc(100% - (2 * var(--space-xl))));
 	margin-inline: auto;
