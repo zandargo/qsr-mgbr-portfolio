@@ -11,25 +11,20 @@
   const { t } = useI18n()
 
   const chartSeries = [
-    {
-      name: t('radar.professionalStrength'),
-      data: [
-        60, // Liderança
-        75, // Comunicação
-        96, // Criatividade
-        72, // Trabalho em equipe
-        94, // Adaptabilidade
-        89, // Resolução de problemas
-      ]
-    }
+    60, // Liderança
+    75, // Comunicação
+    96, // Criatividade
+    72, // Trabalho em equipe
+    94, // Adaptabilidade
+    89, // Resolução de problemas
   ]
 
   const chartOptions = computed(() => ({
     chart: {
-      type: 'radar',
+      type: 'polarArea',
       height: '100%',
       width: '100%',
-      offsetY: 0,
+      fontFamily: 'Fira Code, sans-serif',
       toolbar: {
         show: false
       },
@@ -41,124 +36,97 @@
           delay: 120
         }
       },
-      foreColor: '#8ba698'
+      foreColor: '#CCFFEEDD'
     },
-    xaxis: {
-      categories: [
-        t('radar.categories.0').split(' '),
-        t('radar.categories.1').split(' '),
-        t('radar.categories.2').split(' '),
-        t('radar.categories.3').split(' '),
-        t('radar.categories.4').split(' '),
-        t('radar.categories.5').split(' ')
-      ],
-      labels: {
-        style: {
-          colors: ['#8ba698', '#8ba698', '#8ba698', '#8ba698', '#8ba698', '#8ba698'],
-          fontFamily: 'Fira Code, Barlow, Segoe UI, sans-serif',
-          fontSize: '16px',
-          // rotate: 45,
-          // rotateAlways: true,
-          // trim: true,
-        },
-      },
-    },
-    yaxis: {
-      show: false,
-      max: 100,
-      tickAmount: 4
-    },
+    labels: [
+      t('radar.categories.0'),
+      t('radar.categories.1'),
+      t('radar.categories.2'),
+      t('radar.categories.3'),
+      t('radar.categories.4'),
+      t('radar.categories.5')
+    ],
     stroke: {
       width: 2,
-      colors: ['#44ffaa']
+      colors: ['#AAFFDD99'],
     },
+    // fill: {
+    //   opacity: 0.75,
+    //   // colors: '#00FF00',
+    // },
     fill: {
-      opacity: 0.36,
-      colors: ['#00ff88']
-    },
-    markers: {
-      size: 4,
-      strokeWidth: 2,
-      strokeColors: '#101512',
-      colors: ['#7dffca'],
-      hover: {
-        size: 6
+      type: 'gradient',
+      gradient: {
+        shade: 'dark',
+        type: 'horizontal',
+        shadeIntensity: 0.5,
+        stops: [0, 50],
+        opacityFrom: 0.8,
+        opacityTo: 1,
       }
     },
     dataLabels: {
       enabled: false
     },
     plotOptions: {
-      radar: {
-        size: 130,
-        offsetX: 0,
-        offsetY: 0,
-        polygons: {
-          strokeColors: 'rgba(125, 255, 202, 0.18)',
-          fill: {
-            colors: ['rgba(20, 25, 22, 0.46)', 'rgba(16, 21, 18, 0.66)']
-          }
+      polarArea: {
+        rings: {
+          strokeWidth: 1,
+          strokeColor: 'rgba(125, 255, 202, 0.18)',
+        },
+        spokes: {
+          strokeWidth: 1,
+          connectorColors: 'rgba(125, 255, 202, 0.2)',
         }
       }
     },
     legend: {
       show: true,
-      customLegendItems: [
-        '1', '2', '3', '4', '5', '6'
-      ],
+      position: 'right',
+      horizontalAlign: 'left',
+      fontSize: '14px',
+      formatter: (seriesName, opts) => seriesName,
+      markers: {
+        strokeWidth: 1,
+        width: 12,
+        height: 12,
+        radius: 50,
+      },
+      itemMargin: {
+        horizontal: 18,
+        vertical: 2,
+      }
     },
     tooltip: {
       theme: 'dark'
+    },
+    theme: {
+      // mode: 'dark',
+      // palletete: 'palette5',
+      monochrome: {
+        enabled: true,
+        color: '#66FFBB',
+        shadeTo: 'dark',
+        shadeIntensity: 1,
+      },
     },
     responsive: [
       {
         breakpoint: 1200,
         options: {
-          plotOptions: {
-            radar: {
-              size: 100
-            }
+          legend: {
+            position: 'right',
+            // horizontalAlign: 'left'
           }
         }
       },
       {
         breakpoint: 700,
         options: {
-          plotOptions: {
-            radar: {
-              size: 75
-            }
-          },
-          xaxis: {
-            labels: {
-              show: true,
-              style: {
-                fontSize: '10px'
-              },
-              // rotate: 25,
-              // rotateAlways: true,
-            }
-          },
-          // yaxis: {
-          //   labels: {
-          //     style: {
-          //       fontSize: '11px'
-          //     },
-          //     rotate: 25,
-          //     rotateAlways: true,
-          //   }
-          // },
-          // legend: {
-          //   show: true,
-          //   position: 'bottom',
-          //   horizontalAlign: 'center',
-          //   fontSize: '12px',
-          //   markers: {
-          //     width: 10,
-          //     height: 10,
-          //     radius: 5
-          //   }
-          // }
+          legend: {
+            position: 'bottom',
+            // horizontalAlign: 'center'
+          }
         }
       }
     ]

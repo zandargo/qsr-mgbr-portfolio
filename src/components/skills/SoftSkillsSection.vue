@@ -130,14 +130,14 @@
     margin: 0;
     font-size: clamp(1.8rem, 3vw, 2.8rem);
     line-height: 1.08;
-    max-width: 23ch;
+    /* max-width: 23ch; */
   }
 
   .skills-header__description {
     margin: 0;
     color: var(--text-muted);
     line-height: 1.7;
-    max-width: 72ch;
+    /* max-width: 72ch; */
   }
 
   .skills-stage {

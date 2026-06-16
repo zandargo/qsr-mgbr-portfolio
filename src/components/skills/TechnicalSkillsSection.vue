@@ -3,10 +3,13 @@
     <article class="technical-shell glass-panel glow-border">
       <header ref="headerRef" class="technical-header">
         <p class="section-kicker text-mono">{{ t('technicalSkills.kicker') }}</p>
-        <h2 id="technical-skills-title" class="text-display">{{ t('technicalSkills.title') }}</h2>
-        <p class="technical-header__description">
-          {{ t('technicalSkills.description') }}
-        </p>
+        <div style="width: 95%">
+          <h2 id="technical-skills-title" class="text-display">{{ t('technicalSkills.title') }}</h2>
+          <p class="technical-header__description">
+            {{ t('technicalSkills.description') }}
+          </p>
+
+        </div>
       </header>
 
       <div class="technical-groups ">
@@ -74,6 +77,7 @@
         colors: ['transparent', '#A0FFF0'],
       },
       xaxis: {
+        type: 'category',
         categories,
         labels: {
           show: true,
@@ -281,6 +285,9 @@
                 fillColors: ['rgba(0, 255, 136, 0.75)', 'rgba(160, 255, 240, 0.75)'],
                 strokeWidth: 0,
                 offsetX: -12,
+              },
+              itemMargin: {
+                horizontal: 32,
               }
             },
           }
@@ -433,7 +440,7 @@
     margin: 0;
     color: var(--text-muted);
     line-height: 1.7;
-    max-width: 72ch;
+    /* max-width: 72ch; */
   }
 
   .technical-groups {
