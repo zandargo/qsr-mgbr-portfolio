@@ -293,6 +293,9 @@
     align-items: center;
     gap: var(--space-lg);
     padding: var(--space-sm) var(--space-lg);
+    /* width: min(1200px, calc(100% - (2 * var(--space-md)))); */
+    width: clamp(90%, 1200px, calc(100% - (2 * var(--space-md))));
+    margin: 0 auto;
     pointer-events: auto;
   }
 
