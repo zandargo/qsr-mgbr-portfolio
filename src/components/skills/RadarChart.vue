@@ -27,7 +27,9 @@
   const chartOptions = computed(() => ({
     chart: {
       type: 'radar',
+      height: '100%',
       width: '100%',
+      offsetY: 0,
       toolbar: {
         show: false
       },
@@ -88,8 +90,9 @@
     },
     plotOptions: {
       radar: {
-        size: 100,
-        // offsetX: -40,
+        size: 130,
+        offsetX: 0,
+        offsetY: 0,
         polygons: {
           strokeColors: 'rgba(125, 255, 202, 0.18)',
           fill: {
@@ -112,9 +115,9 @@
         breakpoint: 1200,
         options: {
           plotOptions: {
-            // radar: {
-            //   size: 120
-            // }
+            radar: {
+              size: 100
+            }
           }
         }
       },
@@ -122,9 +125,9 @@
         breakpoint: 700,
         options: {
           plotOptions: {
-            // radar: {
-            //   size: 80
-            // }
+            radar: {
+              size: 75
+            }
           },
           xaxis: {
             labels: {
@@ -164,6 +167,9 @@
 
 <style scoped>
   .radar-chart {
+    /* width: 80%; */
     max-width: 100%;
+    height: clamp(320px, 48vw, 430px);
+    min-height: 320px;
   }
 </style>
