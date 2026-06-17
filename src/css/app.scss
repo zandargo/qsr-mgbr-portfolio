@@ -114,8 +114,8 @@ body {
 	background: var(--glass);
 	border: 1px solid var(--glass-border);
 	border-radius: var(--radius-lg);
-	backdrop-filter: blur(12px);
-	-webkit-backdrop-filter: blur(12px);
+	backdrop-filter: blur(16px);
+	-webkit-backdrop-filter: blur(16px);
 }
 
 .glow-border {

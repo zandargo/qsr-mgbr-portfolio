@@ -23,8 +23,11 @@
       </div>
 
       <div class="gallery-carousel-shell" :aria-label="t('gallery.carouselAria')">
-        <q-carousel class="gallery-carousel" control-type="flat" arrow-navigation swipeable animated navigation navigation-position="bottom" v-model:model-value="activeSlide" :aria-label="t('gallery.carouselAria')">
-          <q-carousel-slide v-for="item in galleryItems" :key="`carousel-${item.id}`" :name="item.id" :img-src="item.image" :img-alt="item.alt" img-fit="cover" class="gallery-slide" :aria-label="t('gallery.itemAria', { title: item.title, type: item.type })">
+        <q-carousel class="gallery-carousel" control-type="flat" arrows swipeable animated infinite navigation navigation-position="bottom" autoplay="1000" control-color="green" v-model:model-value="activeSlide" :aria-label="t('gallery.carouselAria')" transition-next="jump-left" transition-prev="jump-right">
+          <q-carousel-slide v-for="item in galleryItems" :key="`carousel-${item.id}`" :name="item.id" :img-src="item.image" :img-alt="item.alt" class="gallery-slide q-pa-none" :aria-label="t('gallery.itemAria', { title: item.title, type: item.type })">
+            <div class="fit flex flexbox items-center glass-panel">
+              <q-img :src="item.image" fit="contain" spinner-color="primary" spinner-size="82px" />
+            </div>
             <!-- <div class="gallery-slide__meta">
               <p class="gallery-item__type text-mono">{{ item.type }}</p>
               <h3 class="gallery-item__title text-display">{{ item.title }}</h3>
@@ -261,8 +264,11 @@
   .gallery-slide {
     border-radius: var(--radius-lg);
     overflow: hidden;
-    border: 2px solid rgba(125, 255, 202, 0.22);
+    /* border: 2px solid rgba(125, 255, 202, 0.22); */
     background: linear-gradient(165deg, rgba(12, 18, 14, 0.9), rgba(8, 12, 10, 0.8));
+    background-position: center;
+    background-size: cover;
+
   }
 
   @media (max-width: 1140px) {
