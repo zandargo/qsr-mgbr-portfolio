@@ -3,19 +3,19 @@
     <div class="biography-shell">
       <!-- *// -------------------- PROFILE PICTURE ------------------- //* -->
       <article class="profile-panel glass-panel glow-border column justify-between">
-        <header class="profile-panel__header section-header">
+        <header class="section-header">
           <p class="section-kicker text-mono">{{ t('biography.kicker') }}</p>
           <h5 id="biography-title" class="text-display section-title q-ma-none">{{ t('biography.title') }}</h5>
         </header>
 
-        <div class="profile-media">
+        <div class="col-6 profile-media">
           <div class="profile-media__frame" aria-hidden="true">
-            <q-img src="/img/profile/Profile002.png" spinner-color="primary" spinner-size="82px" height="100%" fit="cover" position="50% 25%" style="opacity: 0.01;" />
+            <q-img src="/img/profile/Profile002.png" spinner-color="primary" spinner-size="82px" height="100%" fit="cover" position="50% 25%" style="opacity: 0.1;" />
           </div>
           <p class="profile-media__caption text-mono">{{ t('biography.caption') }}</p>
         </div>
 
-        <div class="">
+        <div class="col">
           <p class="section-description text-justify">
             {{ t('biography.description') }}
           </p>
@@ -221,9 +221,9 @@
   .profile-media {
     display: grid;
     gap: var(--space-sm);
-    height: 50vh;
+    /* height: 50vh; */
     /* min-height: 420px; */
-    /* align-content: start; */
+    align-content: start;
   }
 
   .profile-media__frame {

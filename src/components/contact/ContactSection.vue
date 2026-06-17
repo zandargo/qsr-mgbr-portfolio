@@ -45,7 +45,12 @@
 
           <div :ref="(element) => setLineRef(element, 6)" class="terminal-block">
             <p class="terminal-block__label">{{ t('contact.terminal.linkedinLabel') }}</p>
-            <a class="terminal-link" href="https://linkedin.com/in/madson-germano" target="_blank" rel="noopener noreferrer">linkedin.com/in/madson-germano</a>
+            <a class="terminal-link" href="https://linkedin.com/in/madson-br" target="_blank" rel="noopener noreferrer">linkedin.com/in/madson-br</a>
+          </div>
+
+          <div :ref="(element) => setLineRef(element, 7)" class="terminal-block">
+            <p class="terminal-block__label">UPWORK</p>
+            <a class="terminal-link" href="https://www.upwork.com/freelancers/~01074a8f5756ea2138" target="_blank" rel="noopener noreferrer">upwork.com/freelancers/~01074a8f5756ea2138</a>
           </div>
 
           <p ref="messageRef" class="terminal-line terminal-line--system" aria-live="polite">

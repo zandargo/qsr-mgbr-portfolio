@@ -91,10 +91,11 @@
         width: 12,
         height: 12,
         radius: 50,
+        offsetX: -8,
       },
       itemMargin: {
         horizontal: 18,
-        vertical: 2,
+        vertical: 4,
       }
     },
     tooltip: {
@@ -117,6 +118,10 @@
           legend: {
             position: 'right',
             // horizontalAlign: 'left'
+            itemMargin: {
+              horizontal: 18,
+              vertical: 2,
+            }
           }
         }
       },
@@ -125,8 +130,13 @@
         options: {
           legend: {
             position: 'bottom',
-            // horizontalAlign: 'center'
-          }
+            offsetX: 16,
+            // horizontalAlign: 'center',
+            itemMargin: {
+              horizontal: 18,
+              vertical: 2,
+            }
+          },
         }
       }
     ]

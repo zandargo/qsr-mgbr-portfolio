@@ -67,7 +67,7 @@
       badge: t('linksSection.cards.linkedin.badge'),
       tags: ['Leadership', 'Projects', 'Industry'],
       ctaLabel: t('linksSection.cards.linkedin.ctaLabel'),
-      href: 'https://linkedin.com/in/madson-germano',
+      href: 'https://linkedin.com/in/madson-br',
       mediaBackground:
         'linear-gradient(138deg, rgba(16, 22, 19, 0.88), rgba(125, 255, 202, 0.2)), radial-gradient(circle at 84% 18%, rgba(0, 255, 136, 0.26), transparent 45%)',
       image: 'img/screen/ProfileLinkedin01.jpeg'

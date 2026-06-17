@@ -124,7 +124,7 @@
 
   const handleNavAction = (sectionId) => {
     activeSection.value = sectionId
-    scrollTo(`#${sectionId}`, { offset: -110, duration: 1.1 })
+    scrollTo(`#${sectionId}`, { offset: 64, duration: 1.1 })
     syncUrlHash(sectionId)
     if (isMenuOpen.value) {
       closeMenu()
