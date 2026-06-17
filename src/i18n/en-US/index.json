@@ -14,7 +14,7 @@
     "biography": "Biography",
     "skills": "Skills",
     "projects": "Projects",
-    "experience": "Experience",
+    "gallery": "Gallery",
     "links": "Links",
     "contact": "Contact",
     "reviews": "Reviews",
@@ -369,6 +369,9 @@
     "next": "Next",
     "prevAria": "Previous gallery item",
     "nextAria": "Next gallery item",
+    "imageType": "Engineering",
+    "imageTools": "Photography",
+    "imageAlt": "Gallery image: {filename}",
     "items": {
       "assyFrame": {
         "title": "Conveyor Frame Assembly",

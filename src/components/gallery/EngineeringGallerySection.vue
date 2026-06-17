@@ -14,111 +14,79 @@
           <div class="gallery-item__media-wrap">
             <img class="gallery-item__media" :src="item.image" :alt="item.alt" loading="lazy" decoding="async" width="760" height="760" />
           </div>
-          <div class="gallery-item__meta">
+          <!-- <div class="gallery-item__meta">
             <p class="gallery-item__type text-mono">{{ item.type }}</p>
             <h3 class="gallery-item__title text-display">{{ item.title }}</h3>
             <p class="gallery-item__tools">{{ item.tools }}</p>
-          </div>
+          </div> -->
         </article>
       </div>
 
       <div class="gallery-carousel-shell" :aria-label="t('gallery.carouselAria')">
-        <div ref="emblaRef" class="gallery-carousel">
-          <div class="gallery-carousel__container">
-            <article v-for="item in galleryItems" :key="`carousel-${item.id}`" class="gallery-slide" :aria-label="t('gallery.itemAria', { title: item.title, type: item.type })">
-              <div class="gallery-slide__media-wrap">
-                <img class="gallery-slide__media" :src="item.image" :alt="item.alt" loading="lazy" decoding="async" width="760" height="760" />
-              </div>
-              <div class="gallery-slide__meta">
-                <p class="gallery-item__type text-mono">{{ item.type }}</p>
-                <h3 class="gallery-item__title text-display">{{ item.title }}</h3>
-                <p class="gallery-item__tools">{{ item.tools }}</p>
-              </div>
-            </article>
-          </div>
-        </div>
-
-        <div class="gallery-carousel__controls">
-          <button type="button" class="gallery-carousel__button" :disabled="!canScrollPrev" @click="scrollPrev" :aria-label="t('gallery.prevAria')">
-            {{ t('gallery.prev') }}
-          </button>
-          <button type="button" class="gallery-carousel__button" :disabled="!canScrollNext" @click="scrollNext" :aria-label="t('gallery.nextAria')">
-            {{ t('gallery.next') }}
-          </button>
-        </div>
+        <q-carousel class="gallery-carousel" control-type="flat" arrow-navigation swipeable animated navigation navigation-position="bottom" v-model:model-value="activeSlide" :aria-label="t('gallery.carouselAria')">
+          <q-carousel-slide v-for="item in galleryItems" :key="`carousel-${item.id}`" :name="item.id" :img-src="item.image" :img-alt="item.alt" img-fit="cover" class="gallery-slide" :aria-label="t('gallery.itemAria', { title: item.title, type: item.type })">
+            <!-- <div class="gallery-slide__meta">
+              <p class="gallery-item__type text-mono">{{ item.type }}</p>
+              <h3 class="gallery-item__title text-display">{{ item.title }}</h3>
+              <p class="gallery-item__tools">{{ item.tools }}</p>
+            </div> -->
+          </q-carousel-slide>
+        </q-carousel>
       </div>
     </article>
   </div>
 </template>
 
 <script setup>
-  import emblaCarouselVue from 'embla-carousel-vue'
   import VanillaTilt from 'vanilla-tilt'
-  import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
+  import { onBeforeUnmount, onMounted, ref } from 'vue'
   import { useI18n } from 'vue-i18n'
 
   const { t } = useI18n()
+  const galleryItems = ref([])
+  const activeSlide = ref(null)
 
-  const galleryItems = computed(() => [
-    {
-      id: 'assy-frame',
-      title: t('gallery.items.assyFrame.title'),
-      type: t('gallery.items.assyFrame.type'),
-      tools: t('gallery.items.assyFrame.tools'),
-      alt: t('gallery.items.assyFrame.alt'),
-      image: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=80'
-    },
-    {
-      id: 'exploded-module',
-      title: t('gallery.items.explodedModule.title'),
-      type: t('gallery.items.explodedModule.type'),
-      tools: t('gallery.items.explodedModule.tools'),
-      alt: t('gallery.items.explodedModule.alt'),
-      image: 'https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=1200&q=80'
-    },
-    {
-      id: 'cnc-layout',
-      title: t('gallery.items.cncLayout.title'),
-      type: t('gallery.items.cncLayout.type'),
-      tools: t('gallery.items.cncLayout.tools'),
-      alt: t('gallery.items.cncLayout.alt'),
-      image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80'
-    },
-    {
-      id: 'prototype-print',
-      title: t('gallery.items.prototypePrint.title'),
-      type: t('gallery.items.prototypePrint.type'),
-      tools: t('gallery.items.prototypePrint.tools'),
-      alt: t('gallery.items.prototypePrint.alt'),
-      image: 'https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=1200&q=80'
-    },
-    {
-      id: 'plant-drawing',
-      title: t('gallery.items.plantDrawing.title'),
-      type: t('gallery.items.plantDrawing.type'),
-      tools: t('gallery.items.plantDrawing.tools'),
-      alt: t('gallery.items.plantDrawing.alt'),
-      image: 'https://images.unsplash.com/photo-1581093450021-4a7360e9a9b0?auto=format&fit=crop&w=1200&q=80'
-    },
-    {
-      id: 'render-bay',
-      title: t('gallery.items.renderBay.title'),
-      type: t('gallery.items.renderBay.type'),
-      tools: t('gallery.items.renderBay.tools'),
-      alt: t('gallery.items.renderBay.alt'),
-      image: 'https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&w=1200&q=80'
+  const buildImageTitle = (filename) => {
+    const base = filename.replace(/\.[^.]+$/, '')
+    return base
+      .replace(/[-_]/g, ' ')
+      .replace(/\b\w/g, (char) => char.toUpperCase())
+      .trim()
+  }
+
+  const loadGalleryImages = async () => {
+    try {
+      const manifestUrl = new URL('img/gallery/manifest.json', window.location.href).href
+      const response = await fetch(manifestUrl)
+
+      if (!response.ok) {
+        throw new Error(`Failed to load gallery manifest (${response.status})`)
+      }
+
+      const imageFiles = await response.json()
+      galleryItems.value = imageFiles.map((filename, index) => {
+        const imageSrc = new URL(`img/gallery/${filename}`, window.location.href).href
+
+        return {
+          id: `gallery-image-${index}`,
+          title: buildImageTitle(filename),
+          type: t('gallery.imageType'),
+          tools: t('gallery.imageTools'),
+          alt: t('gallery.imageAlt', { filename }),
+          image: imageSrc
+        }
+      })
+
+      activeSlide.value = galleryItems.value.length > 0 ? galleryItems.value[0].id : null
     }
-  ])
+    catch (error) {
+      console.error('Unable to load gallery images:', error)
+      galleryItems.value = []
+      activeSlide.value = null
+    }
+  }
 
   const masonryRefs = ref([])
-  const canScrollPrev = ref(false)
-  const canScrollNext = ref(false)
-  const [emblaRef, emblaApi] = emblaCarouselVue({
-    loop: false,
-    dragFree: true,
-    align: 'start'
-  })
-
   let mediaQueryList = null
 
   const setMasonryRef = (element, index) => {
@@ -169,26 +137,9 @@
     })
   }
 
-  const syncCarouselButtons = () => {
-    if (!emblaApi.value) {
-      canScrollPrev.value = false
-      canScrollNext.value = false
-      return
-    }
-
-    canScrollPrev.value = emblaApi.value.canScrollPrev()
-    canScrollNext.value = emblaApi.value.canScrollNext()
-  }
-
-  const scrollPrev = () => {
-    emblaApi.value?.scrollPrev()
-  }
-
-  const scrollNext = () => {
-    emblaApi.value?.scrollNext()
-  }
 
   onMounted(() => {
+    loadGalleryImages()
     initTilt()
 
     if (typeof window !== 'undefined') {
@@ -197,23 +148,9 @@
     }
   })
 
-  watch(
-    emblaApi,
-    (api) => {
-      if (!api) {
-        return
-      }
-
-      syncCarouselButtons()
-      api.on('select', syncCarouselButtons)
-      api.on('reInit', syncCarouselButtons)
-    }
-  )
-
   onBeforeUnmount(() => {
     destroyTilt()
     mediaQueryList?.removeEventListener?.('change', initTilt)
-    emblaApi.value?.destroy?.()
   })
 </script>
 
@@ -315,60 +252,17 @@
 
   .gallery-carousel-shell {
     display: none;
-    gap: var(--space-sm);
   }
 
   .gallery-carousel {
-    overflow: hidden;
-  }
-
-  .gallery-carousel__container {
-    display: flex;
-    touch-action: pan-y pinch-zoom;
+    min-height: 0;
   }
 
   .gallery-slide {
-    flex: 0 0 86%;
-    min-width: 0;
-    margin-right: var(--space-sm);
     border-radius: var(--radius-lg);
     overflow: hidden;
-    border: 1px solid rgba(125, 255, 202, 0.22);
+    border: 2px solid rgba(125, 255, 202, 0.22);
     background: linear-gradient(165deg, rgba(12, 18, 14, 0.9), rgba(8, 12, 10, 0.8));
-  }
-
-  .gallery-slide__media-wrap {
-    aspect-ratio: 4 / 3;
-    overflow: hidden;
-  }
-
-  .gallery-carousel__controls {
-    display: flex;
-    gap: 0.55rem;
-  }
-
-  .gallery-carousel__button {
-    padding: 0.52rem 0.82rem;
-    border-radius: 999px;
-    border: 1px solid rgba(125, 255, 202, 0.24);
-    background: rgba(12, 18, 14, 0.64);
-    color: var(--text);
-    font-size: 0.68rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: border-color 180ms ease, opacity 180ms ease;
-  }
-
-  .gallery-carousel__button:hover,
-  .gallery-carousel__button:focus-visible {
-    outline: none;
-    border-color: rgba(0, 255, 136, 0.5);
-  }
-
-  .gallery-carousel__button:disabled {
-    opacity: 0.45;
-    cursor: not-allowed;
   }
 
   @media (max-width: 1140px) {

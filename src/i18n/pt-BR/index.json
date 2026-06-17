@@ -14,7 +14,7 @@
 		"biography": "Biografia",
 		"skills": "Habilidades",
 		"projects": "Projetos",
-		"experience": "Experiência",
+		"gallery": "Galeria",
 		"reviews": "Depoimentos",
 		"links": "Links",
 		"contact": "Contato",
@@ -369,6 +369,9 @@
 		"next": "Próximo",
 		"prevAria": "Item anterior da galeria",
 		"nextAria": "Próximo item da galeria",
+		"imageType": "Engenharia",
+		"imageTools": "Fotografia",
+		"imageAlt": "Imagem da galeria: {filename}",
 		"items": {
 			"assyFrame": {
 				"title": "Conjunto de Estrutura de Esteira",

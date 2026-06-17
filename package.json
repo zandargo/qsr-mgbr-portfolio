@@ -10,7 +10,10 @@
     "test": "echo \"No test specified\" && exit 0",
     "dev": "quasar dev",
     "build": "quasar build",
-    "postinstall": "quasar prepare"
+    "predev": "node scripts/generate-gallery-manifest.js",
+    "prebuild": "node scripts/generate-gallery-manifest.js",
+    "postinstall": "quasar prepare",
+    "generate-gallery-manifest": "node scripts/generate-gallery-manifest.js"
   },
   "dependencies": {
     "@iconify/vue": "^5.0.1",
