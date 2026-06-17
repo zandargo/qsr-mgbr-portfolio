@@ -181,10 +181,6 @@
   }
 
   @media (max-width: 680px) {
-    .section-title {
-      font-size: clamp(1.6rem, 7vw, 2.1rem);
-    }
-
     .traits-cloud {
       gap: 0.45rem;
     }

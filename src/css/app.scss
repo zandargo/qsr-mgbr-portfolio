@@ -81,6 +81,20 @@ body {
 	margin: 0;
 	font-size: clamp(1.8rem, 3vw, 2.8rem);
 	line-height: 1.06;
+	// text-align: justify;
+	// hyphens: auto;
+}
+
+@media (max-width: 1200px) {
+	.section-title {
+		font-size: clamp(1.7rem, 2.5vw, 2.35rem);
+	}
+}
+
+@media (max-width: 680px) {
+	.section-title {
+		font-size: clamp(1.6rem, 7vw, 2.1rem);
+	}
 }
 
 .section-description {

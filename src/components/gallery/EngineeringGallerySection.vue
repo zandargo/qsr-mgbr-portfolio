@@ -388,10 +388,6 @@
   }
 
   @media (max-width: 640px) {
-    .section-title {
-      font-size: clamp(1.6rem, 7vw, 2.1rem);
-    }
-
     .gallery-slide {
       flex-basis: 92%;
     }

@@ -294,12 +294,6 @@
     margin-left: calc(50% + 1.5rem);
   }
 
-  @media (max-width: 1200px) {
-    .section-title {
-      font-size: clamp(1.7rem, 2.5vw, 2.35rem);
-    }
-  }
-
   @media (max-width: 1024px) {
     .biography-shell {
       grid-template-columns: 1fr;

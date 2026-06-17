@@ -465,10 +465,4 @@
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 0.4rem;
   }
-
-  @media (max-width: 640px) {
-    .section-title {
-      font-size: clamp(1.6rem, 7vw, 2.15rem);
-    }
-  }
 </style>
