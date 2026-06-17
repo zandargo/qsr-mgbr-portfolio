@@ -35,6 +35,8 @@
 
   const { t } = useI18n()
   const { screen } = useQuasar()
+  const currentYear = new Date().getFullYear()
+  const yearsFrom = (startYear) => currentYear - startYear
 
   const sectionRef = ref(null)
   const headerRef = ref(null)
@@ -131,7 +133,7 @@
             }
           },
           min: 0,
-          max: 15,
+          max: 20,
           tickAmount: 5,
           labels: {
             show: true,
@@ -324,48 +326,48 @@
       key: 'engineering',
       title: t('technicalSkills.groups.engineering.title'),
       skills: [
-        { name: 'SolidWorks', value: 90, years: 13 },
-        { name: 'AutoCAD', value: 85, years: 9 },
-        { name: 'SolidEdge', value: 80, years: 4 },
-        { name: '3D Printing', value: 88, years: 5 },
-        { name: 'ANSYS', value: 82, years: 4 },
-        { name: 'BIM', value: 74, years: 3 },
-        { name: 'CATIA', value: 78, years: 5 },
-        { name: 'NX', value: 70, years: 3 },
-        { name: 'FEM', value: 86, years: 6 },
-        { name: 'GD&T', value: 92, years: 12 }
+        { name: 'SolidWorks', value: 90, years: yearsFrom(2012) },
+        { name: 'AutoCAD', value: 85, years: yearsFrom(2008) },
+        { name: 'SolidEdge', value: 80, years: yearsFrom(2020) },
+        { name: '3D Printing', value: 88, years: yearsFrom(2019) },
+        { name: 'ANSYS', value: 82, years: yearsFrom(2020) },
+        { name: 'BIM', value: 74, years: yearsFrom(2021) },
+        { name: 'CATIA', value: 78, years: yearsFrom(2019) },
+        { name: 'NX', value: 70, years: yearsFrom(2021) },
+        { name: 'FEM', value: 86, years: yearsFrom(2018) },
+        { name: 'GD&T', value: 92, years: yearsFrom(2012) }
       ]
     },
     {
       key: 'frontend',
       title: t('technicalSkills.groups.frontend.title'),
       skills: [
-        { name: 'Vue.js', value: 95, years: 6 },
-        { name: 'Quasar', value: 90, years: 5 },
-        { name: 'JavaScript', value: 94, years: 7 },
-        { name: 'Electron', value: 82, years: 3 },
-        { name: 'HTML/CSS', value: 96, years: 8 },
-        { name: 'Vite', value: 85, years: 4 },
-        { name: 'Node.js', value: 68, years: 6 },
-        { name: 'REST APIs', value: 84, years: 4 },
-        { name: 'TypeScript', value: 40, years: 2 },
-        { name: 'Git', value: 93, years: 8 },
+        { name: 'Vue.js', value: 95, years: yearsFrom(2018) },
+        { name: 'Quasar', value: 90, years: yearsFrom(2019) },
+        { name: 'JavaScript', value: 94, years: yearsFrom(2017) },
+        { name: 'Electron', value: 82, years: yearsFrom(2021) },
+        { name: 'HTML/CSS', value: 96, years: yearsFrom(2016) },
+        { name: 'Vite', value: 85, years: yearsFrom(2020) },
+        { name: 'Node.js', value: 68, years: yearsFrom(2018) },
+        { name: 'REST APIs', value: 84, years: yearsFrom(2020) },
+        { name: 'TypeScript', value: 40, years: yearsFrom(2022) },
+        { name: 'Git', value: 93, years: yearsFrom(2016) },
       ]
     },
     {
       key: 'automation',
       title: t('technicalSkills.groups.automation.title'),
       skills: [
-        { name: 'Excel', value: 94, years: 10 },
-        { name: 'VBA', value: 93, years: 8 },
-        { name: 'Python', value: 65, years: 5 },
-        { name: 'REST APIs', value: 84, years: 4 },
-        { name: 'Design Automation', value: 91, years: 6 },
-        { name: 'Power Automate', value: 80, years: 3 },
-        { name: 'Shell Scripting', value: 76, years: 4 },
-        { name: 'SQL', value: 85, years: 7 },
-        { name: 'CI/CD', value: 83, years: 4 },
-        { name: 'API Integration', value: 89, years: 5 }
+        { name: 'Excel', value: 94, years: yearsFrom(2014) },
+        { name: 'VBA', value: 93, years: yearsFrom(2016) },
+        { name: 'Python', value: 65, years: yearsFrom(2019) },
+        { name: 'REST APIs', value: 84, years: yearsFrom(2020) },
+        { name: 'Design Automation', value: 91, years: yearsFrom(2018) },
+        { name: 'Power Automate', value: 80, years: yearsFrom(2021) },
+        { name: 'Shell Scripting', value: 76, years: yearsFrom(2020) },
+        { name: 'SQL', value: 85, years: yearsFrom(2017) },
+        { name: 'CI/CD', value: 83, years: yearsFrom(2020) },
+        { name: 'API Integration', value: 89, years: yearsFrom(2019) }
       ]
     }
   ]
