@@ -28,17 +28,17 @@
         <FeaturedProjectsSection />
       </section>
 
-      <section id="reviews" class="page-section" aria-labelledby="reviews-title">
-        <ReviewsSection />
-      </section>
+      <!-- <section id="links" class="page-section" aria-labelledby="links-title">
+        <ExternalLinksSection />
+      </section> -->
 
       <section id="gallery" class="page-section" aria-labelledby="gallery-title">
         <EngineeringGallerySection />
       </section>
 
-      <!-- <section id="links" class="page-section" aria-labelledby="links-title">
-        <ExternalLinksSection />
-      </section> -->
+      <section id="reviews" class="page-section" aria-labelledby="reviews-title">
+        <ReviewsSection />
+      </section>
 
       <section id="contact" class="page-section" aria-labelledby="contact-title">
         <ContactSection />
