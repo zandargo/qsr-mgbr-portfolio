@@ -74,7 +74,7 @@
     { id: 'projects', label: t('nav.projects') },
     { id: 'reviews', label: t('nav.reviews') },
     { id: 'gallery', label: t('nav.gallery') },
-    { id: 'links', label: t('nav.links') },
+    // { id: 'links', label: t('nav.links') },
     { id: 'contact', label: t('nav.contact') }
   ])
 

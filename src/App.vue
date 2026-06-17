@@ -36,9 +36,9 @@
         <EngineeringGallerySection />
       </section>
 
-      <section id="links" class="page-section" aria-labelledby="links-title">
+      <!-- <section id="links" class="page-section" aria-labelledby="links-title">
         <ExternalLinksSection />
-      </section>
+      </section> -->
 
       <section id="contact" class="page-section" aria-labelledby="contact-title">
         <ContactSection />
