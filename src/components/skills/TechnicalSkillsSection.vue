@@ -29,10 +29,12 @@
   import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
   import { useI18n } from 'vue-i18n'
   import { useIntersectionReveal } from '../../composables/useIntersectionReveal'
+  import { useQuasar } from 'quasar'
   import ApexCharts from 'vue3-apexcharts'
   import { matLegendToggle } from '@quasar/extras/material-icons'
 
   const { t } = useI18n()
+  const { screen } = useQuasar()
 
   const sectionRef = ref(null)
   const headerRef = ref(null)
@@ -317,7 +319,7 @@
     return Object.fromEntries(vars.map(v => v.split(':').map(s => s.trim())))
   }
 
-  const skillGroups = computed(() => [
+  const fullSkillGroups = [
     {
       key: 'engineering',
       title: t('technicalSkills.groups.engineering.title'),
@@ -325,8 +327,13 @@
         { name: 'SolidWorks', value: 90, years: 13 },
         { name: 'AutoCAD', value: 85, years: 9 },
         { name: 'SolidEdge', value: 80, years: 4 },
+        { name: '3D Printing', value: 88, years: 5 },
+        { name: 'ANSYS', value: 82, years: 4 },
         { name: 'BIM', value: 74, years: 3 },
-        { name: '3D Printing', value: 88, years: 5 }
+        { name: 'CATIA', value: 78, years: 5 },
+        { name: 'NX', value: 70, years: 3 },
+        { name: 'FEM', value: 86, years: 6 },
+        { name: 'GD&T', value: 92, years: 12 }
       ]
     },
     {
@@ -337,21 +344,39 @@
         { name: 'Quasar', value: 90, years: 5 },
         { name: 'JavaScript', value: 94, years: 7 },
         { name: 'Electron', value: 82, years: 3 },
-        { name: 'HTML/CSS', value: 96, years: 8 }
+        { name: 'HTML/CSS', value: 96, years: 8 },
+        { name: 'Vite', value: 85, years: 4 },
+        { name: 'Node.js', value: 68, years: 6 },
+        { name: 'REST APIs', value: 84, years: 4 },
+        { name: 'TypeScript', value: 40, years: 2 },
+        { name: 'Git', value: 93, years: 8 },
       ]
     },
     {
       key: 'automation',
       title: t('technicalSkills.groups.automation.title'),
       skills: [
-        { name: 'VBA', value: 93, years: 8 },
-        { name: 'Python', value: 87, years: 5 },
-        { name: 'REST APIs', value: 84, years: 4 },
         { name: 'Excel', value: 94, years: 10 },
-        { name: 'Design Automation', value: 91, years: 6 }
+        { name: 'VBA', value: 93, years: 8 },
+        { name: 'Python', value: 65, years: 5 },
+        { name: 'REST APIs', value: 84, years: 4 },
+        { name: 'Design Automation', value: 91, years: 6 },
+        { name: 'Power Automate', value: 80, years: 3 },
+        { name: 'Shell Scripting', value: 76, years: 4 },
+        { name: 'SQL', value: 85, years: 7 },
+        { name: 'CI/CD', value: 83, years: 4 },
+        { name: 'API Integration', value: 89, years: 5 }
       ]
     }
-  ])
+  ]
+
+  const skillGroups = computed(() => {
+    const maxSkills = screen.gt.sm ? 10 : 5
+    return fullSkillGroups.map(group => ({
+      ...group,
+      skills: group.skills.slice(0, maxSkills)
+    }))
+  })
 
   const setCardRef = (element, key) => {
     if (!element) {
