@@ -360,8 +360,8 @@
   },
   "gallery": {
     "kicker": "Engineering Gallery",
-    "title": "Industrial visuals from concept sketches to production-ready assemblies.",
-    "description": "A curated view of mechanical systems, technical drawings, 3D prototypes, and render studies used in real engineering workflows.",
+    "title": "Visual stories from mechanical projects and 3D renderings to frontend experiences and automation workflows.",
+    "description": "A curated view of mechanical systems, technical drawings, 3D prototypes, frontend interfaces, and automation-driven solutions used in real engineering workflows.",
     "masonryAria": "Engineering media gallery",
     "carouselAria": "Engineering gallery carousel",
     "itemAria": "{title} ({type})",
@@ -369,8 +369,8 @@
     "next": "Next",
     "prevAria": "Previous gallery item",
     "nextAria": "Next gallery item",
-    "imageType": "Engineering",
-    "imageTools": "Photography",
+    "imageType": "Creative Work",
+    "imageTools": "Software & automation",
     "imageAlt": "Gallery image: {filename}",
     "items": {
       "assyFrame": {

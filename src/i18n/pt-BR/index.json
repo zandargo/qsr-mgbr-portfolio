@@ -360,8 +360,8 @@
 	},
 	"gallery": {
 		"kicker": "Galeria de Engenharia",
-		"title": "Visuais industriais de esboços conceituais a conjuntos prontos para produção.",
-		"description": "Uma visão curada de sistemas mecânicos, desenhos técnicos, protótipos 3D e estudos de render usados em fluxos reais de engenharia.",
+		"title": "Histórias visuais de projetos mecânicos e renderizações 3D a experiências frontend e fluxos de automação.",
+		"description": "Uma visão curada de sistemas mecânicos, desenhos técnicos, protótipos 3D, interfaces frontend e soluções de automação usadas em fluxos reais de engenharia.",
 		"masonryAria": "Galeria de mídia de engenharia",
 		"carouselAria": "Carrossel da galeria de engenharia",
 		"itemAria": "{title} ({type})",
@@ -369,8 +369,8 @@
 		"next": "Próximo",
 		"prevAria": "Item anterior da galeria",
 		"nextAria": "Próximo item da galeria",
-		"imageType": "Engenharia",
-		"imageTools": "Fotografia",
+		"imageType": "Trabalho Criativo",
+		"imageTools": "Software e automação",
 		"imageAlt": "Imagem da galeria: {filename}",
 		"items": {
 			"assyFrame": {
