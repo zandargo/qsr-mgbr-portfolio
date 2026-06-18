@@ -30,7 +30,7 @@
           </template>
           <q-carousel-slide v-for="item in galleryItems" :key="`carousel-${item.id}`" :name="item.id" :img-src="item.image" :img-alt="item.alt" class="gallery-slide q-pa-none" :aria-label="t('gallery.itemAria', { title: item.title, type: item.type })">
             <div class="fit flex flexbox items-center glass-panel">
-              <q-img :src="item.image" fit="contain" spinner-color="primary" spinner-size="82px" />
+              <q-img :src="item.image" fit="contain" position="50% 50%" spinner-color="primary" spinner-size="82px" />
             </div>
             <!-- <div class="gallery-slide__meta">
               <p class="gallery-item__type text-mono">{{ item.type }}</p>
@@ -41,8 +41,8 @@
         </q-carousel>
       </div>
 
-      <q-dialog v-model:model-value="isCarouselOpen" transition-show="slide-up" transition-hide="slide-down" :content-class="['glass-panel', 'glow-border', 'gallery-carousel-dialog']" :aria-label="t('gallery.carouselAria')">
-        <q-carousel class="gallery-carousel q-pa-none" arrows swipeable animated infinite navigation navigation-position="bottom" xautoplay="1000" control-color="green" v-model:model-value="activeSlide" :aria-label="t('gallery.carouselAria')" transition-next="jump-left" transition-prev="jump-right" style="width: 100% !important; min-height: 85vh; max-height: 92vh;">
+      <q-dialog v-model:model-value="isCarouselOpen" maximized transition-show="slide-up" transition-hide="slide-down" :content-class="['gallery-carousel-dialog', 'glass-panel', 'glow-border']" :aria-label="t('gallery.carouselAria')">
+        <q-carousel class="gallery-carousel gallery-carousel--maximized q-pa-none" arrows swipeable animated infinite navigation navigation-position="bottom" xautoplay="1000" control-color="green" v-model:model-value="activeSlide" :aria-label="t('gallery.carouselAria')" transition-next="jump-left" transition-prev="jump-right">
           <!-- <q-carousel-control control-type="flat" position="top" @click.stop="closeCarouselModal">
             <q-icon name="close" size="24px" color="white" />
           </q-carousel-control> -->
@@ -52,10 +52,12 @@
           </template>
           <q-carousel-slide v-for="item in galleryItems" :key="`dialog-carousel-${item.id}`" :name="item.id" :img-src="item.image" :img-alt="item.alt" class="gallery-slide q-pa-none" :aria-label="t('gallery.itemAria', { title: item.title, type: item.type })">
             <div class="fit flex flexbox items-center glass-panel">
-              <q-img :src="item.image" fit="contain" spinner-color="primary" spinner-size="82px" />
+              <q-img :src="item.image" fit="contain" position="50% 50%" spinner-color="primary" spinner-size="82px" />
             </div>
           </q-carousel-slide>
         </q-carousel>
+        <!-- <div class="">
+        </div> -->
       </q-dialog>
     </article>
   </div>
@@ -295,35 +297,29 @@
 
   .gallery-carousel {
     min-height: 0;
-    width: 100%;
     overflow: hidden !important;
+    border-radius: var(--radius-lg);
   }
 
   .gallery-carousel-dialog {
-    /* width: min(1120px, 96vw) !important;
-    min-width: min(1120px, 96vw) !important;
-    max-width: 98vw !important; */
-    width: clamp(1200px, 80vw, 98vw) !important;
-    max-height: 92vh !important;
-    padding: 0 !important;
     overflow: hidden !important;
-    /* box-sizing: border-box; */
   }
 
   .gallery-carousel-dialog .gallery-carousel {
-    width: 100%;
-    height: 100%;
     overflow: hidden !important;
   }
 
+  .gallery-carousel--maximized {
+    width: clamp(1200px, 80vh, 96vw);
+    height: clamp(675px, 80vh, 96vw);
+  }
+
   .gallery-slide {
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    /* border: 2px solid rgba(125, 255, 202, 0.22); */
+    border-radius: var(--radius-lg) !important;
+    overflow: hidden !important;
     background: linear-gradient(165deg, rgba(12, 18, 14, 0.9), rgba(8, 12, 10, 0.8));
     background-position: center;
     background-size: cover;
-
   }
 
   @media (max-width: 1140px) {
