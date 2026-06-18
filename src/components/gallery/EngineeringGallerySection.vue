@@ -10,9 +10,9 @@
       </header>
 
       <div class="gallery-masonry" :aria-label="t('gallery.masonryAria')">
-        <article v-for="(item, index) in galleryItems" :key="`masonry-${item.id}`" :ref="(element) => setMasonryRef(element, index)" class="gallery-item" :aria-label="t('gallery.itemAria', { title: item.title, type: item.type })">
+        <article v-for="(item, index) in galleryItems" :key="`masonry-${item.id}`" :ref="(element) => setMasonryRef(element, index)" class="gallery-item" role="button" tabindex="0" :aria-label="t('gallery.itemAria', { title: item.title, type: item.type })" @click="openCarouselModal(index)" @keydown.enter.prevent="openCarouselModal(index)" @keydown.space.prevent="openCarouselModal(index)">
           <div class="gallery-item__media-wrap">
-            <img class="gallery-item__media" :src="item.image" :alt="item.alt" loading="lazy" decoding="async" width="760" height="760" />
+            <img class="gallery-item__media" :src="item.image" :alt="item.alt" loading="lazy" decoding="async" width="640" height="640" />
           </div>
           <!-- <div class="gallery-item__meta">
             <p class="gallery-item__type text-mono">{{ item.type }}</p>
@@ -24,6 +24,10 @@
 
       <div class="gallery-carousel-shell" :aria-label="t('gallery.carouselAria')">
         <q-carousel class="gallery-carousel" control-type="flat" arrows swipeable animated infinite navigation navigation-position="bottom" autoplay="1000" control-color="green" v-model:model-value="activeSlide" :aria-label="t('gallery.carouselAria')" transition-next="jump-left" transition-prev="jump-right">
+          <template v-slot:navigation-icon="{ active, btnProps, onClick }">
+            <q-btn v-if="active" size="sm" icon="circle" color="green-6" flat round dense @click="onClick" />
+            <q-btn v-else size="xs" icon="o_circle" color="green-9" flat round dense @click="onClick" />
+          </template>
           <q-carousel-slide v-for="item in galleryItems" :key="`carousel-${item.id}`" :name="item.id" :img-src="item.image" :img-alt="item.alt" class="gallery-slide q-pa-none" :aria-label="t('gallery.itemAria', { title: item.title, type: item.type })">
             <div class="fit flex flexbox items-center glass-panel">
               <q-img :src="item.image" fit="contain" spinner-color="primary" spinner-size="82px" />
@@ -36,6 +40,23 @@
           </q-carousel-slide>
         </q-carousel>
       </div>
+
+      <q-dialog v-model:model-value="isCarouselOpen" transition-show="slide-up" transition-hide="slide-down" :content-class="['glass-panel', 'glow-border', 'gallery-carousel-dialog']" :aria-label="t('gallery.carouselAria')">
+        <q-carousel class="gallery-carousel q-pa-none" arrows swipeable animated infinite navigation navigation-position="bottom" xautoplay="1000" control-color="green" v-model:model-value="activeSlide" :aria-label="t('gallery.carouselAria')" transition-next="jump-left" transition-prev="jump-right" style="width: 100% !important; min-height: 85vh; max-height: 92vh;">
+          <!-- <q-carousel-control control-type="flat" position="top" @click.stop="closeCarouselModal">
+            <q-icon name="close" size="24px" color="white" />
+          </q-carousel-control> -->
+          <template v-slot:navigation-icon="{ active, btnProps, onClick }">
+            <q-btn v-if="active" size="sm" icon="circle" color="green-6" flat round dense @click="onClick" />
+            <q-btn v-else size="xs" icon="o_circle" color="green-9" flat round dense @click="onClick" />
+          </template>
+          <q-carousel-slide v-for="item in galleryItems" :key="`dialog-carousel-${item.id}`" :name="item.id" :img-src="item.image" :img-alt="item.alt" class="gallery-slide q-pa-none" :aria-label="t('gallery.itemAria', { title: item.title, type: item.type })">
+            <div class="fit flex flexbox items-center glass-panel">
+              <q-img :src="item.image" fit="contain" spinner-color="primary" spinner-size="82px" />
+            </div>
+          </q-carousel-slide>
+        </q-carousel>
+      </q-dialog>
     </article>
   </div>
 </template>
@@ -48,6 +69,20 @@
   const { t } = useI18n()
   const galleryItems = ref([])
   const activeSlide = ref(null)
+  const isCarouselOpen = ref(false)
+
+  const openCarouselModal = (index) => {
+    if (!galleryItems.value[index]) {
+      return
+    }
+
+    activeSlide.value = galleryItems.value[index].id
+    isCarouselOpen.value = true
+  }
+
+  const closeCarouselModal = () => {
+    isCarouselOpen.value = false
+  }
 
   const buildImageTitle = (filename) => {
     const base = filename.replace(/\.[^.]+$/, '')
@@ -191,6 +226,7 @@
       transform 230ms ease,
       border-color 230ms ease,
       box-shadow 230ms ease;
+    cursor: pointer;
   }
 
   .gallery-item:hover,
@@ -259,6 +295,25 @@
 
   .gallery-carousel {
     min-height: 0;
+    width: 100%;
+    overflow: hidden !important;
+  }
+
+  .gallery-carousel-dialog {
+    /* width: min(1120px, 96vw) !important;
+    min-width: min(1120px, 96vw) !important;
+    max-width: 98vw !important; */
+    width: clamp(1200px, 80vw, 98vw) !important;
+    max-height: 92vh !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    /* box-sizing: border-box; */
+  }
+
+  .gallery-carousel-dialog .gallery-carousel {
+    width: 100%;
+    height: 100%;
+    overflow: hidden !important;
   }
 
   .gallery-slide {
