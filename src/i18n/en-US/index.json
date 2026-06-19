@@ -48,6 +48,8 @@
     "actions": {
       "github": "GitHub",
       "linkedin": "LinkedIn",
+      "upwork": "Upwork",
+      "email": "Email",
       "resume": "Resume"
     },
     "scrollHint": "Scroll for timeline",

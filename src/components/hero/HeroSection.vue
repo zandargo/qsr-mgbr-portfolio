@@ -34,6 +34,14 @@
             <Icon icon="mdi:linkedin" height="24px" />
             <span>{{ t('hero.actions.linkedin') }}</span>
           </a>
+          <a class="action-button col-12 col-md-3" href="https://www.upwork.com/freelancers/~01074a8f5756ea2138" target="_blank" rel="noreferrer">
+            <Icon icon="mdi:briefcase-outline" height="24px" />
+            <span>{{ t('hero.actions.upwork') }}</span>
+          </a>
+          <a class="action-button col-12 col-md-3" href="mailto:madson.br@gmail.com">
+            <Icon icon="mdi:email-outline" height="24px" />
+            <span>{{ t('hero.actions.email') }}</span>
+          </a>
           <a class="action-button col-12 col-md-3" href="#contact">
             <Icon icon="mdi:file-document-outline" height="24px" />
             <span>{{ t('hero.actions.resume') }}</span>

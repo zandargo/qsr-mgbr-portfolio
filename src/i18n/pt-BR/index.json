@@ -48,6 +48,8 @@
 		"actions": {
 			"github": "GitHub",
 			"linkedin": "LinkedIn",
+			"upwork": "Upwork",
+			"email": "E-mail",
 			"resume": "Currículo"
 		},
 		"scrollHint": "Role para a linha do tempo",
