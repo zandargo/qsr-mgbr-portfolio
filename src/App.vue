@@ -3,54 +3,55 @@
     <BackgroundLayer />
     <NavigationBar />
 
-    <main class="portfolio-main" :aria-label="t('app.mainAria')">
-      <section id="hero" class="page-section" aria-labelledby="hero-title">
-        <HeroSection />
-      </section>
+    <q-scroll-area class="portfolio-scroll fit" v-bind="scrollAreaProps" aria-label="main page scroll area">
+      <main class="portfolio-main" :aria-label="t('app.mainAria')">
+        <section id="hero" class="page-section" aria-labelledby="hero-title">
+          <HeroSection />
+        </section>
 
-      <section id="biography" class="page-section" aria-labelledby="biography-title">
-        <BiographySection />
-      </section>
+        <section id="biography" class="page-section" aria-labelledby="biography-title">
+          <BiographySection />
+        </section>
 
-      <section id="soft-skills" class="page-section" aria-labelledby="soft-skills-title">
-        <SoftSkillsSection />
-      </section>
+        <section id="soft-skills" class="page-section" aria-labelledby="soft-skills-title">
+          <SoftSkillsSection />
+        </section>
 
-      <section id="technical-skills" class="page-section" aria-labelledby="technical-skills-title">
-        <TechnicalSkillsSection />
-      </section>
+        <section id="technical-skills" class="page-section" aria-labelledby="technical-skills-title">
+          <TechnicalSkillsSection />
+        </section>
 
-      <!-- <section id="experience" class="page-section" aria-labelledby="experience-title">
+        <!-- <section id="experience" class="page-section" aria-labelledby="experience-title">
         <ExperienceSection />
       </section> -->
 
-      <section id="projects" class="page-section" aria-labelledby="projects-title">
-        <FeaturedProjectsSection />
-      </section>
+        <section id="projects" class="page-section" aria-labelledby="projects-title">
+          <FeaturedProjectsSection />
+        </section>
 
-      <!-- <section id="links" class="page-section" aria-labelledby="links-title">
+        <!-- <section id="links" class="page-section" aria-labelledby="links-title">
         <ExternalLinksSection />
       </section> -->
 
-      <section id="gallery" class="page-section" aria-labelledby="gallery-title">
-        <EngineeringGallerySection />
-      </section>
+        <section id="gallery" class="page-section" aria-labelledby="gallery-title">
+          <EngineeringGallerySection />
+        </section>
 
-      <section id="reviews" class="page-section" aria-labelledby="reviews-title">
-        <ReviewsSection />
-      </section>
+        <section id="reviews" class="page-section" aria-labelledby="reviews-title">
+          <ReviewsSection />
+        </section>
 
-      <section id="contact" class="page-section" aria-labelledby="contact-title">
-        <ContactSection />
-      </section>
-    </main>
+        <section id="contact" class="page-section" aria-labelledby="contact-title">
+          <ContactSection />
+        </section>
+      </main>
 
-    <FooterSection />
+      <FooterSection />
+    </q-scroll-area>
   </div>
 </template>
 
 <script setup>
-  import { onMounted, onUnmounted } from 'vue'
   import { useI18n } from 'vue-i18n'
   import BackgroundLayer from './components/background/BackgroundLayer.vue'
   import HeroSection from './components/hero/HeroSection.vue'
@@ -65,14 +66,13 @@
   import ContactSection from './components/contact/ContactSection.vue'
   import NavigationBar from './components/layout/NavigationBar.vue'
   import FooterSection from './components/layout/FooterSection.vue'
-  import { useLenis } from './composables/useLenis'
   import { useQuasar } from 'quasar'
+  import { useScrollAreaStyles } from './composables/useScrollAreaStyles'
 
   const { t } = useI18n()
 
-  const { init, destroy } = useLenis()
-
   const $q = useQuasar()
+  const scrollAreaProps = useScrollAreaStyles()
 
   const appIcons = {
     'app:upwork': 'img:/img/icons/upwork-svgrepo-com.svg',
@@ -85,21 +85,34 @@
       return { icon }
     }
   }
-
-  onMounted(() => {
-    init()
-  })
-
-  onUnmounted(() => {
-    destroy()
-  })
 </script>
 
 <style scoped>
   .portfolio-app {
     position: relative;
+    width: 100%;
     min-height: 100vh;
     isolation: isolate;
+  }
+
+  .portfolio-scroll {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .portfolio-scroll .q-scrollarea__container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .portfolio-main {
+    position: relative;
+    z-index: 1;
+    padding-top: 88px;
+    min-height: 100%;
   }
 
   .portfolio-main {

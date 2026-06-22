@@ -13,7 +13,7 @@
         </header>
 
         <div v-if="project" class="project-modal__content">
-          <q-scroll-area class="project-modal__scroll" @wheel.passive.stop>
+          <q-scroll-area class="project-modal__scroll" @wheel.passive.stop v-bind="scrollAreaProps">
             <div class="project-modal__body">
               <section class="project-modal__block" :aria-label="t('projectModal.sections.screenshotsAria')">
                 <h4 class="project-modal__block-title text-mono">{{ t('projectModal.sections.screenshots') }}</h4>
@@ -73,8 +73,10 @@
   import { animate } from 'animejs'
   import { nextTick, onBeforeUnmount, ref, watch } from 'vue'
   import { useI18n } from 'vue-i18n'
+  import { useScrollAreaStyles } from '../../composables/useScrollAreaStyles'
 
   const { t } = useI18n()
+  const scrollAreaProps = useScrollAreaStyles()
 
   const props = defineProps({
     modelValue: {
