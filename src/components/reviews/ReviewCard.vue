@@ -1,9 +1,9 @@
 <template>
-  <article class="review-card glass-panel" tabindex="0" :aria-label="t('reviews.cardAria', { client: review.client, rating: review.rating })">
-    <div class="xxreview-card__top row items-center justify-between gap-sm">
+  <article class="review-card glass-panel column" tabindex="0" :aria-label="t('reviews.cardAria', { client: review.client, rating: review.rating })">
+    <div class="review-card__top row items-start gap-sm">
       <div class="col-12">
         <h5 class="text-display q-my-none">{{ review.jobTitle }}</h5>
-        <p class="review-card__client text-mono q-mt-xs">{{ review.client }}</p>
+        <p class="review-card__client text-mono text-accent text-bold text-italic q-my-sm">{{ review.client }}</p>
       </div>
 
       <div class="col-12 review-card__rating row items-center gap-xs">
@@ -36,7 +36,7 @@
 <style scoped>
   .review-card {
     padding: clamp(1.15rem, 2.5vw, 1.4rem);
-    display: grid;
+    /* display: grid; */
     gap: var(--space-sm);
     min-height: 220px;
     background: rgba(16, 22, 19, 0.72);
@@ -47,7 +47,7 @@
   }
 
   .review-card__client {
-    margin: 0;
+    /* margin: 0; */
     font-size: clamp(1.05rem, 1.3vw, 1.2rem);
     line-height: 1.2;
   }
