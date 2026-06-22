@@ -66,10 +66,25 @@
   import NavigationBar from './components/layout/NavigationBar.vue'
   import FooterSection from './components/layout/FooterSection.vue'
   import { useLenis } from './composables/useLenis'
+  import { useQuasar } from 'quasar'
 
   const { t } = useI18n()
 
   const { init, destroy } = useLenis()
+
+  const $q = useQuasar()
+
+  const appIcons = {
+    'app:upwork': 'img:/public/img/icons/upwork-svgrepo-com.svg',
+    'app:vue': 'img:/public/img/icons/vue-svgrepo-com.svg',
+  }
+
+  $q.iconMapFn = iconName => {
+    const icon = appIcons[iconName]
+    if (icon !== undefined) {
+      return { icon }
+    }
+  }
 
   onMounted(() => {
     init()

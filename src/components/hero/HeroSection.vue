@@ -35,7 +35,7 @@
             <span>{{ t('hero.actions.linkedin') }}</span>
           </a>
           <a class="action-button col-12 col-md-3" href="https://www.upwork.com/freelancers/~01074a8f5756ea2138" target="_blank" rel="noreferrer">
-            <Icon icon="mdi:briefcase-outline" height="24px" />
+            <q-icon name="app:upwork" size="24px" class="upwork-icon" style="opacity: 0.85;" />
             <span>{{ t('hero.actions.upwork') }}</span>
           </a>
           <a class="action-button col-12 col-md-3" href="mailto:madson.br@gmail.com">
