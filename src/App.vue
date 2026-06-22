@@ -75,8 +75,8 @@
   const $q = useQuasar()
 
   const appIcons = {
-    'app:upwork': 'img:/public/img/icons/upwork-svgrepo-com.svg',
-    'app:vue': 'img:/public/img/icons/vue-svgrepo-com.svg',
+    'app:upwork': 'img:/img/icons/upwork-svgrepo-com.svg',
+    'app:vue': 'img:/img/icons/vue-svgrepo-com.svg',
   }
 
   $q.iconMapFn = iconName => {
