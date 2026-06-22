@@ -14,7 +14,7 @@
 
     <p class="review-card__text">{{ review.text }}</p>
 
-    <div v-if="review.skills?.length" class="row q-gutter-sm">
+    <div v-if="review.skills?.length" class="q-mt-md row q-gutter-sm">
       <q-badge v-for="skill in review.skills" :key="skill" :label="skill" color="text-muted" rounded dense outline class="review-card__skill" />
     </div>
   </article>

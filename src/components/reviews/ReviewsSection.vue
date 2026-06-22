@@ -7,7 +7,7 @@
         <p class="section-description">{{ t('reviews.description') }}</p>
       </header>
 
-      <div class="reviews-grid q-pt-md" :aria-label="t('reviews.listAria')">
+      <div class="reviews-masonry q-pt-md" :aria-label="t('reviews.listAria')">
         <ReviewCard v-for="review in reviews" :key="review.id || review.jobTitle" :review="review" />
       </div>
     </article>
@@ -49,7 +49,7 @@
           client: item['Client Name'] || t('reviews.unknownClient'),
           rating: Number(item['Client Feedback Score']) || 0,
           text: item['Client Feedback Comment'].trim(),
-          skills: item.Skills ? item.Skills.split(' || ').map((skill) => skill.trim()).filter(Boolean) : []
+          skills: item.Skills && item.Skills.toLowerCase() !== 'not available' ? item.Skills.split(' || ').map((skill) => skill.trim()).filter(Boolean) : []
         }))
     } catch (error) {
       // Fallback if the JSON cannot be loaded.
@@ -76,15 +76,20 @@
     gap: var(--space-sm);
   }
 
-  .reviews-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: var(--space-lg);
+  .reviews-masonry {
+    column-count: 3;
+    column-gap: var(--space-lg);
+  }
+
+  .reviews-masonry>* {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: var(--space-lg);
   }
 
   @media (max-width: 980px) {
-    .reviews-grid {
-      grid-template-columns: 1fr;
+    .reviews-masonry {
+      column-count: 1;
     }
   }
 </style>
