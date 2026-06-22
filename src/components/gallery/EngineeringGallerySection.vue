@@ -23,7 +23,7 @@
       </div>
 
       <div class="gallery-carousel-shell" :aria-label="t('gallery.carouselAria')">
-        <q-carousel class="gallery-carousel" control-type="flat" arrows swipeable animated infinite navigation navigation-position="bottom" autoplay="1000" control-color="green" v-model:model-value="activeSlide" :aria-label="t('gallery.carouselAria')" transition-next="jump-left" transition-prev="jump-right">
+        <q-carousel class="gallery-carousel" control-type="flat" arrows swipeable animated infinite navigation navigation-position="bottom" :autoplay="1000" control-color="green" v-model:model-value="activeSlide" :aria-label="t('gallery.carouselAria')" transition-next="jump-left" transition-prev="jump-right">
           <template v-slot:navigation-icon="{ active, btnProps, onClick }">
             <q-btn v-if="active" size="sm" icon="circle" color="green-6" flat round dense @click="onClick" />
             <q-btn v-else size="xs" icon="o_circle" color="green-9" flat round dense @click="onClick" />
@@ -42,7 +42,7 @@
       </div>
 
       <q-dialog v-model:model-value="isCarouselOpen" maximized transition-show="slide-up" transition-hide="slide-down" :content-class="['gallery-carousel-dialog', 'glass-panel', 'glow-border']" :aria-label="t('gallery.carouselAria')">
-        <q-carousel class="gallery-carousel gallery-carousel--maximized q-pa-none" arrows swipeable animated infinite navigation navigation-position="bottom" xautoplay="1000" control-color="green" v-model:model-value="activeSlide" :aria-label="t('gallery.carouselAria')" transition-next="jump-left" transition-prev="jump-right">
+        <q-carousel class="gallery-carousel gallery-carousel--maximized q-pa-none" arrows swipeable animated infinite navigation navigation-position="bottom" :autoplay="1000" control-color="green" v-model:model-value="activeSlide" :aria-label="t('gallery.carouselAria')" transition-next="jump-left" transition-prev="jump-right">
           <!-- <q-carousel-control control-type="flat" position="top" @click.stop="closeCarouselModal">
             <q-icon name="close" size="24px" color="white" />
           </q-carousel-control> -->

@@ -1,8 +1,8 @@
 <template>
   <article class="review-card glass-panel" tabindex="0" :aria-label="t('reviews.cardAria', { client: review.client, rating: review.rating })">
-    <div class="review-card__top row items-center justify-between gap-sm">
-      <div class="col-12 review-card__header">
-        <h5 class="review-card__title text-display q-mb-none">{{ review.jobTitle }}</h5>
+    <div class="xxreview-card__top row items-center justify-between gap-sm">
+      <div class="col-12">
+        <h5 class="text-display q-my-none">{{ review.jobTitle }}</h5>
         <p class="review-card__client text-mono q-mt-xs">{{ review.client }}</p>
       </div>
 
@@ -14,7 +14,7 @@
 
     <p class="review-card__text">{{ review.text }}</p>
 
-    <div v-if="review.skills?.length" class="row q-col-gutter-sm">
+    <div v-if="review.skills?.length" class="row q-gutter-sm">
       <q-badge v-for="skill in review.skills" :key="skill" :label="skill" color="text-muted" rounded dense outline class="review-card__skill" />
     </div>
   </article>

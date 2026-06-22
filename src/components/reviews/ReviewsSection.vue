@@ -7,7 +7,7 @@
         <p class="section-description">{{ t('reviews.description') }}</p>
       </header>
 
-      <div class="reviews-grid" :aria-label="t('reviews.listAria')">
+      <div class="reviews-grid q-pt-md" :aria-label="t('reviews.listAria')">
         <ReviewCard v-for="review in reviews" :key="review.id || review.jobTitle" :review="review" />
       </div>
     </article>
