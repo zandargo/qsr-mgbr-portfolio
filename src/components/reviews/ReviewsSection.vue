@@ -8,37 +8,56 @@
       </header>
 
       <div class="reviews-grid" :aria-label="t('reviews.listAria')">
-        <ReviewCard v-for="review in reviews" :key="review.client" :review="review" />
+        <ReviewCard v-for="review in reviews" :key="review.id || review.jobTitle" :review="review" />
       </div>
     </article>
   </div>
 </template>
 
 <script setup>
-  import { computed, ref } from 'vue'
+  import { onMounted, ref } from 'vue'
   import { useI18n } from 'vue-i18n'
   import ReviewCard from './ReviewCard.vue'
 
   const { t } = useI18n()
   const sectionRef = ref(null)
+  const reviews = ref([])
 
-  const reviews = computed(() => [
-    {
-      client: 'Upwork',
-      rating: 5,
-      text: t('reviews.items.0.text')
-    },
-    {
-      client: 'Engineering Partner',
-      rating: 4.5,
-      text: t('reviews.items.1.text')
-    },
-    {
-      client: 'Product Lead',
-      rating: 4,
-      text: t('reviews.items.2.text')
+  onMounted(async () => {
+    try {
+      const response = await fetch('/txt/merged_export_2026-06-22.json')
+      if (!response.ok) {
+        throw new Error(`Unable to load reviews: ${response.status}`)
+      }
+
+      const data = await response.json()
+      reviews.value = data
+        .filter((item) => {
+          const clientName = item['Client Name']?.trim()
+          const feedbackComment = item['Client Feedback Comment']?.trim()
+          const unavailableText = 'not available'
+          return (
+            feedbackComment &&
+            feedbackComment.toLowerCase() !== unavailableText &&
+            clientName &&
+            clientName.toLowerCase() !== unavailableText
+          )
+        })
+        .map((item) => ({
+          id: item.id || `${item['Job Title']}-${item['Client Name']}`,
+          jobTitle: item['Job Title'] || t('reviews.unknownTitle'),
+          client: item['Client Name'] || t('reviews.unknownClient'),
+          rating: Number(item['Client Feedback Score']) || 0,
+          text: item['Client Feedback Comment'].trim(),
+          skills: item.Skills ? item.Skills.split(' || ').map((skill) => skill.trim()).filter(Boolean) : []
+        }))
+    } catch (error) {
+      // Fallback if the JSON cannot be loaded.
+      reviews.value = []
+      // eslint-disable-next-line no-console
+      console.error(error)
     }
-  ])
+  })
 </script>
 
 <style scoped>

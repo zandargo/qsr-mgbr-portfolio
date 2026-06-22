@@ -197,6 +197,8 @@
 		"description": "Feedback real de clientes e colaboradores que confiaram no fluxo de trabalho, na qualidade e na execução.",
 		"listAria": "Lista de depoimentos de clientes",
 		"cardAria": "Depoimento de {client} com avaliação {rating} de 5",
+		"unknownTitle": "Depoimento sem título",
+		"unknownClient": "Cliente desconhecido",
 		"items": {
 			"0": {
 				"text": "Entregou resultados excelentes com comunicação clara e iteração rápida — o trabalho superou as expectativas."

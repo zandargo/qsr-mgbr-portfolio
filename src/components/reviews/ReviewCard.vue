@@ -1,7 +1,11 @@
 <template>
   <article class="review-card glass-panel" tabindex="0" :aria-label="t('reviews.cardAria', { client: review.client, rating: review.rating })">
     <div class="review-card__top row items-center justify-between gap-sm">
-      <h3 class="col-12 review-card__client text-display q-mb-none">{{ review.client }}</h3>
+      <div class="col-12 review-card__header">
+        <h5 class="review-card__title text-display q-mb-none">{{ review.jobTitle }}</h5>
+        <p class="review-card__client text-mono q-mt-xs">{{ review.client }}</p>
+      </div>
+
       <div class="col-12 review-card__rating row items-center gap-xs">
         <q-rating :model-value="review.rating" max="5" readonly dense color="green" size="sm" icon="star_border" icon-selected="star" icon-half="star_half" />
         <span class="review-card__score text-mono">{{ review.rating }}/5</span>
@@ -9,6 +13,10 @@
     </div>
 
     <p class="review-card__text">{{ review.text }}</p>
+
+    <div v-if="review.skills?.length" class="review-card__skills row wrap gap-xs">
+      <q-badge v-for="skill in review.skills" :key="skill" :label="skill" color="secondary" outline class="review-card__skill" />
+    </div>
   </article>
 </template>
 

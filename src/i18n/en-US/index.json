@@ -165,6 +165,8 @@
     "description": "Real feedback from clients and collaborators who trusted the workflow, quality, and execution.",
     "listAria": "Client review list",
     "cardAria": "Review by {client} with rating {rating} out of 5",
+    "unknownTitle": "Untitled review",
+    "unknownClient": "Unknown client",
     "items": {
       "0": {
         "text": "Delivered excellent results with clear communication and fast iteration — the work exceeded expectations."
