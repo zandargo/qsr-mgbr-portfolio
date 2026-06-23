@@ -217,31 +217,31 @@
     "description": "A selected set of systems that combine mechanical logic, frontend architecture, and automation efficiency.",
     "items": {
       "pdlm": {
-        "title": "Product Data Lifecycle Manager",
-        "summary": "A centralized platform to control engineering documents, approvals, and lifecycle transitions for industrial products.",
-        "overview": "A product lifecycle platform that unifies engineering records, release workflows, and approval trails into a single interface for technical teams.",
+        "title": "Workshop Service Manager",
+        "summary": "A Quasar, Vue and Firebase system for auto shop operations, tracking customers, services, appointments, status, and invoices.",
+        "overview": "A workshop operations platform that centralizes client records, service catalogs, schedule planning, appointment status, and invoice generation into a single responsive dashboard.",
         "architecture": {
-          "0": "Modular Vue frontend with Quasar-based UI shells",
-          "1": "Role-driven API gateway to control approvals and release permissions",
-          "2": "Event timeline module for full lifecycle traceability"
+          "0": "Quasar + Vue frontend with responsive workshop management panels",
+          "1": "Firebase backend for realtime client data, service scheduling, and authenticated access",
+          "2": "Service workflow views for appointment status, work orders, and invoice tracking"
         },
         "challenges": {
-          "0": "Consolidating legacy document states across disconnected repositories",
-          "1": "Designing approval paths flexible enough for multi-department teams",
-          "2": "Keeping large lifecycle tables fast on lower-power laptops"
+          "0": "Mapping vehicle service workflows into intuitive appointment and status boards",
+          "1": "Ensuring realtime synchronization of customer, service, and invoice records in Firebase",
+          "2": "Keeping the workshop interface clear for busy teams while managing schedules and service updates"
         },
         "screenshots": {
           "0": {
-            "label": "Release dashboard",
-            "type": "Control panel"
+            "label": "Main dashboard",
+            "type": "Overview"
           },
           "1": {
-            "label": "Approval route editor",
-            "type": "Workflow"
+            "label": "Services view",
+            "type": "Service manager"
           },
           "2": {
-            "label": "Lifecycle timeline",
-            "type": "Audit view"
+            "label": "Inventory view",
+            "type": "Stock overview"
           }
         }
       },
@@ -484,9 +484,9 @@
     },
     "productsCards": {
       "pdlm": {
-        "title": "PDLM",
-        "description": "Product Lifecycle Management platform with approval routing, document controls, and release traceability for engineering teams.",
-        "badge": "SaaS System",
+        "title": "Workshop Service Manager",
+        "description": "Auto shop operations software built with Vue, Quasar, and Firebase for client records, service scheduling, work order tracking, and invoice generation.",
+        "badge": "Workshop App",
         "ctaLabel": "View Project"
       },
       "cadtk": {

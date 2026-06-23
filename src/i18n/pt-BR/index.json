@@ -217,31 +217,31 @@
 		"description": "Um conjunto selecionado de sistemas que combinam lógica mecânica, arquitetura frontend e eficiência em automação.",
 		"items": {
 			"pdlm": {
-				"title": "Gerenciador de Ciclo de Vida de Produto",
-				"summary": "Plataforma centralizada para controlar documentos de engenharia, aprovações e transições de ciclo de vida de produtos industriais.",
-				"overview": "Uma plataforma de ciclo de vida que unifica registros de engenharia, fluxos de liberação e trilhas de aprovação em uma única interface para equipes técnicas.",
+				"title": "Gestor de Oficina",
+				"summary": "Sistema com Quasar, Vue e Firebase para operar oficinas automotivas, gerenciar clientes, serviços, agendamentos, status de atendimento e faturas.",
+				"overview": "Plataforma de gestão de oficina que centraliza cadastro de clientes, catálogo de serviços, agendamento, status de atendimento e geração de faturas em um painel responsivo.",
 				"architecture": {
-					"0": "Frontend Vue modular com shells de UI baseados em Quasar",
-					"1": "Gateway de API orientado por papéis para controlar aprovações e permissões de liberação",
-					"2": "Módulo de linha do tempo de eventos para rastreabilidade completa"
+					"0": "Frontend Vue e Quasar com painéis responsivos para gestão de oficina",
+					"1": "Backend Firebase para dados de clientes, agendamento em tempo real e acesso autenticado",
+					"2": "Visões de fluxo de serviço para status de atendimento, ordens de serviço e acompanhamento de faturas"
 				},
 				"challenges": {
-					"0": "Consolidar estados de documentos legados em repositórios desconectados",
-					"1": "Desenhar fluxos de aprovação flexíveis para equipes multi-departamento",
-					"2": "Manter tabelas de ciclo de vida performáticas em notebooks menos potentes"
+					"0": "Mapear fluxos de atendimento automotivo em quadros de agenda e status intuitivos",
+					"1": "Garantir sincronização em tempo real de clientes, serviços e registros de faturamento no Firebase",
+					"2": "Manter a interface da oficina clara para equipes ocupadas enquanto gerencia agendamentos e atualizações de serviço"
 				},
 				"screenshots": {
 					"0": {
-						"label": "Painel de liberação",
-						"type": "Painel de controle"
+						"label": "Painel principal",
+						"type": "Visão geral"
 					},
 					"1": {
-						"label": "Editor de rota de aprovação",
-						"type": "Fluxo"
+						"label": "Visão de serviços",
+						"type": "Gestão de serviços"
 					},
 					"2": {
-						"label": "Linha do tempo de ciclo de vida",
-						"type": "Auditoria"
+						"label": "Visão de estoque",
+						"type": "Resumo de estoque"
 					}
 				}
 			},
@@ -484,9 +484,9 @@
 		},
 		"productsCards": {
 			"pdlm": {
-				"title": "PDLM",
-				"description": "Plataforma PLM com roteamento de aprovação, controle de documentos e rastreabilidade de liberações para equipes de engenharia.",
-				"badge": "Sistema SaaS",
+				"title": "Gestor de Oficina",
+				"description": "Software para operações de oficina construído com Vue, Quasar e Firebase para registros de clientes, agendamento de serviços, controle de ordens e geração de faturas.",
+				"badge": "App de Oficina",
 				"ctaLabel": "Ver Projeto"
 			},
 			"cadtk": {

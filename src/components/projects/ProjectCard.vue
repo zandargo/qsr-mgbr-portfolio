@@ -5,15 +5,15 @@
       <p class="project-card__code text-mono">{{ project.code }}</p>
     </div>
 
-    <div class="project-card__content">
+    <div class="project-card__content column justify-between">
       <h3 class="project-card__title text-display">{{ project.title }}</h3>
-      <p class="project-card__summary">{{ project.summary }}</p>
+      <p class="q-mt-md project-card__summary">{{ project.summary }}</p>
 
-      <ul class="project-card__tags" :aria-label="t('projectCard.technologiesAria', { title: project.title })">
+      <ul class="project-card__tags q-pa-none q-my-md " :aria-label="t('projectCard.technologiesAria', { title: project.title })">
         <li v-for="tag in project.tags" :key="tag" class="project-card__tag text-mono">{{ tag }}</li>
       </ul>
 
-      <div class="project-card__actions">
+      <div class="project-card__actions items-end">
         <button type="button" class="project-card__link" @click="emit('open-project', project)">{{ t('projectCard.details') }}</button>
         <!-- <a class="project-card__link" :href="project.github" target="_blank" rel="noreferrer">{{ t('projectCard.github') }}</a> -->
         <a class="project-card__link project-card__link--primary" :href="project.demo" target="_blank" rel="noreferrer">{{ t('projectCard.liveDemo') }}</a>
@@ -186,8 +186,8 @@
 
   .project-card__content {
     padding: var(--space-md);
-    display: grid;
-    gap: var(--space-sm);
+    /* display: grid; */
+    /* gap: var(--space-sm); */
   }
 
   .project-card__title {
@@ -197,15 +197,15 @@
   }
 
   .project-card__summary {
-    margin: 0;
+    /* margin: 0; */
     color: var(--text-muted);
     line-height: 1.55;
   }
 
   .project-card__tags {
     list-style: none;
-    margin: 0;
-    padding: 0;
+    /* margin: 0; */
+    /* padding: 0; */
     display: flex;
     flex-wrap: wrap;
     gap: 0.4rem;
