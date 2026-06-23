@@ -245,6 +245,35 @@
           }
         }
       },
+      "flwrx": {
+        "title": "FloWorks Studio",
+        "summary": "An interactive tool for plansifter flow schema design, inlet/outlet visualization, and schema data management with Quasar, Vue, Firebase, and animated SVGs.",
+        "overview": "A workflow application to define plansifter flow paths, visualize inlets and outlets, and store schematics, material profiles, and process metadata in Firebase.",
+        "architecture": {
+          "0": "Vue and Quasar frontend with a responsive schematic editor",
+          "1": "Firebase backend for schema storage, authentication, and real-time synchronization",
+          "2": "Animated SVG visualizations for inlet/outlet flow and process feedback"
+        },
+        "challenges": {
+          "0": "Building an intuitive plansifter flow editor with scalable SVG rendering",
+          "1": "Keeping schema state and metadata synchronized between Firebase and the UI preview",
+          "2": "Balancing engineering detail with a polished interactive experience for operators"
+        },
+        "screenshots": {
+          "0": {
+            "label": "Flow schema editor",
+            "type": "Flow map"
+          },
+          "1": {
+            "label": "Inlet and outlet visualization",
+            "type": "Channel view"
+          },
+          "2": {
+            "label": "Schema repository view",
+            "type": "Database"
+          }
+        }
+      },
       "cadtk": {
         "title": "CAD Automation Toolkit",
         "summary": "Reusable automation scripts and templates that accelerate repetitive modeling and drawing tasks in production teams.",

@@ -9,5 +9,6 @@
   ],
   "i18n-ally.keystyle": "nested",
   "i18n-ally.namespace": true,
-  "i18n-ally.pathMatcher": "{locale}/index.json"
+  "i18n-ally.pathMatcher": "{locale}/index.json",
+  "vue-i18n.i18nPaths": "src\\i18n"
 }

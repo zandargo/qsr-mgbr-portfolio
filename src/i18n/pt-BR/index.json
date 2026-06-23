@@ -245,6 +245,35 @@
 					}
 				}
 			},
+			"flwrx": {
+				"title": "FloWorks Studio",
+				"summary": "Software interativo para projetar esquemas de fluxo de peneira plana, visualizar entradas e saídas, e gerenciar esquemas em banco de dados com Vue, Quasar, Firebase e SVGs animados.",
+				"overview": "Aplicação voltada para fluxo de trabalho que define trajetórias de fluxo de peneira, visualiza entradas e saídas, e armazena esquemas, perfis de material e dados operacionais no Firebase.",
+				"architecture": {
+					"0": "Frontend Vue e Quasar com editor de esquemas responsivo",
+					"1": "Backend Firebase para armazenamento de esquemas, autenticação e sincronização em tempo real",
+					"2": "Visualizações SVG animadas para fluxos de entrada/saída e feedback de processo"
+				},
+				"challenges": {
+					"0": "Criar um editor intuitivo para diagramas de fluxo de peneira com renderização SVG escalável",
+					"1": "Sincronizar estado de esquema e metadados entre armazenamento Firebase e pré-visualizações de UI",
+					"2": "Equilibrar detalhe de engenharia com experiência interativa polida para operadores"
+				},
+				"screenshots": {
+					"0": {
+						"label": "Editor de esquema de fluxo",
+						"type": "Mapa de fluxo"
+					},
+					"1": {
+						"label": "Visualização de entradas e saídas",
+						"type": "Área de canais"
+					},
+					"2": {
+						"label": "Visão do repositório de esquemas",
+						"type": "Banco de dados"
+					}
+				}
+			},
 			"cadtk": {
 				"title": "Toolkit de Automação CAD",
 				"summary": "Scripts e templates reutilizáveis que aceleram tarefas repetitivas de modelagem e desenho em equipes de produção.",

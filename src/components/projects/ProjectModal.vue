@@ -19,7 +19,7 @@
                 <h4 class="project-modal__block-title text-mono">{{ t('projectModal.sections.screenshots') }}</h4>
                 <div class="project-modal__shots">
                   <article v-for="shot in project.screenshots ?? []" :key="`${project.code}-${shot.label}`" class="project-modal__shot">
-                    <div class="project-modal__shot-image" :style="{ background: project.thumbnail }" aria-hidden="true" />
+                    <div class="project-modal__shot-image" :style="formatBackgroundValue(shot.img || project.thumbnail)" aria-hidden="true" />
                     <div class="project-modal__shot-meta">
                       <p class="project-modal__shot-label">{{ shot.label }}</p>
                       <p class="project-modal__shot-type text-mono">{{ shot.type }}</p>
@@ -90,6 +90,26 @@
   })
 
   const emit = defineEmits(['update:modelValue', 'closed'])
+
+  const formatBackgroundValue = (value) => {
+    if (!value) {
+      return { background: 'none' }
+    }
+
+    const trimmedValue = String(value).trim()
+    const isCssBackground = /^(?:linear-gradient|radial-gradient|repeating-linear-gradient|repeating-radial-gradient|url\(|none)\b/i.test(trimmedValue)
+
+    if (isCssBackground) {
+      return { background: trimmedValue }
+    }
+
+    return {
+      backgroundImage: `url(${trimmedValue})`,
+      backgroundPosition: 'center',
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat'
+    }
+  }
 
   const overlayRef = ref(null)
   const panelRef = ref(null)
@@ -389,7 +409,7 @@
   }
 
   .project-modal__shot-image {
-    height: 120px;
+    height: 160px;
     filter: saturate(0.95) contrast(1.05);
   }
 

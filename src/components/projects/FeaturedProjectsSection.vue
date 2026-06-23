@@ -39,6 +39,31 @@
 
   const projects = computed(() => [
     {
+      code: 'FLWRX',
+      title: t('projects.items.flwrx.title'),
+      summary: t('projects.items.flwrx.summary'),
+      tags: ['Vue', 'Quasar', 'Firebase', 'SVG'],
+      overview: t('projects.items.flwrx.overview'),
+      architecture: [
+        t('projects.items.flwrx.architecture.0'),
+        t('projects.items.flwrx.architecture.1'),
+        t('projects.items.flwrx.architecture.2')
+      ],
+      challenges: [
+        t('projects.items.flwrx.challenges.0'),
+        t('projects.items.flwrx.challenges.1'),
+        t('projects.items.flwrx.challenges.2')
+      ],
+      screenshots: [
+        { label: t('projects.items.flwrx.screenshots.0.label'), type: t('projects.items.flwrx.screenshots.0.type'), img: 'img/projects/floworks/Floworks-wip-002.jpeg' },
+        { label: t('projects.items.flwrx.screenshots.1.label'), type: t('projects.items.flwrx.screenshots.1.type'), img: 'img/projects/floworks/Floworks-wip-003.png' },
+        { label: t('projects.items.flwrx.screenshots.2.label'), type: t('projects.items.flwrx.screenshots.2.type'), img: 'img/projects/floworks/Floworks-wip-004.jpeg' }
+      ],
+      thumbnail: 'img/projects/floworks/Banner.png',
+      github: 'https://github.com/zandargo/qsr-mgbr-portfolio',
+      demo: '#projects'
+    },
+    {
       code: 'PDLM',
       title: t('projects.items.pdlm.title'),
       summary: t('projects.items.pdlm.summary'),
@@ -55,9 +80,9 @@
         t('projects.items.pdlm.challenges.2')
       ],
       screenshots: [
-        { label: t('projects.items.pdlm.screenshots.0.label'), type: t('projects.items.pdlm.screenshots.0.type') },
-        { label: t('projects.items.pdlm.screenshots.1.label'), type: t('projects.items.pdlm.screenshots.1.type') },
-        { label: t('projects.items.pdlm.screenshots.2.label'), type: t('projects.items.pdlm.screenshots.2.type') }
+        { label: t('projects.items.pdlm.screenshots.0.label'), type: t('projects.items.pdlm.screenshots.0.type'), img: 'linear-gradient(140deg, rgba(0, 255, 136, 0.26), rgba(16, 22, 19, 0.92)), radial-gradient(circle at 18% 20%, rgba(125, 255, 202, 0.3), transparent 42%)' },
+        { label: t('projects.items.pdlm.screenshots.1.label'), type: t('projects.items.pdlm.screenshots.1.type'), img: 'linear-gradient(140deg, rgba(0, 255, 136, 0.26), rgba(16, 22, 19, 0.92)), radial-gradient(circle at 18% 20%, rgba(125, 255, 202, 0.3), transparent 42%)' },
+        { label: t('projects.items.pdlm.screenshots.2.label'), type: t('projects.items.pdlm.screenshots.2.type'), img: 'linear-gradient(140deg, rgba(0, 255, 136, 0.26), rgba(16, 22, 19, 0.92)), radial-gradient(circle at 18% 20%, rgba(125, 255, 202, 0.3), transparent 42%)' }
       ],
       thumbnail: 'linear-gradient(140deg, rgba(0, 255, 136, 0.26), rgba(16, 22, 19, 0.92)), radial-gradient(circle at 18% 20%, rgba(125, 255, 202, 0.3), transparent 42%)',
       github: 'https://github.com/zandargo/qsr-mgbr-portfolio',
@@ -80,9 +105,9 @@
         t('projects.items.cadtk.challenges.2')
       ],
       screenshots: [
-        { label: t('projects.items.cadtk.screenshots.0.label'), type: t('projects.items.cadtk.screenshots.0.type') },
-        { label: t('projects.items.cadtk.screenshots.1.label'), type: t('projects.items.cadtk.screenshots.1.type') },
-        { label: t('projects.items.cadtk.screenshots.2.label'), type: t('projects.items.cadtk.screenshots.2.type') }
+        { label: t('projects.items.cadtk.screenshots.0.label'), type: t('projects.items.cadtk.screenshots.0.type'), img: 'linear-gradient(135deg, rgba(16, 21, 18, 0.82), rgba(0, 255, 136, 0.2)), radial-gradient(circle at 80% 20%, rgba(125, 255, 202, 0.34), transparent 45%)' },
+        { label: t('projects.items.cadtk.screenshots.1.label'), type: t('projects.items.cadtk.screenshots.1.type'), img: 'linear-gradient(135deg, rgba(16, 21, 18, 0.82), rgba(0, 255, 136, 0.2)), radial-gradient(circle at 80% 20%, rgba(125, 255, 202, 0.34), transparent 45%)' },
+        { label: t('projects.items.cadtk.screenshots.2.label'), type: t('projects.items.cadtk.screenshots.2.type'), img: 'linear-gradient(135deg, rgba(16, 21, 18, 0.82), rgba(0, 255, 136, 0.2)), radial-gradient(circle at 80% 20%, rgba(125, 255, 202, 0.34), transparent 45%)' }
       ],
       thumbnail: 'linear-gradient(135deg, rgba(16, 21, 18, 0.82), rgba(0, 255, 136, 0.2)), radial-gradient(circle at 80% 20%, rgba(125, 255, 202, 0.34), transparent 45%)',
       github: 'https://github.com/zandargo/qsr-mgbr-portfolio',
@@ -105,9 +130,9 @@
         t('projects.items.portf.challenges.2')
       ],
       screenshots: [
-        { label: t('projects.items.portf.screenshots.0.label'), type: t('projects.items.portf.screenshots.0.type') },
-        { label: t('projects.items.portf.screenshots.1.label'), type: t('projects.items.portf.screenshots.1.type') },
-        { label: t('projects.items.portf.screenshots.2.label'), type: t('projects.items.portf.screenshots.2.type') }
+        { label: t('projects.items.portf.screenshots.0.label'), type: t('projects.items.portf.screenshots.0.type'), img: 'linear-gradient(125deg, rgba(125, 255, 202, 0.3), rgba(16, 21, 18, 0.84)), radial-gradient(circle at 50% 80%, rgba(0, 255, 136, 0.24), transparent 50%)' },
+        { label: t('projects.items.portf.screenshots.1.label'), type: t('projects.items.portf.screenshots.1.type'), img: 'linear-gradient(125deg, rgba(125, 255, 202, 0.3), rgba(16, 21, 18, 0.84)), radial-gradient(circle at 50% 80%, rgba(0, 255, 136, 0.24), transparent 50%)' },
+        { label: t('projects.items.portf.screenshots.2.label'), type: t('projects.items.portf.screenshots.2.type'), img: 'linear-gradient(125deg, rgba(125, 255, 202, 0.3), rgba(16, 21, 18, 0.84)), radial-gradient(circle at 50% 80%, rgba(0, 255, 136, 0.24), transparent 50%)' }
       ],
       thumbnail: 'linear-gradient(125deg, rgba(125, 255, 202, 0.3), rgba(16, 21, 18, 0.84)), radial-gradient(circle at 50% 80%, rgba(0, 255, 136, 0.24), transparent 50%)',
       github: 'https://github.com/zandargo/qsr-mgbr-portfolio',
@@ -130,9 +155,9 @@
         t('projects.items.xlsys.challenges.2')
       ],
       screenshots: [
-        { label: t('projects.items.xlsys.screenshots.0.label'), type: t('projects.items.xlsys.screenshots.0.type') },
-        { label: t('projects.items.xlsys.screenshots.1.label'), type: t('projects.items.xlsys.screenshots.1.type') },
-        { label: t('projects.items.xlsys.screenshots.2.label'), type: t('projects.items.xlsys.screenshots.2.type') }
+        { label: t('projects.items.xlsys.screenshots.0.label'), type: t('projects.items.xlsys.screenshots.0.type'), img: 'linear-gradient(155deg, rgba(16, 21, 18, 0.88), rgba(0, 255, 136, 0.16)), radial-gradient(circle at 20% 78%, rgba(125, 255, 202, 0.28), transparent 52%)' },
+        { label: t('projects.items.xlsys.screenshots.1.label'), type: t('projects.items.xlsys.screenshots.1.type'), img: 'linear-gradient(155deg, rgba(16, 21, 18, 0.88), rgba(0, 255, 136, 0.16)), radial-gradient(circle at 20% 78%, rgba(125, 255, 202, 0.28), transparent 52%)' },
+        { label: t('projects.items.xlsys.screenshots.2.label'), type: t('projects.items.xlsys.screenshots.2.type'), img: 'linear-gradient(155deg, rgba(16, 21, 18, 0.88), rgba(0, 255, 136, 0.16)), radial-gradient(circle at 20% 78%, rgba(125, 255, 202, 0.28), transparent 52%)' }
       ],
       thumbnail: 'linear-gradient(155deg, rgba(16, 21, 18, 0.88), rgba(0, 255, 136, 0.16)), radial-gradient(circle at 20% 78%, rgba(125, 255, 202, 0.28), transparent 52%)',
       github: 'https://github.com/zandargo/qsr-mgbr-portfolio',

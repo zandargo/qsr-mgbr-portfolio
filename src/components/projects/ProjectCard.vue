@@ -15,7 +15,7 @@
 
       <div class="project-card__actions">
         <button type="button" class="project-card__link" @click="emit('open-project', project)">{{ t('projectCard.details') }}</button>
-        <a class="project-card__link" :href="project.github" target="_blank" rel="noreferrer">{{ t('projectCard.github') }}</a>
+        <!-- <a class="project-card__link" :href="project.github" target="_blank" rel="noreferrer">{{ t('projectCard.github') }}</a> -->
         <a class="project-card__link project-card__link--primary" :href="project.demo" target="_blank" rel="noreferrer">{{ t('projectCard.liveDemo') }}</a>
       </div>
     </div>
@@ -40,9 +40,27 @@
 
   const cardRef = ref(null)
 
-  const mediaStyle = computed(() => ({
-    background: props.project.thumbnail
-  }))
+  const formatBackgroundValue = (value) => {
+    if (!value) {
+      return { background: 'none' }
+    }
+
+    const trimmedValue = String(value).trim()
+    const isCssBackground = /^(?:linear-gradient|radial-gradient|repeating-linear-gradient|repeating-radial-gradient|url\(|none)\b/i.test(trimmedValue)
+
+    if (isCssBackground) {
+      return { background: trimmedValue }
+    }
+
+    return {
+      backgroundImage: `url(${trimmedValue})`,
+      backgroundPosition: 'top',
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat'
+    }
+  }
+
+  const mediaStyle = computed(() => formatBackgroundValue(props.project.thumbnail))
 
   const handleCardClick = (event) => {
     const interactive = event.target.closest('a, button')
