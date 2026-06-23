@@ -60,8 +60,8 @@
         { label: t('projects.items.flwrx.screenshots.2.label'), type: t('projects.items.flwrx.screenshots.2.type'), img: 'img/projects/floworks/Floworks-wip-004.jpeg' }
       ],
       thumbnail: 'img/projects/floworks/Banner01.png',
-      github: 'https://github.com/zandargo/qsr-mgbr-portfolio',
-      demo: '#projects'
+      // github: 'https://github.com/zandargo/qsr-mgbr-portfolio',
+      demo: 'https://floworks.web.app/'
     },
     {
       code: 'CDSTR',
@@ -85,8 +85,8 @@
         { label: t('projects.items.pdlm.screenshots.2.label'), type: t('projects.items.pdlm.screenshots.2.type'), img: 'img/projects/cadastrei/Cadastrei003.jpeg' }
       ],
       thumbnail: 'img/projects/cadastrei/Banner02.png',
-      github: 'https://github.com/zandargo/qsr-mgbr-portfolio',
-      demo: '#projects'
+      // github: 'https://github.com/zandargo/qsr-mgbr-portfolio',
+      demo: 'https://cadastrei.web.app/'
     },
     // {
     //   code: 'CADTK',

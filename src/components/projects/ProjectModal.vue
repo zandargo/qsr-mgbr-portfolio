@@ -57,7 +57,7 @@
               <section class="project-modal__block" :aria-label="t('projectModal.sections.linksAria')">
                 <h4 class="project-modal__block-title text-mono">{{ t('projectModal.sections.links') }}</h4>
                 <div class="project-modal__actions">
-                  <a class="project-modal__action" :href="project.github" target="_blank" rel="noreferrer">{{ t('projectModal.github') }}</a>
+                  <!-- <a class="project-modal__action" :href="project.github" target="_blank" rel="noreferrer">{{ t('projectModal.github') }}</a> -->
                   <a class="project-modal__action project-modal__action--primary" :href="project.demo" target="_blank" rel="noreferrer">{{ t('projectModal.liveDemo') }}</a>
                 </div>
               </section>

@@ -1,559 +1,559 @@
 {
-	"common": {
-		"failed": "Acao falhou",
-		"success": "Acao concluida com sucesso"
-	},
-	"app": {
-		"mainAria": "Secoes do portfolio"
-	},
-	"nav": {
-		"brand": "MGBR",
-		"menu": "Menu",
-		"close": "Fechar",
-		"toggle": "Alternar menu de navegação",
-		"biography": "Biografia",
-		"skills": "Habilidades",
-		"projects": "Projetos",
-		"gallery": "Galeria",
-		"reviews": "Depoimentos",
-		"links": "Links",
-		"contact": "Contato",
-		"language": "Idioma"
-	},
-	"locales": {
-		"en-US": "Inglês",
-		"pt-BR": "Português (Brasil)"
-	},
-	"hero": {
-		"eyebrow": "Inteligência Mecânica",
-		"title": "MADSON GERMANO",
-		"titleScramble": "M4D50N G3RM4N0",
-		"rolesAria": "Funções principais",
-		"roles": {
-			"engineer": "Engenheiro Mecânico",
-			"frontend": "Desenvolvedor Frontend",
-			"automation": "Especialista em Automação"
-		},
-		"focusLabel": "Foco atual",
-		"techTags": {
-			"solidedge": "Solid Edge",
-			"vue": "Vue.js",
-			"quasar": "Quasar",
-			"solidworks": "SolidWorks",
-			"python": "Python",
-			"vba": "VBA",
-			"plm": "PLM",
-			"cadAutomation": "Automação CAD"
-		},
-		"actions": {
-			"github": "GitHub",
-			"linkedin": "LinkedIn",
-			"upwork": "Upwork",
-			"email": "E-mail",
-			"resume": "Currículo"
-		},
-		"scrollHint": "Role para a linha do tempo",
-		"status": {
-			"label": "Sinal de Perfil",
-			"line1": "Projetado como uma estação de trabalho.",
-			"line2": "Construído para sistemas mecânicos, automação CAD e entrega frontend refinada.",
-			"metrics": {
-				"coreDisciplines": "Disciplinas centrais",
-				"portfolioSystem": "Sistema de portfólio",
-				"available": "Disponível para iterar"
-			}
-		}
-	},
-	"biography": {
-		"kicker": "Biografia",
-		"title": "Engenharia, produto, execução digital.",
-		"caption": "Engenheiro Mecânico · Automação CAD · Sistemas Frontend",
-		"description": "Meu caminho começou no projeto mecânico e evoluiu para criar ferramentas digitais que reduzem atrito em equipes de engenharia. Hoje, combino precisão industrial com arquitetura frontend moderna para entregar interfaces confiáveis e rápidas.",
-		"timelineAria": "Linha do tempo de carreira",
-		"timeline": {
-			"0": {
-				"year": "2008",
-				"role": "Monitor de Desenho Técnico",
-				"company": "Universidade Federal do Ceará (UFC)",
-				"summary": "Preparei materiais didáticos e auxiliei alunos no desenvolvimento de habilidades de desenho técnico e representação gráfica para engenharia."
-			},
-			"1": {
-				"year": "2010",
-				"role": "Desenhista CAD (Estagiário)",
-				"company": "Invento Projetos Tecnológicos",
-				"summary": "Desenvolvi e revisei projetos mecânicos em SolidEdge e AutoCAD, aprimorando processos de modelagem 3D, detalhamento técnico e documentação para fabricação."
-			},
-			"2": {
-				"year": "2011",
-				"role": "Monitor de Metrologia",
-				"company": "LAMETRO / UFC",
-				"summary": "Criei materiais de apoio e atividades práticas para disciplinas de metrologia, incluindo um ambiente virtual desenvolvido em Blender para ensino de medições."
-			},
-			"3": {
-				"year": "2012",
-				"role": "Projetista Mecânico",
-				"company": "EKIPAR Engenharia",
-				"summary": "Projetei equipamentos industriais em SolidWorks, acompanhando a fabricação e identificando melhorias de qualidade, segurança operacional e conformidade técnica."
-			},
-			"4": {
-				"year": "2017",
-				"role": "Agente Local de Inovação",
-				"company": "SEBRAE-CE",
-				"summary": "Realizei diagnósticos de inovação em empresas do setor metalmecânico, identificando oportunidades de melhoria em produtos, processos e gestão."
-			},
-			"5": {
-				"year": "2017",
-				"role": "Analista de Projetos e Automação",
-				"company": "Sangati Berga",
-				"summary": "Implementei automações e integrações entre Excel, AutoCAD e SolidWorks, reduzindo em até 80% o tempo de etapas críticas de engenharia e padronizando fluxos BIM."
-			},
-			"6": {
-				"year": "2022",
-				"role": "Desenvolvedor Freelancer",
-				"company": "Upwork",
-				"summary": "Desenvolvo aplicações web, automações para Excel e SolidWorks, interfaces modernas em Vue.js e soluções personalizadas para clientes globais, mantendo 100% de avaliações positivas."
-			},
-			"7": {
-				"year": "2025",
-				"role": "Projetista Mecânico",
-				"company": "Perfisul",
-				"summary": "Atuei no desenvolvimento e detalhamento de projetos mecânicos industriais, aplicando modelagem 3D, documentação técnica e otimização de soluções para fabricação."
-			}
-		}
-	},
-	"softSkills": {
-		"kicker": "Habilidades Comportamentais",
-		"title": "Competências humanas projetadas para entregas de alta complexidade.",
-		"description": "Sistemas técnicos funcionam melhor quando comunicação, liderança e adaptabilidade são tão afiadas quanto as ferramentas.",
-		"traitsAria": "Traços complementares de habilidades comportamentais",
-		"traits": {
-			"0": "Liderança",
-			"1": "Pensamento Crítico",
-			"2": "Inovação",
-			"3": "Protagonismo",
-			"4": "Aprendizado Rapido",
-			"5": "Mentoria",
-			"6": "Adaptabilidade",
-			"7": "Pensamento Sistemico"
-		}
-	},
-	"technicalSkills": {
-		"kicker": "Habilidades Técnicas",
-		"title": "Três domínios. Um motor de entrega.",
-		"description": "De sistemas frontend a projeto mecânico e pipelines de automação, estas são as camadas técnicas com que entrego diariamente.",
-		"groupAria": "Habilidades de {group}",
-		"yearsExperience": "{years} anos de experiência",
-		"axes": {
-			"skillLevel": "Nível de Habilidade",
-			"years": "Anos de Experiência"
-		},
-		"groups": {
-			"frontend": {
-				"title": "Frontend"
-			},
-			"engineering": {
-				"title": "Engenharia"
-			},
-			"automation": {
-				"title": "Automação"
-			}
-		}
-	},
-	"experience": {
-		"kicker": "Experiência",
-		"title": "Um histórico conectado de engenharia e entrega de software.",
-		"description": "Cada função adicionou uma camada mais forte de pensamento sistêmico, da execução CAD até automação e frontend de nível de produto.",
-		"timelineAria": "Linha do tempo de experiência profissional",
-		"items": {
-			"0": {
-				"year": "2010",
-				"company": "Invento",
-				"role": "Desenhista CAD",
-				"summary": "Criei documentação técnica precisa e otimizei qualidade de desenhos para fluxos de fabricação e instalação."
-			},
-			"1": {
-				"year": "2012",
-				"company": "EKIPAR",
-				"role": "Projetista Mecânico",
-				"summary": "Projetei máquinas e conjuntos com foco em fabricabilidade, confiabilidade e clareza de engenharia."
-			},
-			"2": {
-				"year": "2017",
-				"company": "Sangati Berga",
-				"role": "Agente de Inovação",
-				"summary": "Introduzi rotinas de automação e processos orientados a dados para reduzir operações repetitivas de engenharia."
-			},
-			"3": {
-				"year": "2022",
-				"company": "Freelance · Upwork Top Rated Plus",
-				"role": "Especialista em Automação e Frontend",
-				"summary": "Entreguei software customizado, automação CAD e sistemas frontend para clientes globais em contexto de produção."
-			}
-		}
-	},
-	"reviews": {
-		"kicker": "Depoimentos",
-		"title": "Avaliações de clientes que refletem confiabilidade e entrega.",
-		"description": "Feedback real de clientes e colaboradores que confiaram no fluxo de trabalho, na qualidade e na execução.",
-		"listAria": "Lista de depoimentos de clientes",
-		"cardAria": "Depoimento de {client} com avaliação {rating} de 5",
-		"unknownTitle": "Depoimento sem título",
-		"unknownClient": "Cliente desconhecido",
-		"items": {
-			"0": {
-				"text": "Entregou resultados excelentes com comunicação clara e iteração rápida — o trabalho superou as expectativas."
-			},
-			"1": {
-				"text": "Entendimento técnico e rapidez de resposta tornaram a colaboração tranquila. A qualidade se manteve constante durante o projeto."
-			},
-			"2": {
-				"text": "Entrega forte dentro do prazo, com recomendações bem pensadas e implementação sólida. Altamente recomendado para software de engenharia complexo."
-			}
-		}
-	},
-	"projects": {
-		"kicker": "Projetos em Destaque",
-		"title": "Produtos de software moldados por precisão de engenharia.",
-		"description": "Um conjunto selecionado de sistemas que combinam lógica mecânica, arquitetura frontend e eficiência em automação.",
-		"items": {
-			"pdlm": {
-				"title": "Gestor de Oficina",
-				"summary": "Sistema com Quasar, Vue e Firebase para operar oficinas automotivas, gerenciar clientes, serviços, agendamentos, status de atendimento e faturas.",
-				"overview": "Plataforma de gestão de oficina que centraliza cadastro de clientes, catálogo de serviços, agendamento, status de atendimento e geração de faturas em um painel responsivo.",
-				"architecture": {
-					"0": "Frontend Vue e Quasar com painéis responsivos para gestão de oficina",
-					"1": "Backend Firebase para dados de clientes, agendamento em tempo real e acesso autenticado",
-					"2": "Visões de fluxo de serviço para status de atendimento, ordens de serviço e acompanhamento de faturas"
-				},
-				"challenges": {
-					"0": "Mapear fluxos de atendimento automotivo em quadros de agenda e status intuitivos",
-					"1": "Garantir sincronização em tempo real de clientes, serviços e registros de faturamento no Firebase",
-					"2": "Manter a interface da oficina clara para equipes ocupadas enquanto gerencia agendamentos e atualizações de serviço"
-				},
-				"screenshots": {
-					"0": {
-						"label": "Painel principal",
-						"type": "Visão geral"
-					},
-					"1": {
-						"label": "Visão de serviços",
-						"type": "Gestão de serviços"
-					},
-					"2": {
-						"label": "Visão de estoque",
-						"type": "Resumo de estoque"
-					}
-				}
-			},
-			"flwrx": {
-				"title": "FloWorks Studio",
-				"summary": "Software interativo para projetar esquemas de fluxo de peneira plana, visualizar entradas e saídas, e gerenciar esquemas em banco de dados com Vue, Quasar, Firebase e SVGs animados.",
-				"overview": "Aplicação voltada para fluxo de trabalho que define trajetórias de fluxo de peneira, visualiza entradas e saídas, e armazena esquemas, perfis de material e dados operacionais no Firebase.",
-				"architecture": {
-					"0": "Frontend Vue e Quasar com editor de esquemas responsivo",
-					"1": "Backend Firebase para armazenamento de esquemas, autenticação e sincronização em tempo real",
-					"2": "Visualizações SVG animadas para fluxos de entrada/saída e feedback de processo"
-				},
-				"challenges": {
-					"0": "Criar um editor intuitivo para diagramas de fluxo de peneira com renderização SVG escalável",
-					"1": "Sincronizar estado de esquema e metadados entre armazenamento Firebase e pré-visualizações de UI",
-					"2": "Equilibrar detalhe de engenharia com experiência interativa polida para operadores"
-				},
-				"screenshots": {
-					"0": {
-						"label": "Editor de esquema de fluxo",
-						"type": "Mapa de fluxo"
-					},
-					"1": {
-						"label": "Visualização de entradas e saídas",
-						"type": "Área de canais"
-					},
-					"2": {
-						"label": "Visão do repositório de esquemas",
-						"type": "Banco de dados"
-					}
-				}
-			},
-			"cadtk": {
-				"title": "Toolkit de Automação CAD",
-				"summary": "Scripts e templates reutilizáveis que aceleram tarefas repetitivas de modelagem e desenho em equipes de produção.",
-				"overview": "Um toolkit de assistentes CAD scriptáveis que reduz operações repetitivas e reforça padrões de modelagem entre equipes de engenharia.",
-				"architecture": {
-					"0": "Executores Python e VBA para orquestração de macros CAD",
-					"1": "Biblioteca de templates para geração validada de desenhos e BOM",
-					"2": "Camada de logs com relatórios de execução para revisão da equipe"
-				},
-				"challenges": {
-					"0": "Equilibrar flexibilidade de macros customizadas com governança de templates",
-					"1": "Lidar com variações de versão entre estações CAD",
-					"2": "Fornecer diagnósticos claros quando scripts falham no meio do pipeline"
-				},
-				"screenshots": {
-					"0": {
-						"label": "Lançador de macros",
-						"type": "Hub de automação"
-					},
-					"1": {
-						"label": "Seletor de templates",
-						"type": "Painel CAD"
-					},
-					"2": {
-						"label": "Relatório de execução",
-						"type": "Diagnóstico"
-					}
-				}
-			},
-			"portf": {
-				"title": "Portfólio Inteligência Mecânica",
-				"summary": "Experiência interativa de portfólio com sistemas de movimento suaves, renderização focada em desempenho e identidade visual marcante.",
-				"overview": "Um portfólio narrativo construído como experiência de página única com movimento em camadas, coreografia de scroll e seções componentizadas.",
-				"architecture": {
-					"0": "Arquitetura Vue 3 com composables de animação reutilizáveis",
-					"1": "Primitivas responsivas de layout com Quasar e tokens utilitários",
-					"2": "Sistema de circuito de fundo conectado a eventos de interação"
-				},
-				"challenges": {
-					"0": "Manter sequências complexas de animação suaves em hardware móvel",
-					"1": "Construir transições de seção sem sobrecarga visual",
-					"2": "Preservar acessibilidade em cards interativos com estilo intenso"
-				},
-				"screenshots": {
-					"0": {
-						"label": "Superfície de comando hero",
-						"type": "Entrada"
-					},
-					"1": {
-						"label": "Matriz de projetos",
-						"type": "Grade de showcase"
-					},
-					"2": {
-						"label": "Painel terminal de contato",
-						"type": "Bloco de conversão"
-					}
-				}
-			},
-			"xlsys": {
-				"title": "Suite de Engenharia em Excel",
-				"summary": "Calculadoras operacionais e fluxos de relatório para decisões de engenharia, planejamento e visibilidade de execução.",
-				"overview": "Uma suite operacional para equipes de engenharia padronizarem cálculos, reduzirem erros manuais em planilhas e acelerarem relatórios de decisão.",
-				"architecture": {
-					"0": "Camada de interface Excel com templates guiados e lógica protegida",
-					"1": "Módulos VBA para normalização de dados e exportação de relatórios",
-					"2": "Pacotes de fluxo adaptados a rotinas de manufatura e planejamento"
-				},
-				"challenges": {
-					"0": "Proteger integridade de fórmulas mantendo flexibilidade ao usuário",
-					"1": "Normalizar formatos de origem diferentes de arquivos legados",
-					"2": "Reduzir tempo de atualização em modelos de custo de alto volume"
-				},
-				"screenshots": {
-					"0": {
-						"label": "Dashboard de engenharia",
-						"type": "Workbook"
-					},
-					"1": {
-						"label": "Planejador de capacidade",
-						"type": "Grade de cenários"
-					},
-					"2": {
-						"label": "Gerador automático de relatórios",
-						"type": "Fluxo de saída"
-					}
-				}
-			}
-		}
-	},
-	"projectCard": {
-		"cardAria": "Card de projeto {title}",
-		"technologiesAria": "Tecnologias de {title}",
-		"details": "Detalhes",
-		"github": "GitHub",
-		"liveDemo": "Demo"
-	},
-	"projectModal": {
-		"kicker": "Análise do Projeto",
-		"close": "Fechar",
-		"closeAria": "Fechar detalhes do projeto",
-		"github": "GitHub",
-		"liveDemo": "Demo",
-		"sections": {
-			"screenshots": "Capturas",
-			"screenshotsAria": "Capturas do projeto",
-			"overview": "Visão geral",
-			"overviewAria": "Visão geral do projeto",
-			"architecture": "Arquitetura",
-			"architectureAria": "Arquitetura do projeto",
-			"technologies": "Tecnologias",
-			"technologiesAria": "Tecnologias do projeto",
-			"challenges": "Desafios",
-			"challengesAria": "Desafios do projeto",
-			"links": "Links",
-			"linksAria": "Links do projeto"
-		}
-	},
-	"gallery": {
-		"kicker": "Galeria de Engenharia",
-		"title": "Histórias visuais de projetos mecânicos e renderizações 3D a experiências frontend e fluxos de automação.",
-		"description": "Uma visão curada de sistemas mecânicos, desenhos técnicos, protótipos 3D, interfaces frontend e soluções de automação usadas em fluxos reais de engenharia.",
-		"masonryAria": "Galeria de mídia de engenharia",
-		"carouselAria": "Carrossel da galeria de engenharia",
-		"itemAria": "{title} ({type})",
-		"prev": "Anterior",
-		"next": "Próximo",
-		"prevAria": "Item anterior da galeria",
-		"nextAria": "Próximo item da galeria",
-		"imageType": "Trabalho Criativo",
-		"imageTools": "Software e automação",
-		"imageAlt": "Imagem da galeria: {filename}",
-		"items": {
-			"assyFrame": {
-				"title": "Conjunto de Estrutura de Esteira",
-				"type": "Montagem",
-				"tools": "SolidWorks, Weldments",
-				"alt": "Render detalhado de estrutura industrial de esteira com membros estruturais e fixadores."
-			},
-			"explodedModule": {
-				"title": "Módulo de Acionamento Explodido",
-				"type": "Quebra Técnica",
-				"tools": "SolidWorks, Fluxo BOM",
-				"alt": "Ilustração mecânica explodida destacando hierarquia de peças e ordem de montagem."
-			},
-			"cncLayout": {
-				"title": "Layout de Fixação CNC",
-				"type": "Setup de Manufatura",
-				"tools": "AutoCAD, Planejamento CAM",
-				"alt": "Mesa de setup com dispositivos CNC e referências dimensionais."
-			},
-			"prototypePrint": {
-				"title": "Validação Rápida de Protótipo",
-				"type": "Impressão 3D",
-				"tools": "Bambu Studio, PLA",
-				"alt": "Protótipo mecânico impresso em 3D para validação de forma e encaixe."
-			},
-			"plantDrawing": {
-				"title": "Conjunto de Desenhos para Retrofit",
-				"type": "Desenho técnico",
-				"tools": "AutoCAD, Controle de Revisao",
-				"alt": "Folhas técnicas organizadas em bancada para planejamento de retrofit industrial."
-			},
-			"renderBay": {
-				"title": "Estudo de Render Industrial",
-				"type": "Visualização",
-				"tools": "Blender, Cycles",
-				"alt": "Render industrial com alto contraste mostrando iluminação e acabamentos de materiais."
-			}
-		}
-	},
-	"linksSection": {
-		"kicker": "Links Externos",
-		"title": "Presença profissional e produtos de software em um único centro de comando.",
-		"description": "Explore perfis, sinais de credibilidade e sistemas de produto desenvolvidos para equipes de engenharia e operações.",
-		"profiles": {
-			"kicker": "Perfis",
-			"title": "Canais Profissionais"
-		},
-		"products": {
-			"kicker": "Produtos",
-			"title": "Aplicações Desenvolvidas"
-		},
-		"cards": {
-			"github": {
-				"title": "GitHub",
-				"description": "Repositórios de código, experimentos frontend e provas de conceito em automação aplicadas em contextos de engenharia.",
-				"badge": "Código Aberto",
-				"ctaLabel": "Visitar GitHub"
-			},
-			"linkedin": {
-				"title": "LinkedIn",
-				"description": "Histórico de carreira, resultados de projetos e destaques de liderança técnica em trabalhos mecânicos e digitais.",
-				"badge": "Rede",
-				"ctaLabel": "Abrir LinkedIn"
-			},
-			"upwork": {
-				"title": "Upwork",
-				"description": "Histórico de entregas freelance com clientes recorrentes, ganhos em automação e comunicação técnica de alto nível.",
-				"badge": "Top Rated Plus",
-				"ctaLabel": "Ver Upwork"
-			},
-			"resume": {
-				"title": "Currículo PDF",
-				"description": "Perfil para download com profundidade em engenharia, experiência em arquitetura de software e resultados mensuráveis.",
-				"badge": "Download",
-				"ctaLabel": "Abrir Currículo"
-			}
-		},
-		"productsCards": {
-			"pdlm": {
-				"title": "Gestor de Oficina",
-				"description": "Software para operações de oficina construído com Vue, Quasar e Firebase para registros de clientes, agendamento de serviços, controle de ordens e geração de faturas.",
-				"badge": "App de Oficina",
-				"ctaLabel": "Ver Projeto"
-			},
-			"cadtk": {
-				"title": "Toolkit de Automação CAD",
-				"description": "Pacotes reutilizáveis de comandos de automação que reduzem operações repetitivas e padronizam entregáveis de engenharia.",
-				"badge": "Suite de Automação",
-				"ctaLabel": "Ver Projeto"
-			},
-			"xlsys": {
-				"title": "Suite de Engenharia em Excel",
-				"description": "Calculadoras operacionais e fluxos de relatório para capacidade, custo e planejamento de entregas na manufatura.",
-				"badge": "Plataforma de Operações",
-				"ctaLabel": "Ver Projeto"
-			},
-			"internalTools": {
-				"title": "Ferramentas Internas de Manufatura",
-				"description": "Apps internos enxutos para entrada de dados, verificações de processo e monitoramento da produção no chão de fábrica.",
-				"badge": "Stack Interno",
-				"ctaLabel": "Ver Projeto"
-			}
-		}
-	},
-	"externalCard": {
-		"cardAria": "Card externo de {title}",
-		"tagsAria": "Tags de {title}",
-		"openAria": "Abrir {title} em nova aba"
-	},
-	"contact": {
-		"kicker": "Contato",
-		"title": "Abra um canal direto para colaboração freelance e de produto.",
-		"description": "Presença inspirada em terminal com disponibilidade clara, links diretos e contexto de resposta rápida para projetos de engenharia.",
-		"terminal": {
-			"aria": "Interface de terminal de contato",
-			"prompt": "madson\\@signal-node:~",
-			"command": "connect --target madson",
-			"loading": "carregando perfil...",
-			"connected": "conexão estabelecida.",
-			"statusLabel": "STATUS:",
-			"statusValue": "DISPONÍVEL PARA FREELANCE",
-			"emailLabel": "EMAIL:",
-			"githubLabel": "GITHUB:",
-			"linkedinLabel": "LINKEDIN:",
-			"systemMessages": {
-				"0": "compilando portfolio...",
-				"1": "carregando modulos CAD...",
-				"2": "sincronizando dados de projeto...",
-				"3": "renderizando montagem..."
-			}
-		}
-	},
-	"footer": {
-		"kicker": "Projetado e desenvolvido por",
-		"name": "Madson Germano",
-		"role1": "Engenheiro Mecânico",
-		"role2": "& Desenvolvedor Frontend",
-		"stack": "Vue + Quasar + Anime.js",
-		"rights": "Todos os direitos reservados"
-	},
-	"radar": {
-		"professionalStrength": "Força Profissional",
-		"categories": {
-			"0": "Liderança",
-			"1": "Comunicação",
-			"2": "Criatividade",
-			"3": "Trabalho em Equipe",
-			"4": "Adaptabilidade",
-			"5": "Resolução de Problemas"
-		}
-	}
+  "common": {
+    "failed": "Acao falhou",
+    "success": "Acao concluida com sucesso"
+  },
+  "app": {
+    "mainAria": "Secoes do portfolio"
+  },
+  "nav": {
+    "brand": "MGBR",
+    "menu": "Menu",
+    "close": "Fechar",
+    "toggle": "Alternar menu de navegação",
+    "biography": "Biografia",
+    "skills": "Habilidades",
+    "projects": "Projetos",
+    "gallery": "Galeria",
+    "reviews": "Depoimentos",
+    "links": "Links",
+    "contact": "Contato",
+    "language": "Idioma"
+  },
+  "locales": {
+    "en-US": "Inglês",
+    "pt-BR": "Português (Brasil)"
+  },
+  "hero": {
+    "eyebrow": "Inteligência Mecânica",
+    "title": "MADSON GERMANO",
+    "titleScramble": "M4D50N G3RM4N0",
+    "rolesAria": "Funções principais",
+    "roles": {
+      "engineer": "Engenheiro Mecânico",
+      "frontend": "Desenvolvedor Frontend",
+      "automation": "Especialista em Automação"
+    },
+    "focusLabel": "Foco atual",
+    "techTags": {
+      "solidedge": "Solid Edge",
+      "vue": "Vue.js",
+      "quasar": "Quasar",
+      "solidworks": "SolidWorks",
+      "python": "Python",
+      "vba": "VBA",
+      "plm": "PLM",
+      "cadAutomation": "Automação CAD"
+    },
+    "actions": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "upwork": "Upwork",
+      "email": "E-mail",
+      "resume": "Currículo"
+    },
+    "scrollHint": "Role para a linha do tempo",
+    "status": {
+      "label": "Sinal de Perfil",
+      "line1": "Projetado como uma estação de trabalho.",
+      "line2": "Construído para sistemas mecânicos, automação CAD e entrega frontend refinada.",
+      "metrics": {
+        "coreDisciplines": "Disciplinas centrais",
+        "portfolioSystem": "Sistema de portfólio",
+        "available": "Disponível para iterar"
+      }
+    }
+  },
+  "biography": {
+    "kicker": "Biografia",
+    "title": "Engenharia, produto, execução digital.",
+    "caption": "Engenheiro Mecânico · Automação CAD · Sistemas Frontend",
+    "description": "Meu caminho começou no projeto mecânico e evoluiu para criar ferramentas digitais que reduzem atrito em equipes de engenharia. Hoje, combino precisão industrial com arquitetura frontend moderna para entregar interfaces confiáveis e rápidas.",
+    "timelineAria": "Linha do tempo de carreira",
+    "timeline": {
+      "0": {
+        "year": "2008",
+        "role": "Monitor de Desenho Técnico",
+        "company": "Universidade Federal do Ceará (UFC)",
+        "summary": "Preparei materiais didáticos e auxiliei alunos no desenvolvimento de habilidades de desenho técnico e representação gráfica para engenharia."
+      },
+      "1": {
+        "year": "2010",
+        "role": "Desenhista CAD (Estagiário)",
+        "company": "Invento Projetos Tecnológicos",
+        "summary": "Desenvolvi e revisei projetos mecânicos em SolidEdge e AutoCAD, aprimorando processos de modelagem 3D, detalhamento técnico e documentação para fabricação."
+      },
+      "2": {
+        "year": "2011",
+        "role": "Monitor de Metrologia",
+        "company": "LAMETRO / UFC",
+        "summary": "Criei materiais de apoio e atividades práticas para disciplinas de metrologia, incluindo um ambiente virtual desenvolvido em Blender para ensino de medições."
+      },
+      "3": {
+        "year": "2012",
+        "role": "Projetista Mecânico",
+        "company": "EKIPAR Engenharia",
+        "summary": "Projetei equipamentos industriais em SolidWorks, acompanhando a fabricação e identificando melhorias de qualidade, segurança operacional e conformidade técnica."
+      },
+      "4": {
+        "year": "2017",
+        "role": "Agente Local de Inovação",
+        "company": "SEBRAE-CE",
+        "summary": "Realizei diagnósticos de inovação em empresas do setor metalmecânico, identificando oportunidades de melhoria em produtos, processos e gestão."
+      },
+      "5": {
+        "year": "2017",
+        "role": "Analista de Projetos e Automação",
+        "company": "Sangati Berga",
+        "summary": "Implementei automações e integrações entre Excel, AutoCAD e SolidWorks, reduzindo em até 80% o tempo de etapas críticas de engenharia e padronizando fluxos BIM."
+      },
+      "6": {
+        "year": "2022",
+        "role": "Desenvolvedor Freelancer",
+        "company": "Upwork",
+        "summary": "Desenvolvo aplicações web, automações para Excel e SolidWorks, interfaces modernas em Vue.js e soluções personalizadas para clientes globais, mantendo 100% de avaliações positivas."
+      },
+      "7": {
+        "year": "2025",
+        "role": "Projetista Mecânico",
+        "company": "Perfisul",
+        "summary": "Atuei no desenvolvimento e detalhamento de projetos mecânicos industriais, aplicando modelagem 3D, documentação técnica e otimização de soluções para fabricação."
+      }
+    }
+  },
+  "softSkills": {
+    "kicker": "Habilidades Comportamentais",
+    "title": "Competências humanas projetadas para entregas de alta complexidade.",
+    "description": "Sistemas técnicos funcionam melhor quando comunicação, liderança e adaptabilidade são tão afiadas quanto as ferramentas.",
+    "traitsAria": "Traços complementares de habilidades comportamentais",
+    "traits": {
+      "0": "Liderança",
+      "1": "Pensamento Crítico",
+      "2": "Inovação",
+      "3": "Protagonismo",
+      "4": "Aprendizado Rapido",
+      "5": "Mentoria",
+      "6": "Adaptabilidade",
+      "7": "Pensamento Sistemico"
+    }
+  },
+  "technicalSkills": {
+    "kicker": "Habilidades Técnicas",
+    "title": "Três domínios. Um motor de entrega.",
+    "description": "De sistemas frontend a projeto mecânico e pipelines de automação, estas são as camadas técnicas com que entrego diariamente.",
+    "groupAria": "Habilidades de {group}",
+    "yearsExperience": "{years} anos de experiência",
+    "axes": {
+      "skillLevel": "Nível de Habilidade",
+      "years": "Anos de Experiência"
+    },
+    "groups": {
+      "frontend": {
+        "title": "Frontend"
+      },
+      "engineering": {
+        "title": "Engenharia"
+      },
+      "automation": {
+        "title": "Automação"
+      }
+    }
+  },
+  "experience": {
+    "kicker": "Experiência",
+    "title": "Um histórico conectado de engenharia e entrega de software.",
+    "description": "Cada função adicionou uma camada mais forte de pensamento sistêmico, da execução CAD até automação e frontend de nível de produto.",
+    "timelineAria": "Linha do tempo de experiência profissional",
+    "items": {
+      "0": {
+        "year": "2010",
+        "company": "Invento",
+        "role": "Desenhista CAD",
+        "summary": "Criei documentação técnica precisa e otimizei qualidade de desenhos para fluxos de fabricação e instalação."
+      },
+      "1": {
+        "year": "2012",
+        "company": "EKIPAR",
+        "role": "Projetista Mecânico",
+        "summary": "Projetei máquinas e conjuntos com foco em fabricabilidade, confiabilidade e clareza de engenharia."
+      },
+      "2": {
+        "year": "2017",
+        "company": "Sangati Berga",
+        "role": "Agente de Inovação",
+        "summary": "Introduzi rotinas de automação e processos orientados a dados para reduzir operações repetitivas de engenharia."
+      },
+      "3": {
+        "year": "2022",
+        "company": "Freelance · Upwork Top Rated Plus",
+        "role": "Especialista em Automação e Frontend",
+        "summary": "Entreguei software customizado, automação CAD e sistemas frontend para clientes globais em contexto de produção."
+      }
+    }
+  },
+  "reviews": {
+    "kicker": "Depoimentos",
+    "title": "Avaliações de clientes que refletem confiabilidade e entrega.",
+    "description": "Feedback real de clientes e colaboradores que confiaram no fluxo de trabalho, na qualidade e na execução.",
+    "listAria": "Lista de depoimentos de clientes",
+    "cardAria": "Depoimento de {client} com avaliação {rating} de 5",
+    "unknownTitle": "Depoimento sem título",
+    "unknownClient": "Cliente desconhecido",
+    "items": {
+      "0": {
+        "text": "Entregou resultados excelentes com comunicação clara e iteração rápida — o trabalho superou as expectativas."
+      },
+      "1": {
+        "text": "Entendimento técnico e rapidez de resposta tornaram a colaboração tranquila. A qualidade se manteve constante durante o projeto."
+      },
+      "2": {
+        "text": "Entrega forte dentro do prazo, com recomendações bem pensadas e implementação sólida. Altamente recomendado para software de engenharia complexo."
+      }
+    }
+  },
+  "projects": {
+    "kicker": "Projetos em Destaque",
+    "title": "Produtos de software moldados por precisão de engenharia.",
+    "description": "Um conjunto selecionado de sistemas que combinam lógica mecânica, arquitetura frontend e eficiência em automação.",
+    "items": {
+      "pdlm": {
+        "title": "Gestor de Oficina",
+        "summary": "Sistema com Quasar, Vue e Firebase para operar oficinas automotivas, gerenciar clientes, serviços, agendamentos, status de atendimento e faturas.",
+        "overview": "Plataforma de gestão de oficina que centraliza cadastro de clientes, catálogo de serviços, agendamento, status de atendimento e geração de faturas em um painel responsivo.",
+        "architecture": {
+          "0": "Frontend Vue e Quasar com painéis responsivos para gestão de oficina",
+          "1": "Backend Firebase para dados de clientes, agendamento em tempo real e acesso autenticado",
+          "2": "Visões de fluxo de serviço para status de atendimento, ordens de serviço e acompanhamento de faturas"
+        },
+        "challenges": {
+          "0": "Mapear fluxos de atendimento automotivo em quadros de agenda e status intuitivos",
+          "1": "Garantir sincronização em tempo real de clientes, serviços e registros de faturamento no Firebase",
+          "2": "Manter a interface da oficina clara para equipes ocupadas enquanto gerencia agendamentos e atualizações de serviço"
+        },
+        "screenshots": {
+          "0": {
+            "label": "Painel principal",
+            "type": "Visão geral"
+          },
+          "1": {
+            "label": "Visão de serviços",
+            "type": "Gestão de serviços"
+          },
+          "2": {
+            "label": "Visão de estoque",
+            "type": "Resumo de estoque"
+          }
+        }
+      },
+      "flwrx": {
+        "title": "FloWorks Studio",
+        "summary": "Software interativo para projetar esquemas de fluxo de peneira plana, visualizar entradas e saídas, e gerenciar esquemas em banco de dados com Vue, Quasar, Firebase e SVGs animados.",
+        "overview": "Aplicação voltada para fluxo de trabalho que define trajetórias de fluxo de peneira, visualiza entradas e saídas, e armazena esquemas, perfis de material e dados operacionais no Firebase.",
+        "architecture": {
+          "0": "Frontend Vue e Quasar com editor de esquemas responsivo",
+          "1": "Backend Firebase para armazenamento de esquemas, autenticação e sincronização em tempo real",
+          "2": "Visualizações SVG animadas para fluxos de entrada/saída e feedback de processo"
+        },
+        "challenges": {
+          "0": "Criar um editor intuitivo para diagramas de fluxo de peneira com renderização SVG escalável",
+          "1": "Sincronizar estado de esquema e metadados entre armazenamento Firebase e pré-visualizações de UI",
+          "2": "Equilibrar detalhe de engenharia com experiência interativa polida para operadores"
+        },
+        "screenshots": {
+          "0": {
+            "label": "Editor de esquema de fluxo",
+            "type": "Mapa de fluxo"
+          },
+          "1": {
+            "label": "Visualização de entradas e saídas",
+            "type": "Área de canais"
+          },
+          "2": {
+            "label": "Visão do repositório de esquemas",
+            "type": "Banco de dados"
+          }
+        }
+      },
+      "cadtk": {
+        "title": "Toolkit de Automação CAD",
+        "summary": "Scripts e templates reutilizáveis que aceleram tarefas repetitivas de modelagem e desenho em equipes de produção.",
+        "overview": "Um toolkit de assistentes CAD scriptáveis que reduz operações repetitivas e reforça padrões de modelagem entre equipes de engenharia.",
+        "architecture": {
+          "0": "Executores Python e VBA para orquestração de macros CAD",
+          "1": "Biblioteca de templates para geração validada de desenhos e BOM",
+          "2": "Camada de logs com relatórios de execução para revisão da equipe"
+        },
+        "challenges": {
+          "0": "Equilibrar flexibilidade de macros customizadas com governança de templates",
+          "1": "Lidar com variações de versão entre estações CAD",
+          "2": "Fornecer diagnósticos claros quando scripts falham no meio do pipeline"
+        },
+        "screenshots": {
+          "0": {
+            "label": "Lançador de macros",
+            "type": "Hub de automação"
+          },
+          "1": {
+            "label": "Seletor de templates",
+            "type": "Painel CAD"
+          },
+          "2": {
+            "label": "Relatório de execução",
+            "type": "Diagnóstico"
+          }
+        }
+      },
+      "portf": {
+        "title": "Portfólio Inteligência Mecânica",
+        "summary": "Experiência interativa de portfólio com sistemas de movimento suaves, renderização focada em desempenho e identidade visual marcante.",
+        "overview": "Um portfólio narrativo construído como experiência de página única com movimento em camadas, coreografia de scroll e seções componentizadas.",
+        "architecture": {
+          "0": "Arquitetura Vue 3 com composables de animação reutilizáveis",
+          "1": "Primitivas responsivas de layout com Quasar e tokens utilitários",
+          "2": "Sistema de circuito de fundo conectado a eventos de interação"
+        },
+        "challenges": {
+          "0": "Manter sequências complexas de animação suaves em hardware móvel",
+          "1": "Construir transições de seção sem sobrecarga visual",
+          "2": "Preservar acessibilidade em cards interativos com estilo intenso"
+        },
+        "screenshots": {
+          "0": {
+            "label": "Superfície de comando hero",
+            "type": "Entrada"
+          },
+          "1": {
+            "label": "Matriz de projetos",
+            "type": "Grade de showcase"
+          },
+          "2": {
+            "label": "Painel terminal de contato",
+            "type": "Bloco de conversão"
+          }
+        }
+      },
+      "xlsys": {
+        "title": "Suite de Engenharia em Excel",
+        "summary": "Calculadoras operacionais e fluxos de relatório para decisões de engenharia, planejamento e visibilidade de execução.",
+        "overview": "Uma suite operacional para equipes de engenharia padronizarem cálculos, reduzirem erros manuais em planilhas e acelerarem relatórios de decisão.",
+        "architecture": {
+          "0": "Camada de interface Excel com templates guiados e lógica protegida",
+          "1": "Módulos VBA para normalização de dados e exportação de relatórios",
+          "2": "Pacotes de fluxo adaptados a rotinas de manufatura e planejamento"
+        },
+        "challenges": {
+          "0": "Proteger integridade de fórmulas mantendo flexibilidade ao usuário",
+          "1": "Normalizar formatos de origem diferentes de arquivos legados",
+          "2": "Reduzir tempo de atualização em modelos de custo de alto volume"
+        },
+        "screenshots": {
+          "0": {
+            "label": "Dashboard de engenharia",
+            "type": "Workbook"
+          },
+          "1": {
+            "label": "Planejador de capacidade",
+            "type": "Grade de cenários"
+          },
+          "2": {
+            "label": "Gerador automático de relatórios",
+            "type": "Fluxo de saída"
+          }
+        }
+      }
+    }
+  },
+  "projectCard": {
+    "cardAria": "Card de projeto {title}",
+    "technologiesAria": "Tecnologias de {title}",
+    "details": "Detalhes",
+    "github": "GitHub",
+    "liveDemo": "Demo"
+  },
+  "projectModal": {
+    "kicker": "Análise do Projeto",
+    "close": "Fechar",
+    "closeAria": "Fechar detalhes do projeto",
+    "github": "GitHub",
+    "liveDemo": "Demonstração",
+    "sections": {
+      "screenshots": "Capturas",
+      "screenshotsAria": "Capturas do projeto",
+      "overview": "Visão geral",
+      "overviewAria": "Visão geral do projeto",
+      "architecture": "Arquitetura",
+      "architectureAria": "Arquitetura do projeto",
+      "technologies": "Tecnologias",
+      "technologiesAria": "Tecnologias do projeto",
+      "challenges": "Desafios",
+      "challengesAria": "Desafios do projeto",
+      "links": "Links",
+      "linksAria": "Links do projeto"
+    }
+  },
+  "gallery": {
+    "kicker": "Galeria de Engenharia",
+    "title": "Histórias visuais de projetos mecânicos e renderizações 3D a experiências frontend e fluxos de automação.",
+    "description": "Uma visão curada de sistemas mecânicos, desenhos técnicos, protótipos 3D, interfaces frontend e soluções de automação usadas em fluxos reais de engenharia.",
+    "masonryAria": "Galeria de mídia de engenharia",
+    "carouselAria": "Carrossel da galeria de engenharia",
+    "itemAria": "{title} ({type})",
+    "prev": "Anterior",
+    "next": "Próximo",
+    "prevAria": "Item anterior da galeria",
+    "nextAria": "Próximo item da galeria",
+    "imageType": "Trabalho Criativo",
+    "imageTools": "Software e automação",
+    "imageAlt": "Imagem da galeria: {filename}",
+    "items": {
+      "assyFrame": {
+        "title": "Conjunto de Estrutura de Esteira",
+        "type": "Montagem",
+        "tools": "SolidWorks, Weldments",
+        "alt": "Render detalhado de estrutura industrial de esteira com membros estruturais e fixadores."
+      },
+      "explodedModule": {
+        "title": "Módulo de Acionamento Explodido",
+        "type": "Quebra Técnica",
+        "tools": "SolidWorks, Fluxo BOM",
+        "alt": "Ilustração mecânica explodida destacando hierarquia de peças e ordem de montagem."
+      },
+      "cncLayout": {
+        "title": "Layout de Fixação CNC",
+        "type": "Setup de Manufatura",
+        "tools": "AutoCAD, Planejamento CAM",
+        "alt": "Mesa de setup com dispositivos CNC e referências dimensionais."
+      },
+      "prototypePrint": {
+        "title": "Validação Rápida de Protótipo",
+        "type": "Impressão 3D",
+        "tools": "Bambu Studio, PLA",
+        "alt": "Protótipo mecânico impresso em 3D para validação de forma e encaixe."
+      },
+      "plantDrawing": {
+        "title": "Conjunto de Desenhos para Retrofit",
+        "type": "Desenho técnico",
+        "tools": "AutoCAD, Controle de Revisao",
+        "alt": "Folhas técnicas organizadas em bancada para planejamento de retrofit industrial."
+      },
+      "renderBay": {
+        "title": "Estudo de Render Industrial",
+        "type": "Visualização",
+        "tools": "Blender, Cycles",
+        "alt": "Render industrial com alto contraste mostrando iluminação e acabamentos de materiais."
+      }
+    }
+  },
+  "linksSection": {
+    "kicker": "Links Externos",
+    "title": "Presença profissional e produtos de software em um único centro de comando.",
+    "description": "Explore perfis, sinais de credibilidade e sistemas de produto desenvolvidos para equipes de engenharia e operações.",
+    "profiles": {
+      "kicker": "Perfis",
+      "title": "Canais Profissionais"
+    },
+    "products": {
+      "kicker": "Produtos",
+      "title": "Aplicações Desenvolvidas"
+    },
+    "cards": {
+      "github": {
+        "title": "GitHub",
+        "description": "Repositórios de código, experimentos frontend e provas de conceito em automação aplicadas em contextos de engenharia.",
+        "badge": "Código Aberto",
+        "ctaLabel": "Visitar GitHub"
+      },
+      "linkedin": {
+        "title": "LinkedIn",
+        "description": "Histórico de carreira, resultados de projetos e destaques de liderança técnica em trabalhos mecânicos e digitais.",
+        "badge": "Rede",
+        "ctaLabel": "Abrir LinkedIn"
+      },
+      "upwork": {
+        "title": "Upwork",
+        "description": "Histórico de entregas freelance com clientes recorrentes, ganhos em automação e comunicação técnica de alto nível.",
+        "badge": "Top Rated Plus",
+        "ctaLabel": "Ver Upwork"
+      },
+      "resume": {
+        "title": "Currículo PDF",
+        "description": "Perfil para download com profundidade em engenharia, experiência em arquitetura de software e resultados mensuráveis.",
+        "badge": "Download",
+        "ctaLabel": "Abrir Currículo"
+      }
+    },
+    "productsCards": {
+      "pdlm": {
+        "title": "Gestor de Oficina",
+        "description": "Software para operações de oficina construído com Vue, Quasar e Firebase para registros de clientes, agendamento de serviços, controle de ordens e geração de faturas.",
+        "badge": "App de Oficina",
+        "ctaLabel": "Ver Projeto"
+      },
+      "cadtk": {
+        "title": "Toolkit de Automação CAD",
+        "description": "Pacotes reutilizáveis de comandos de automação que reduzem operações repetitivas e padronizam entregáveis de engenharia.",
+        "badge": "Suite de Automação",
+        "ctaLabel": "Ver Projeto"
+      },
+      "xlsys": {
+        "title": "Suite de Engenharia em Excel",
+        "description": "Calculadoras operacionais e fluxos de relatório para capacidade, custo e planejamento de entregas na manufatura.",
+        "badge": "Plataforma de Operações",
+        "ctaLabel": "Ver Projeto"
+      },
+      "internalTools": {
+        "title": "Ferramentas Internas de Manufatura",
+        "description": "Apps internos enxutos para entrada de dados, verificações de processo e monitoramento da produção no chão de fábrica.",
+        "badge": "Stack Interno",
+        "ctaLabel": "Ver Projeto"
+      }
+    }
+  },
+  "externalCard": {
+    "cardAria": "Card externo de {title}",
+    "tagsAria": "Tags de {title}",
+    "openAria": "Abrir {title} em nova aba"
+  },
+  "contact": {
+    "kicker": "Contato",
+    "title": "Abra um canal direto para colaboração freelance e de produto.",
+    "description": "Presença inspirada em terminal com disponibilidade clara, links diretos e contexto de resposta rápida para projetos de engenharia.",
+    "terminal": {
+      "aria": "Interface de terminal de contato",
+      "prompt": "madson\\@signal-node:~",
+      "command": "connect --target madson",
+      "loading": "carregando perfil...",
+      "connected": "conexão estabelecida.",
+      "statusLabel": "STATUS:",
+      "statusValue": "DISPONÍVEL PARA FREELANCE",
+      "emailLabel": "EMAIL:",
+      "githubLabel": "GITHUB:",
+      "linkedinLabel": "LINKEDIN:",
+      "systemMessages": {
+        "0": "compilando portfolio...",
+        "1": "carregando modulos CAD...",
+        "2": "sincronizando dados de projeto...",
+        "3": "renderizando montagem..."
+      }
+    }
+  },
+  "footer": {
+    "kicker": "Projetado e desenvolvido por",
+    "name": "Madson Germano",
+    "role1": "Engenheiro Mecânico",
+    "role2": "& Desenvolvedor Frontend",
+    "stack": "Vue + Quasar + Anime.js",
+    "rights": "Todos os direitos reservados"
+  },
+  "radar": {
+    "professionalStrength": "Força Profissional",
+    "categories": {
+      "0": "Liderança",
+      "1": "Comunicação",
+      "2": "Criatividade",
+      "3": "Trabalho em Equipe",
+      "4": "Adaptabilidade",
+      "5": "Resolução de Problemas"
+    }
+  }
 }
