@@ -216,7 +216,7 @@
     "title": "Produtos de software moldados por precisão de engenharia.",
     "description": "Um conjunto selecionado de sistemas que combinam lógica mecânica, arquitetura frontend e eficiência em automação.",
     "items": {
-      "pdlm": {
+      "cdstr": {
         "title": "Gestor de Oficina",
         "summary": "Sistema com Quasar, Vue e Firebase para operar oficinas automotivas, gerenciar clientes, serviços, agendamentos, status de atendimento e faturas.",
         "overview": "Plataforma de gestão de oficina que centraliza cadastro de clientes, catálogo de serviços, agendamento, status de atendimento e geração de faturas em um painel responsivo.",
@@ -274,90 +274,32 @@
           }
         }
       },
-      "cadtk": {
-        "title": "Toolkit de Automação CAD",
-        "summary": "Scripts e templates reutilizáveis que aceleram tarefas repetitivas de modelagem e desenho em equipes de produção.",
-        "overview": "Um toolkit de assistentes CAD scriptáveis que reduz operações repetitivas e reforça padrões de modelagem entre equipes de engenharia.",
+      "vittalinq": {
+        "title": "Vittalinq Clinic Manager",
+        "summary": "Plataforma de saúde para pequenas clínicas gerenciarem registros de pacientes, sessões, agendamentos e fluxos de atendimento.",
+        "overview": "Sistema de gestão de clínicas que centraliza cadastro de clientes, agendamento de consultas, anotações de sessões e coordenação da equipe em um painel responsivo.",
         "architecture": {
-          "0": "Executores Python e VBA para orquestração de macros CAD",
-          "1": "Biblioteca de templates para geração validada de desenhos e BOM",
-          "2": "Camada de logs com relatórios de execução para revisão da equipe"
+          "0": "Frontend Vue e Quasar para administração ágil de consultas e pacientes",
+          "1": "Backend Firebase para registros seguros, dados de sessões e autenticação",
+          "2": "Visões de fluxos clínicos para agendamentos, acompanhamento de sessões e histórico de atendimentos"
         },
         "challenges": {
-          "0": "Equilibrar flexibilidade de macros customizadas com governança de templates",
-          "1": "Lidar com variações de versão entre estações CAD",
-          "2": "Fornecer diagnósticos claros quando scripts falham no meio do pipeline"
+          "0": "Modelar fluxos de clínica e agendamentos em uma interface fácil de usar",
+          "1": "Organizar dados de pacientes e sessões mantendo a experiência clara para profissionais",
+          "2": "Equilibrar agendamento rápido com registro preciso para continuidade do atendimento"
         },
         "screenshots": {
           "0": {
-            "label": "Lançador de macros",
-            "type": "Hub de automação"
+            "label": "Página de login",
+            "type": "Autenticação"
           },
           "1": {
-            "label": "Seletor de templates",
-            "type": "Painel CAD"
+            "label": "Visão geral de clientes",
+            "type": "Lista de pacientes"
           },
           "2": {
-            "label": "Relatório de execução",
-            "type": "Diagnóstico"
-          }
-        }
-      },
-      "portf": {
-        "title": "Portfólio Inteligência Mecânica",
-        "summary": "Experiência interativa de portfólio com sistemas de movimento suaves, renderização focada em desempenho e identidade visual marcante.",
-        "overview": "Um portfólio narrativo construído como experiência de página única com movimento em camadas, coreografia de scroll e seções componentizadas.",
-        "architecture": {
-          "0": "Arquitetura Vue 3 com composables de animação reutilizáveis",
-          "1": "Primitivas responsivas de layout com Quasar e tokens utilitários",
-          "2": "Sistema de circuito de fundo conectado a eventos de interação"
-        },
-        "challenges": {
-          "0": "Manter sequências complexas de animação suaves em hardware móvel",
-          "1": "Construir transições de seção sem sobrecarga visual",
-          "2": "Preservar acessibilidade em cards interativos com estilo intenso"
-        },
-        "screenshots": {
-          "0": {
-            "label": "Superfície de comando hero",
-            "type": "Entrada"
-          },
-          "1": {
-            "label": "Matriz de projetos",
-            "type": "Grade de showcase"
-          },
-          "2": {
-            "label": "Painel terminal de contato",
-            "type": "Bloco de conversão"
-          }
-        }
-      },
-      "xlsys": {
-        "title": "Suite de Engenharia em Excel",
-        "summary": "Calculadoras operacionais e fluxos de relatório para decisões de engenharia, planejamento e visibilidade de execução.",
-        "overview": "Uma suite operacional para equipes de engenharia padronizarem cálculos, reduzirem erros manuais em planilhas e acelerarem relatórios de decisão.",
-        "architecture": {
-          "0": "Camada de interface Excel com templates guiados e lógica protegida",
-          "1": "Módulos VBA para normalização de dados e exportação de relatórios",
-          "2": "Pacotes de fluxo adaptados a rotinas de manufatura e planejamento"
-        },
-        "challenges": {
-          "0": "Proteger integridade de fórmulas mantendo flexibilidade ao usuário",
-          "1": "Normalizar formatos de origem diferentes de arquivos legados",
-          "2": "Reduzir tempo de atualização em modelos de custo de alto volume"
-        },
-        "screenshots": {
-          "0": {
-            "label": "Dashboard de engenharia",
-            "type": "Workbook"
-          },
-          "1": {
-            "label": "Planejador de capacidade",
-            "type": "Grade de cenários"
-          },
-          "2": {
-            "label": "Gerador automático de relatórios",
-            "type": "Fluxo de saída"
+            "label": "Agenda de consultas",
+            "type": "Calendário"
           }
         }
       }
@@ -480,32 +422,6 @@
         "description": "Perfil para download com profundidade em engenharia, experiência em arquitetura de software e resultados mensuráveis.",
         "badge": "Download",
         "ctaLabel": "Abrir Currículo"
-      }
-    },
-    "productsCards": {
-      "pdlm": {
-        "title": "Gestor de Oficina",
-        "description": "Software para operações de oficina construído com Vue, Quasar e Firebase para registros de clientes, agendamento de serviços, controle de ordens e geração de faturas.",
-        "badge": "App de Oficina",
-        "ctaLabel": "Ver Projeto"
-      },
-      "cadtk": {
-        "title": "Toolkit de Automação CAD",
-        "description": "Pacotes reutilizáveis de comandos de automação que reduzem operações repetitivas e padronizam entregáveis de engenharia.",
-        "badge": "Suite de Automação",
-        "ctaLabel": "Ver Projeto"
-      },
-      "xlsys": {
-        "title": "Suite de Engenharia em Excel",
-        "description": "Calculadoras operacionais e fluxos de relatório para capacidade, custo e planejamento de entregas na manufatura.",
-        "badge": "Plataforma de Operações",
-        "ctaLabel": "Ver Projeto"
-      },
-      "internalTools": {
-        "title": "Ferramentas Internas de Manufatura",
-        "description": "Apps internos enxutos para entrada de dados, verificações de processo e monitoramento da produção no chão de fábrica.",
-        "badge": "Stack Interno",
-        "ctaLabel": "Ver Projeto"
       }
     }
   },

@@ -216,7 +216,7 @@
     "title": "Software products shaped by engineering precision.",
     "description": "A selected set of systems that combine mechanical logic, frontend architecture, and automation efficiency.",
     "items": {
-      "pdlm": {
+      "cdstr": {
         "title": "Workshop Service Manager",
         "summary": "A Quasar, Vue and Firebase system for auto shop operations, tracking customers, services, appointments, status, and invoices.",
         "overview": "A workshop operations platform that centralizes client records, service catalogs, schedule planning, appointment status, and invoice generation into a single responsive dashboard.",
@@ -274,90 +274,32 @@
           }
         }
       },
-      "cadtk": {
-        "title": "CAD Automation Toolkit",
-        "summary": "Reusable automation scripts and templates that accelerate repetitive modeling and drawing tasks in production teams.",
-        "overview": "A toolkit of scriptable CAD assistants that cuts repetitive operations and enforces consistent modeling standards across engineering squads.",
+      "vittalinq": {
+        "title": "Vittalinq Clinic Manager",
+        "summary": "A healthcare platform for small clinics to manage patient records, sessions, appointments, and care workflows.",
+        "overview": "A clinic management system that centralizes client records, appointment scheduling, session notes, and team coordination into a responsive dashboard.",
         "architecture": {
-          "0": "Python and VBA command runners for CAD macro orchestration",
-          "1": "Template library for validated drawing and BOM generation",
-          "2": "Logging layer with execution reports for team review"
+          "0": "Vue and Quasar frontend for streamlined appointment and patient administration",
+          "1": "Firebase backend for secure client records, session data, and authentication",
+          "2": "Clinical workflow views for appointments, session tracking, and care history"
         },
         "challenges": {
-          "0": "Balancing flexibility for custom macros with strict template governance",
-          "1": "Handling version drift across different CAD workstation setups",
-          "2": "Providing clear diagnostics when scripts fail mid-pipeline"
+          "0": "Modeling clinic workflows and appointment flows in an easy-to-use interface",
+          "1": "Organizing patient and session data while keeping the experience clear for providers",
+          "2": "Balancing fast scheduling with accurate record keeping for care continuity"
         },
         "screenshots": {
           "0": {
-            "label": "Macro launcher",
-            "type": "Automation hub"
+            "label": "Login page",
+            "type": "Authentication"
           },
           "1": {
-            "label": "Template selector",
-            "type": "CAD panel"
+            "label": "Clients overview",
+            "type": "Patient list"
           },
           "2": {
-            "label": "Execution report",
-            "type": "Diagnostics"
-          }
-        }
-      },
-      "portf": {
-        "title": "Mechanical Intelligence Portfolio",
-        "summary": "Interactive portfolio experience engineered with smooth motion systems, performance-focused rendering, and bold visual identity.",
-        "overview": "A narrative-driven portfolio built as a single-page experience with layered motion, scroll choreography, and componentized section systems.",
-        "architecture": {
-          "0": "Vue 3 composition architecture with reusable animation composables",
-          "1": "Quasar-powered responsive layout primitives and utility tokens",
-          "2": "Background circuit system connected to interaction events"
-        },
-        "challenges": {
-          "0": "Keeping complex animation sequences smooth on mobile hardware",
-          "1": "Building section transitions without visual overload",
-          "2": "Maintaining accessibility for highly styled interactive cards"
-        },
-        "screenshots": {
-          "0": {
-            "label": "Hero command surface",
-            "type": "Landing"
-          },
-          "1": {
-            "label": "Projects matrix",
-            "type": "Showcase grid"
-          },
-          "2": {
-            "label": "Terminal contact panel",
-            "type": "Conversion block"
-          }
-        }
-      },
-      "xlsys": {
-        "title": "Excel Engineering Suite",
-        "summary": "Operational calculators and reporting flows tailored for engineering decisions, planning, and project execution visibility.",
-        "overview": "An operations suite for engineering teams to standardize calculations, reduce manual spreadsheet errors, and accelerate decision reporting.",
-        "architecture": {
-          "0": "Excel interface layer with guided templates and protected logic",
-          "1": "VBA automation modules for data normalization and report export",
-          "2": "Workflow packs tailored to manufacturing and planning routines"
-        },
-        "challenges": {
-          "0": "Protecting formula integrity while preserving user flexibility",
-          "1": "Normalizing different source formats from legacy files",
-          "2": "Reducing refresh times for high-volume cost models"
-        },
-        "screenshots": {
-          "0": {
-            "label": "Engineering dashboard",
-            "type": "Workbook"
-          },
-          "1": {
-            "label": "Capacity planner",
-            "type": "Scenario grid"
-          },
-          "2": {
-            "label": "Auto report generator",
-            "type": "Output flow"
+            "label": "Appointment schedule",
+            "type": "Calendar"
           }
         }
       }
@@ -480,32 +422,6 @@
         "description": "Downloadable profile with engineering depth, software architecture experience, and measurable project results.",
         "badge": "Download",
         "ctaLabel": "Open Resume"
-      }
-    },
-    "productsCards": {
-      "pdlm": {
-        "title": "Workshop Service Manager",
-        "description": "Auto shop operations software built with Vue, Quasar, and Firebase for client records, service scheduling, work order tracking, and invoice generation.",
-        "badge": "Workshop App",
-        "ctaLabel": "View Project"
-      },
-      "cadtk": {
-        "title": "CAD Automation Toolkit",
-        "description": "Reusable automation command packs that shorten repetitive modeling operations and standardize engineering deliverables.",
-        "badge": "Automation Suite",
-        "ctaLabel": "View Project"
-      },
-      "xlsys": {
-        "title": "Excel Engineering Suite",
-        "description": "Operational calculators and reporting workflows for capacity, cost, and delivery planning inside manufacturing routines.",
-        "badge": "Ops Platform",
-        "ctaLabel": "View Project"
-      },
-      "internalTools": {
-        "title": "Internal Manufacturing Tools",
-        "description": "Lean internal apps for data entry, process checks, and production monitoring tailored to shop-floor constraints.",
-        "badge": "Internal Stack",
-        "ctaLabel": "View Project"
       }
     }
   },
