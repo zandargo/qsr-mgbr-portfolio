@@ -250,7 +250,7 @@
           breakpoint: 640,
           options: {
             chart: {
-              width: '100%'
+              width: '90%'
             },
             yaxis: [
               {
@@ -362,12 +362,12 @@
         { name: 'VBA', value: 93, years: yearsFrom(2016) },
         { name: 'Python', value: 65, years: yearsFrom(2019) },
         { name: 'REST APIs', value: 84, years: yearsFrom(2020) },
-        { name: 'Design Automation', value: 91, years: yearsFrom(2018) },
-        { name: 'Power Automate', value: 80, years: yearsFrom(2021) },
-        { name: 'Shell Scripting', value: 76, years: yearsFrom(2020) },
+        { name: ['Design', 'Automation'], value: 91, years: yearsFrom(2018) },
+        { name: ['Power', 'Automate'], value: 80, years: yearsFrom(2021) },
+        { name: ['Shell', 'Scripting'], value: 76, years: yearsFrom(2020) },
         { name: 'SQL', value: 85, years: yearsFrom(2017) },
         { name: 'CI/CD', value: 83, years: yearsFrom(2020) },
-        { name: 'API Integration', value: 89, years: yearsFrom(2019) }
+        { name: ['API', 'Integration'], value: 89, years: yearsFrom(2019) }
       ]
     }
   ]

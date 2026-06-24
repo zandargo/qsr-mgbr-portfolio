@@ -16,7 +16,8 @@
   /* Typography */
   --font-display: 'Fira Code', 'Space Grotesk', 'Segoe UI', sans-serif;
   --font-body: 'Barlow', 'Segoe UI', sans-serif;
-  --font-mono: 'JetBrains Mono', 'Consolas', monospace;
+  // --font-mono: 'JetBrains Mono', 'Consolas', monospace;
+  --font-mono: 'Fira Code', 'JetBrains Mono', 'Consolas', monospace;
 
   /* Spacing scale */
   --space-2xs: 0.25rem;
@@ -126,11 +127,18 @@ body {
 }
 
 .glass-panel {
-  background: var(--glass);
+  background: rgba(20, 25, 22, 0.9);
   border: 1px solid var(--glass-border);
+  // border: 1px solid red;
   border-radius: var(--radius-lg);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+}
+
+@supports (backdrop-filter: blur(16px)) or (-webkit-backdrop-filter: blur(16px)) {
+  .glass-panel {
+    background: var(--glass);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
 }
 
 .glow-border {
