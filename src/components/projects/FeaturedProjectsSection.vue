@@ -114,7 +114,32 @@
       backgroundPosition: 'center',
       // github: 'https://github.com/zandargo/qsr-mgbr-portfolio',
       demo: 'https://vittalinq.web.app/'
-    }
+    },
+    {
+      code: 'BNHQQ',
+      title: t('projects.items.benhaqui.title'),
+      summary: t('projects.items.benhaqui.summary'),
+      tags: ['Vue', 'Quasar', 'Firebase', 'Community'],
+      overview: t('projects.items.benhaqui.overview'),
+      architecture: [
+        t('projects.items.benhaqui.architecture.0'),
+        t('projects.items.benhaqui.architecture.1'),
+        t('projects.items.benhaqui.architecture.2')
+      ],
+      challenges: [
+        t('projects.items.benhaqui.challenges.0'),
+        t('projects.items.benhaqui.challenges.1'),
+        t('projects.items.benhaqui.challenges.2')
+      ],
+      screenshots: [
+        { label: t('projects.items.benhaqui.screenshots.0.label'), type: t('projects.items.benhaqui.screenshots.0.type'), img: 'img/projects/benhaqui/Benhaqui-001.jpeg' },
+        { label: t('projects.items.benhaqui.screenshots.1.label'), type: t('projects.items.benhaqui.screenshots.1.type'), img: 'img/projects/benhaqui/Benhaqui-002.jpeg' },
+        { label: t('projects.items.benhaqui.screenshots.2.label'), type: t('projects.items.benhaqui.screenshots.2.type'), img: 'img/projects/benhaqui/Benhaqui-003.jpeg' }
+      ],
+      thumbnail: 'img/projects/benhaqui/Banner001.png',
+      backgroundPosition: 'bottom',
+      demo: 'https://benhaqui.web.app/'
+    },
   ])
 </script>
 

@@ -274,6 +274,35 @@
           }
         }
       },
+      "benhaqui": {
+        "title": "Benhaqui Condo Exchange",
+        "summary": "A community service exchange platform for condominium residents to offer and request local help like meal preparation, groceries, lessons, and neighborhood referrals.",
+        "overview": "A neighborhood services platform where apartment residents post the services they can provide or the help they need, making it easy for co-residents in the same condominium to connect on offers, requests, and referrals.",
+        "architecture": {
+          "0": "Vue and Quasar frontend with resident service listings, request boards, and condominium-level access controls",
+          "1": "Firebase backend for authenticated resident profiles, service posting, and realtime updates",
+          "2": "Matching-friendly UI for offer/request workflows, referrals, and condo community interactions"
+        },
+        "challenges": {
+          "0": "Designing a simple flow for residents to publish service offers and needs within the same condominium",
+          "1": "Keeping the experience safe and discoverable while preserving local community context",
+          "2": "Balancing offer/request visibility, referral sharing, and trust signals for neighbors"
+        },
+        "screenshots": {
+          "0": {
+            "label": "Service offers board",
+            "type": "Marketplace"
+          },
+          "1": {
+            "label": "Request details",
+            "type": "Request listing"
+          },
+          "2": {
+            "label": "Resident profile",
+            "type": "Community"
+          }
+        }
+      },
       "vittalinq": {
         "title": "Vittalinq Clinic Manager",
         "summary": "A healthcare platform for small clinics to manage patient records, sessions, appointments, and care workflows.",
