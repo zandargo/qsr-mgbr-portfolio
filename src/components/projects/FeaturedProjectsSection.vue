@@ -10,7 +10,7 @@
       </header>
 
       <div class="projects-grid">
-        <ProjectCard v-for="project in projects" :key="project.code" :project="project" @open-project="openProjectModal" />
+        <ProjectCard v-for="project in projects" :key="project.code" :project="project" :background-position="project.backgroundPosition" @open-project="openProjectModal" />
       </div>
     </article>
 
@@ -60,6 +60,7 @@
         { label: t('projects.items.flwrx.screenshots.2.label'), type: t('projects.items.flwrx.screenshots.2.type'), img: 'img/projects/floworks/Floworks-wip-004.jpeg' }
       ],
       thumbnail: 'img/projects/floworks/Banner01.png',
+      backgroundPosition: 'top',
       // github: 'https://github.com/zandargo/qsr-mgbr-portfolio',
       demo: 'https://floworks.web.app/'
     },
@@ -85,6 +86,7 @@
         { label: t('projects.items.cdstr.screenshots.2.label'), type: t('projects.items.cdstr.screenshots.2.type'), img: 'img/projects/cadastrei/Cadastrei003.jpeg' }
       ],
       thumbnail: 'img/projects/cadastrei/Banner02.png',
+      backgroundPosition: 'center',
       // github: 'https://github.com/zandargo/qsr-mgbr-portfolio',
       demo: 'https://cadastrei.web.app/'
     },
@@ -109,6 +111,7 @@
         { label: t('projects.items.vittalinq.screenshots.1.label'), type: t('projects.items.vittalinq.screenshots.1.type'), img: 'img/projects/vittalinq/vittalinq001.jpeg' }
       ],
       thumbnail: 'img/projects/vittalinq/Banner01.png',
+      backgroundPosition: 'center',
       // github: 'https://github.com/zandargo/qsr-mgbr-portfolio',
       demo: 'https://vittalinq.web.app/'
     }

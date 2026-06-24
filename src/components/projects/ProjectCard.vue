@@ -35,6 +35,10 @@
     project: {
       type: Object,
       required: true
+    },
+    backgroundPosition: {
+      type: String,
+      default: 'top'
     }
   })
 
@@ -54,7 +58,7 @@
 
     return {
       backgroundImage: `url(${trimmedValue})`,
-      backgroundPosition: 'top',
+      backgroundPosition: props.backgroundPosition,
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat'
     }
