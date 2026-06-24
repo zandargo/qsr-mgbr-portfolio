@@ -290,16 +290,20 @@
         },
         "screenshots": {
           "0": {
-            "label": "Quadro de ofertas",
-            "type": "Mercado"
+            "label": "Painel principal",
+            "type": "Desktop"
           },
           "1": {
-            "label": "Detalhes de solicitação",
-            "type": "Lista de pedidos"
+            "label": "Seção de serviços",
+            "type": "Desktop"
           },
           "2": {
-            "label": "Perfil de morador",
-            "type": "Comunidade"
+            "label": "Painel principal",
+            "type": "Mobile"
+          },
+          "3": {
+            "label": "Perfil do usuário",
+            "type": "Mobile"
           }
         }
       },

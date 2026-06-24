@@ -119,7 +119,7 @@
       code: 'BNHQQ',
       title: t('projects.items.benhaqui.title'),
       summary: t('projects.items.benhaqui.summary'),
-      tags: ['Vue', 'Quasar', 'Firebase', 'Community'],
+      tags: ['Vue', 'Quasar', 'Firebase'],
       overview: t('projects.items.benhaqui.overview'),
       architecture: [
         t('projects.items.benhaqui.architecture.0'),
@@ -132,9 +132,10 @@
         t('projects.items.benhaqui.challenges.2')
       ],
       screenshots: [
-        { label: t('projects.items.benhaqui.screenshots.0.label'), type: t('projects.items.benhaqui.screenshots.0.type'), img: 'img/projects/benhaqui/Benhaqui-001.jpeg' },
-        { label: t('projects.items.benhaqui.screenshots.1.label'), type: t('projects.items.benhaqui.screenshots.1.type'), img: 'img/projects/benhaqui/Benhaqui-002.jpeg' },
-        { label: t('projects.items.benhaqui.screenshots.2.label'), type: t('projects.items.benhaqui.screenshots.2.type'), img: 'img/projects/benhaqui/Benhaqui-003.jpeg' }
+        { label: t('projects.items.benhaqui.screenshots.0.label'), type: t('projects.items.benhaqui.screenshots.0.type'), img: 'img/projects/benhaqui/Benhaqui001.jpeg' },
+        { label: t('projects.items.benhaqui.screenshots.1.label'), type: t('projects.items.benhaqui.screenshots.1.type'), img: 'img/projects/benhaqui/Benhaqui002.jpeg' },
+        { label: t('projects.items.benhaqui.screenshots.2.label'), type: t('projects.items.benhaqui.screenshots.2.type'), img: 'img/projects/benhaqui/Benhaqui-mob-001.png' },
+        { label: t('projects.items.benhaqui.screenshots.3.label'), type: t('projects.items.benhaqui.screenshots.3.type'), img: 'img/projects/benhaqui/Benhaqui-mob-002.png' }
       ],
       thumbnail: 'img/projects/benhaqui/Banner001.png',
       backgroundPosition: 'bottom',

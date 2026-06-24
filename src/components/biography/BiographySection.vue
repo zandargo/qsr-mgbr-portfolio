@@ -10,7 +10,7 @@
 
         <div class="profile-media column justify-between">
           <div class="profile-media__frame" aria-hidden="true">
-            <q-img src="/img/profile/Profile002.png" spinner-color="primary" spinner-size="82px" height="100%" fit="cover" position="50% 25%" style="opacity: 0.1;" />
+            <q-img src="/img/profile/Profile002.png" spinner-color="primary" spinner-size="82px" height="100%" fit="cover" position="50% 25%" style="opacity: 0.95;" />
           </div>
           <p class="profile-media__caption text-mono">{{ t('biography.caption') }}</p>
         </div>

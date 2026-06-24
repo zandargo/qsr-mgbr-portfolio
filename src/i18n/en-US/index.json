@@ -290,16 +290,20 @@
         },
         "screenshots": {
           "0": {
-            "label": "Service offers board",
-            "type": "Marketplace"
+            "label": "Main dashboard",
+            "type": "Desktop"
           },
           "1": {
-            "label": "Request details",
-            "type": "Request listing"
+            "label": "Services section",
+            "type": "Desktop"
           },
           "2": {
-            "label": "Resident profile",
-            "type": "Community"
+            "label": "Main dashboard",
+            "type": "Mobile"
+          },
+          "3": {
+            "label": "User profile",
+            "type": "Mobile"
           }
         }
       },
