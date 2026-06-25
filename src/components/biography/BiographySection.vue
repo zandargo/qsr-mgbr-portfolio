@@ -227,6 +227,7 @@
   }
 
   .profile-media__frame {
+    position: relative;
     /* display: grid; */
     /* place-items: center; */
     /* aspect-ratio: 4 / 3; */
@@ -240,12 +241,12 @@
     min-height: 0;
   }
 
-  .profile-media__frame::before {
+  .profile-media__frame::after {
     content: '';
     position: absolute;
     inset: 0;
     background:
-      linear-gradient(90deg, transparent 0%, rgba(125, 255, 202, 0.12) 36%, transparent 100%),
+      linear-gradient(90deg, transparent 0%, rgba(125, 255, 202, 0.1) 36%, transparent 100%),
       repeating-linear-gradient(0deg, rgba(125, 255, 202, 0.06) 0 1px, transparent 1px 12px);
   }
 
